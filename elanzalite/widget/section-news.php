@@ -28,6 +28,7 @@ class themehunk_customizer_section_news extends WP_Widget {
         $args = array(
             'order' => 'DESC',
             'post_type' => 'post',
+            'post_status' => 'publish',
             'meta_key' => '_thumbnail_id',
             'posts_per_page' => $fcount, 
             'cat' => $fcate

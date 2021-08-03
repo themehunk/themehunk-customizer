@@ -28,6 +28,7 @@ class themehunk_customizer_section_three extends WP_Widget {
             'orderby' =>'date',
             'ignore_sticky_posts' => 1,
             'post_type' => 'post',
+            'post_status' => 'publish',
            // 'meta_key' => '_thumbnail_id',
             'posts_per_page' => $ofcount, 
             'cat' => $ofcate

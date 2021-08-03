@@ -26,6 +26,7 @@ class themehunk_customizer_section_four extends WP_Widget {
             'orderby' =>'date',
             'ignore_sticky_posts' => 1,
             'post_type' => 'post',
+            'post_status' => 'publish',
             'posts_per_page' => $count, 
             'cat' => $cate
         );

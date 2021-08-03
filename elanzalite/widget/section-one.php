@@ -30,6 +30,7 @@ class themehunk_customizer_section_one extends WP_Widget {
             'order' => 'DESC',
             'ignore_sticky_posts' => 1,
             'post_type' => 'post',
+            'post_status' => 'publish',
             'meta_key' => '_thumbnail_id',
             'posts_per_page' => $fcount, 
             'cat' => $fcate
@@ -72,6 +73,7 @@ $args1 = array(
             'order' => 'DESC',
             'ignore_sticky_posts' => 1,
             'post_type' => 'post',
+            'post_status' => 'publish',
             'meta_key' => '_thumbnail_id',
             'posts_per_page' => 4, 
             'cat' => $ltcate

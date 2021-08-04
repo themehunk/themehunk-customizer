@@ -53,7 +53,8 @@ global $woocommerce;
 $myarray = array($productId);
 
 $args = array('post_type' => 'product',
-      'post__in'      => $myarray
+      'post_status' => 'publish',
+      'post__in' => $myarray
 );
 
 // The Query

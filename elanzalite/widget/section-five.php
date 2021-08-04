@@ -30,6 +30,7 @@ class themehunk_customizer_section_five extends WP_Widget {
             'orderby' =>'date',
             'ignore_sticky_posts' => 1,
             'post_type' => 'post',
+            'post_status' => 'publish',
            // 'meta_key' => '_thumbnail_id',
             'posts_per_page' => $one_count, 
             'cat' => $one_cate
@@ -94,6 +95,7 @@ class themehunk_customizer_section_five extends WP_Widget {
             'orderby' =>'date',
             'ignore_sticky_posts' => 1,
             'post_type' => 'post',
+            'post_status' => 'publish',
             'posts_per_page' => $two_count, 
             'cat' => $two_cate
         );

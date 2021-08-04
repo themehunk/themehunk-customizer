@@ -30,6 +30,12 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 
 == Changelog ==
 
+
+= 2.5.0 =
+* M-shop post publish and image cropping issue fixed.
+* Shopline post publish and image cropping issue fixed.
+* Elanzalite post publish issue fixed.
+
 = 2.4.15 =
 * Notify slider removed.
 

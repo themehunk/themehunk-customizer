@@ -26,6 +26,7 @@ class themehunk_customizer_section_two extends WP_Widget {
             'order' => 'DESC',
             'ignore_sticky_posts' => 1,
             'post_type' => 'post',
+            'post_status' => 'publish',
             'meta_key' => '_thumbnail_id',
             'posts_per_page' => $count, 
             'cat' => $cate

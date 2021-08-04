@@ -64,7 +64,7 @@ function shopline_slider_product(){
 
  $args = array('posts_per_page' => $posts_per_page,
                 'post_type' => 'product',
-                'post_status'=> 'publish',
+                'post_status' => 'publish',
                 'orderby' =>'date',
                 'order' => 'DESC');
 
@@ -187,7 +187,8 @@ function shopline_featured_products() {
 		);
 
 		$args = array(
-		'post_type'   =>  'product',
+		'post_type'   => 'product',
+    'post_status' => 'publish',
 		'stock'       => 1,
 		'showposts'   =>  6,
 		'columns'     =>  4,
@@ -522,6 +523,7 @@ function shopline_category_products() {
                           )
                       ),
                       'post_type' => 'product',
+                      'post_status' => 'publish',
                       'orderby' => 'date'
                   );
 
@@ -539,6 +541,7 @@ function shopline_category_products() {
         $args = array(
                       'posts_per_page' => $posts_per_page,
                       'post_type' => 'product',
+                      'post_status' => 'publish',
                       'tax_query' => array(
                           array(
                               'taxonomy' => 'product_cat',
@@ -553,6 +556,7 @@ function shopline_category_products() {
         $args = array(
                       'posts_per_page' => $posts_per_page,
                       'post_type' => 'product',
+                      'post_status' => 'publish',
                       'orderby' =>'date',
                       'order' => 'DESC'
                   );
@@ -591,6 +595,7 @@ $term_product = get_theme_mod('slide_woo_product','recent');
             'hide_empty' => 1,
              'posts_per_page' => $posts_per_page,        
                       'post_type' => 'product',
+                      'post_status' => 'publish',
                       'orderby' => 'date',
                       'order' => 'DESC'
         );
@@ -660,6 +665,7 @@ function shopline_recent_contegory_product(){
   $args = array(
                       'posts_per_page' => $posts_per_page,
                       'post_type' => 'product',
+                      'post_status' => 'publish',
                       'tax_query' => array(
                           array(
                               'taxonomy' => 'product_cat',

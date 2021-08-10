@@ -20,11 +20,13 @@ function jot_shop_shortcode_template($section_name=''){
 }
 function jot_shop_shortcodeid_data($atts){
     $output = '';
+     if (class_exists('WooCommerce')) {
     $pull_quote_atts = shortcode_atts(array(
         'section' => ''
             ), $atts);
     $section_name = wp_kses_post($pull_quote_atts['section']);
   	$output = jot_shop_shortcode_template($section_name);
+  }
     return $output;
 }
 add_shortcode('jot-shop', 'jot_shop_shortcodeid_data');

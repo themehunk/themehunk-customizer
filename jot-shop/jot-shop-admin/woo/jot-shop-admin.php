@@ -387,6 +387,33 @@ function jot_shop_product_filter_loop($args){
     wp_reset_postdata();
 }
 }
+if(!function_exists('jot_shop_post_query')){
+/*****************************/
+// Product show function
+/****************************/
+function jot_shop_post_query($query){
+
+       $args = array(
+            'orderby' => esc_html($query['orderby']),
+            'order' => 'DESC',
+            'ignore_sticky_posts' => esc_html($query['sticky']),
+            'post_type' => 'post',
+            'posts_per_page' => esc_html($query['count']), 
+            'cat' => esc_html($query['cate']),
+            'meta_key'     => '_thumbnail_id',
+           
+        );
+
+       if($query['thumbnail']){
+          $args['meta_key'] = '_thumbnail_id';
+       }
+
+            $return = new WP_Query($args);
+
+            return $return;
+}
+
+}
 if(!function_exists('jot_shop_product_list_categories_slider')){
   function jot_shop_product_list_categories_slider( $args = '' ){
     $term = get_theme_mod('jot_shop_include_category_slider','0');

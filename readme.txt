@@ -30,10 +30,11 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 
 == Changelog ==
 = 2.5.3 =
-* Ribbon section video issue resolved.
-* About me widget added.
-* Single-post widget Added.
-* Th-variation swatches issue resolved.
+* Jotshop - Ribbon section video issue resolved.
+* Jotshop - About me widget added.
+* Jotshop - Single-post widget Added.
+* Jotshop - Th-variation swatches issue resolved.
+* Jotshop - Import demo files added.
 
 = 2.5.2 =
 * Jot-Shop Issue Fixed.

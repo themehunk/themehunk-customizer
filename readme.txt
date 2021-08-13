@@ -4,7 +4,7 @@ Author URI: : https://www.themehunk.com/
 Tags: themehunk, customizer, oneline-lite,Testimonial,Team, service
 Requires at least: 5.5
 Tested up to: 5.8
-Stable tag: 2.5.1
+Stable tag: 2.5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,16 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 == Screenshots ==
 
 == Changelog ==
+= 2.5.3 =
+* Jotshop - Ribbon section video issue resolved.
+* Jotshop - About me widget added.
+* Jotshop - Single-post widget Added.
+* Jotshop - Th-variation swatches issue resolved.
+* Jotshop - Import demo files added.
+
+= 2.5.2 =
+* Jot-Shop Issue Fixed.
+
 = 2.5.1 =
 * Jot-Shop Theme Added.
 

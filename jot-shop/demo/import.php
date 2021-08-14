@@ -71,9 +71,12 @@ function jot_shop_after_import(){
     }
   }
 
-  if ( $front_page_id && $blog_page_id ) {
-    update_option( 'show_on_front', 'page' );
+  if ( $front_page_id ) {
     update_option( 'page_on_front', $front_page_id );
+    update_option( 'show_on_front', 'page' );
+
+  }
+  if ($blog_page_id) {
     update_option( 'page_for_posts', $blog_page_id );
   }
 

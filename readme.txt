@@ -36,6 +36,7 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 * Jotshop - Th-variation swatches issue resolved.
 * Jotshop - Import demo files added.
 * Jotshop - Import link changed.
+* Jotshop - Import demo homepage set issue resolved.
 
 = 2.5.2 =
 * Jot-Shop Issue Fixed.

@@ -3,32 +3,33 @@ add_filter( 'pt-ocdi/disable_pt_branding', '__return_true' );
 add_filter( 'pt-ocdi/regenerate_thumbnails_in_content_import', '__return_false' );
 
 function jot_shop_import_files(){
+  $file_url = 'https://themehunk.com/wp-content/uploads/sites-demo/jotshop/';
   return apply_filters(
     'jot_shop_demo_site', array(
     array(
         'import_file_name' => esc_html__('Jot Shop Default','jot-shop'),
-        'import_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/jotshop/default/blog.xml'),
-        'import_customizer_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/jotshop/default/customizer.dat'),
-        'import_widget_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/jotshop/default/widgets.wie'),
-        'import_preview_image_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/jotshop/default/thumb.png'),
+        'import_file_url'=> esc_url($file_url.'default/blog.xml'),
+        'import_customizer_file_url'=> esc_url($file_url.'default/customizer.dat'),
+        'import_widget_file_url'=> esc_url($file_url.'default/widgets.wie'),
+        'import_preview_image_url'=> esc_url($file_url.'default/thumb.png'),
         'preview_url'=> esc_url('https://wpthemes.themehunk.com/jotshop/'),
         'import_notice' => __( 'Before importing the demo data, Install & Activate the recommended plugins.', 'jot-shop' ),
        ),
     array(
         'import_file_name' => esc_html__('Jot Shop Groceries','jot-shop'),
-        'import_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/jotshop/groceries/blog.xml'),
-        'import_customizer_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/jotshop/groceries/customizer.dat'),
-        'import_widget_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/jotshop/groceries/widgets.wie'),
-        'import_preview_image_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/jotshop/groceries/thumb.png'),
+        'import_file_url'=> esc_url($file_url.'groceries/blog.xml'),
+        'import_customizer_file_url'=> esc_url($file_url.'groceries/customizer.dat'),
+        'import_widget_file_url'=> esc_url($file_url.'groceries/widgets.wie'),
+        'import_preview_image_url'=> esc_url($file_url.'groceries/thumb.png'),
         'preview_url'=> esc_url('https://wpthemes.themehunk.com/groceries-shop/'),
         'import_notice' => __( 'Before importing the demo data, Install & Activate the recommended plugins.', 'jot-shop' ),
        ),
     array(
         'import_file_name' => esc_html__('Jot Shop Electro','jot-shop'),
-        'import_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/jotshop/electro/blog.xml'),
-        'import_customizer_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/jotshop/electro/customizer.dat'),
-        'import_widget_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/jotshop/electro/widgets.wie'),
-        'import_preview_image_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/jotshop/electro/thumb.png'),
+        'import_file_url'=> esc_url($file_url.'electro/blog.xml'),
+        'import_customizer_file_url'=> esc_url($file_url.'electro/customizer.dat'),
+        'import_widget_file_url'=> esc_url($file_url.'electro/widgets.wie'),
+        'import_preview_image_url'=> esc_url($file_url.'electro/thumb.png'),
         'preview_url'=> esc_url('https://wpthemes.themehunk.com/electro-shop/'),
         'import_notice' => __( 'Before importing the demo data, Install & Activate the recommended plugins.', 'jot-shop' ),
        ),
@@ -70,9 +71,12 @@ function jot_shop_after_import(){
     }
   }
 
-  if ( $front_page_id && $blog_page_id ) {
-    update_option( 'show_on_front', 'page' );
+  if ( $front_page_id ) {
     update_option( 'page_on_front', $front_page_id );
+    update_option( 'show_on_front', 'page' );
+
+  }
+  if ($blog_page_id) {
     update_option( 'page_for_posts', $blog_page_id );
   }
 

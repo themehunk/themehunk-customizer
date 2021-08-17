@@ -33,6 +33,7 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 = 2.5.4 =
 * Big-store - Yith plugin added in big-store theme.
 * Big-store - Yith plugin make default and make wpc plugin second priority.
+* Big-store - Draft publish issue fixed.
 
 = 2.5.3 =
 * Jotshop - Ribbon section video issue resolved.

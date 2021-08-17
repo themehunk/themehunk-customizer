@@ -446,6 +446,7 @@ if ( ! function_exists( 'big_store_product_list_categories_slider' ) ) {
 }
 
 // cLASS To fetch cat image
+if(! class_exists('Big_Store_List_Category_Images')){
 class Big_Store_List_Category_Images extends Walker_Category {
     function start_el( &$output, $category, $depth = 0, $args = array(), $id = 0 ) {
         $saved_data =  get_term_meta( $category->term_id, 'thumbnail_id', true );
@@ -489,4 +490,5 @@ class Big_Store_List_Category_Images extends Walker_Category {
             $output .= "\t$link<br />\n";
         }
     }
+}
 }

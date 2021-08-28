@@ -7,7 +7,7 @@ if(!function_exists('big_store_product_query')){
     function big_store_product_query($term_id,$prdct_optn){
    $limit_product = get_theme_mod('big_store_prd_shw_no','20');
     // product filter
-    $args = array('limit' => $limit_product, 'visibility' => 'catalog');
+    $args = array('limit' => $limit_product, 'visibility' => 'catalog', 'status' => 'publish');
     if($term_id){
         $term_args = array('hide_empty' => 1,'slug'    => $term_id);
         $product_categories = get_terms( 'product_cat', $term_args);
@@ -28,6 +28,7 @@ if(!function_exists('big_store_product_query')){
 }
 
 
+if(!function_exists('big_store_product_slide_list_loop')){
 function big_store_product_slide_list_loop($term_id,$prdct_optn){
     $args = big_store_product_query($term_id,$prdct_optn);
     $products = wc_get_products( $args );
@@ -35,7 +36,7 @@ function big_store_product_slide_list_loop($term_id,$prdct_optn){
     foreach ($products as $product) {
       $pid =  $product->get_id();
       ?>
-        <div <?php post_class('product'); ?>>
+        <div <?php post_class('product',$pid); ?>>
           <div class="thunk-list">
                <div class="thunk-product-image">
                 <a href="<?php echo get_permalink($pid); ?>" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
@@ -60,6 +61,7 @@ function big_store_product_slide_list_loop($term_id,$prdct_optn){
     }
     wp_reset_query();
  }
+}
 
 /**********************************************
 //Funtion Category list show
@@ -153,13 +155,14 @@ if( $iPod || $iPhone ){
 /********************************/
 if(!function_exists('big_store_product_cat_filter_default_loop')){
 function big_store_product_cat_filter_default_loop($term_id,$prdct_optn){
+    global $product;
     $args = big_store_product_query($term_id,$prdct_optn);
     $products = wc_get_products( $args );
     if (!empty($products)) {
     foreach ($products as $product) {
       $pid =  $product->get_id();
       ?>
-        <div <?php post_class('product'); ?>>
+        <div <?php post_class('product', $pid); ?>>
           <div class="thunk-product-wrap">
           <div class="thunk-product">
                <div class="thunk-product-image">
@@ -202,6 +205,9 @@ function big_store_product_cat_filter_default_loop($term_id,$prdct_optn){
                </div>
                <div class="thunk-product-content">
                    <?php 
+                      if (class_exists('TH_Variation_Swatches_Pro')) {
+                          thvs_loop_available_attributes($product);
+                        } 
                         $rat_product = wc_get_product($pid);
                         $rating_count =  $rat_product->get_rating_count();
                         $average =  $rat_product->get_average_rating();
@@ -213,12 +219,10 @@ function big_store_product_cat_filter_default_loop($term_id,$prdct_optn){
                <div class="thunk-product-hover">     
                     <?php 
                       echo big_store_add_to_cart_url($product);
-                      if( class_exists( 'YITH_WCWL' ) && (! class_exists( 'WPCleverWoosw' ))){
-                      echo big_store_whish_list($pid);
-                      }
-                      if( ( class_exists( 'WPCleverWoosw' ))){
-                      echo do_shortcode('[woosw id='.$pid.']');
-                      }
+
+                      if ( function_exists('big_store_whish_list_both')){
+                      big_store_whish_list_both($pid);
+                    }
                       if(get_theme_mod( 'big_store_woo_quickview_enable', true )){
                   ?>
                    <div class="thunk-quickview">
@@ -228,13 +232,13 @@ function big_store_product_cat_filter_default_loop($term_id,$prdct_optn){
                                    </a>
                                 </span>
                     </div>
-                  <?php } 
-                    if( ( class_exists( 'YITH_Woocompare' )) && (! class_exists( 'WPCleverWooscp' ))){
-                  echo big_store_add_to_compare_fltr($pid);
+                  <?php }
+
+
+                    if ( function_exists('big_store_add_to_compare_fltr_both')){
+                  big_store_add_to_compare_fltr_both($pid);
                 }
-                  if( ( class_exists( 'WPCleverWooscp' ))){
-                    echo do_shortcode('[wooscp id='.$pid.']');
-                  }
+
                   ?>
                    
             </div>
@@ -252,6 +256,7 @@ function big_store_product_cat_filter_default_loop($term_id,$prdct_optn){
 
 if(!function_exists('big_store_product_filter_loop')){
 function big_store_product_filter_loop($args){  
+  global $product;
    $products = wc_get_products( $args );
     if (!empty($products)) {
     foreach ($products as $product) {
@@ -316,6 +321,9 @@ function big_store_product_filter_loop($args){
                </div>
                <div class="thunk-product-content">
                    <?php 
+                     if (class_exists('TH_Variation_Swatches_Pro')) {
+                          thvs_loop_available_attributes($product);
+                        } 
                         $rat_product = wc_get_product($pid);
                         $rating_count =  $rat_product->get_rating_count();
                         $average =  $rat_product->get_average_rating();
@@ -327,12 +335,11 @@ function big_store_product_filter_loop($args){
                <div class="thunk-product-hover">     
                     <?php 
                       echo big_store_add_to_cart_url($product);
-                      if( class_exists( 'YITH_WCWL' ) && (! class_exists( 'WPCleverWoosw' ))){
-                      echo big_store_whish_list($pid);
-                      }
-                      if( ( class_exists( 'WPCleverWoosw' ))){
-                      echo do_shortcode('[woosw id='.$pid.']');
-                      }
+                       if ( function_exists('big_store_whish_list_both')){
+                      big_store_whish_list_both($pid);
+                    }
+
+
                       if(get_theme_mod( 'big_store_woo_quickview_enable', true )){
                   ?>
                    <div class="thunk-quickview">
@@ -342,13 +349,12 @@ function big_store_product_filter_loop($args){
                                    </a>
                                 </span>
                     </div>
-                  <?php } 
-                    if( ( class_exists( 'YITH_Woocompare' )) && (! class_exists( 'WPCleverWooscp' ))){
-                  echo big_store_add_to_compare_fltr($pid);
+                  <?php }
+
+                  if ( function_exists('big_store_add_to_compare_fltr_both')){
+                  big_store_add_to_compare_fltr_both($pid);
                 }
-                  if( ( class_exists( 'WPCleverWooscp' ))){
-                    echo do_shortcode('[wooscp id='.$pid.']');
-                  }
+
                   ?>
                    
             </div>
@@ -372,7 +378,7 @@ function big_store_product_list_filter_loop($args){
     foreach ($products as $product) {
       $pid =  $product->get_id();
       ?>
-        <div <?php post_class(); ?>>
+        <div <?php post_class('product',$pid); ?>>
           <div class="thunk-list">
                <div class="thunk-product-image">
                 <a href="<?php echo get_permalink($pid); ?>" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
@@ -440,6 +446,7 @@ if ( ! function_exists( 'big_store_product_list_categories_slider' ) ) {
 }
 
 // cLASS To fetch cat image
+if(! class_exists('Big_Store_List_Category_Images')){
 class Big_Store_List_Category_Images extends Walker_Category {
     function start_el( &$output, $category, $depth = 0, $args = array(), $id = 0 ) {
         $saved_data =  get_term_meta( $category->term_id, 'thumbnail_id', true );
@@ -483,4 +490,5 @@ class Big_Store_List_Category_Images extends Walker_Category {
             $output .= "\t$link<br />\n";
         }
     }
+}
 }

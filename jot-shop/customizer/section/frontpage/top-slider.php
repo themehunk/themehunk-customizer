@@ -39,13 +39,6 @@ $wp_customize->add_control(
                             'url' => SLIDER_LAYOUT_4,
                         ),
 
-                        'slide-layout-6' => array(
-                            'url' => SLIDER_LAYOUT_6,
-                        ),
-                        
-                        'slide-layout-9' => array(
-                            'url' => JOT_SHOP_SLIDER_LAYOUT_9,
-                        ),
                              
                     ),
                 )

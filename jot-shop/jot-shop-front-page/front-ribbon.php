@@ -22,7 +22,7 @@ $jot_shop_youtube_video_link = get_theme_mod('jot_shop_youtube_video_link',''); 
     <?php if (get_theme_mod('jot_shop_enable_youtube_video','') == 1) { ?>
        <?php if ($jot_shop_youtube_video_link != '') { ?>
 <div class="th-youtube-video">
-<iframe class="" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="<?php echo esc_url($jot_shop_youtube_video_link); ?>?autoplay=1&amp;controls=0&amp;rel=0&amp;playsinline=1&amp;enablejsapi=1"></iframe>
+<iframe class="" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="<?php echo esc_url($jot_shop_youtube_video_link); ?>?autoplay=1&amp;controls=0&amp;rel=0&amp;playsinline=1&amp;mute=1&amp;enablejsapi=1"></iframe>
 </div> 
 <?php } 
     }

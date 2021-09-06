@@ -2,7 +2,7 @@
 /*
   Plugin Name: ThemeHunk Customizer
   Description: With the help of ThemeHunk unlimited addon you can add unlimited number of columns for services, Testimonial, and Team with color options for each.
-  Version: 2.5.4
+  Version: 2.5.5
   Author: ThemeHunk
   Text Domain: themehunk-customizer
   Author URI: http://www.themehunk.com/

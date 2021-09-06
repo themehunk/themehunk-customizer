@@ -55,7 +55,6 @@ $wp_customize->add_control( new Jot_Shop_Customizer_Buttonset_Control( $wp_custo
     $wp_customize->add_setting( 'jot_shop_ribbon_bg_background_position', array(
         'default' => 'center center',
         'sanitize_callback' => 'sanitize_text_field',
-        'transport'         => 'postMessage',
     ) );
     // Registers example_background control
     $wp_customize->add_control(

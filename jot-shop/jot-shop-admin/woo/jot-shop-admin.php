@@ -235,8 +235,8 @@ function jot_shop_product_cat_filter_default_loop($term_id,$prdct_optn){
                                 </span>
                     </div>
                   <?php } 
-                          if( ( class_exists( 'WPCleverWooscp' ))){
-                    echo do_shortcode('[wooscp id='.$pid.']');
+                          if( ( class_exists( 'WPCleverWoosc' ))){
+                    jot_shop_wpc_compare($pid);
                   }
                     if( ( class_exists( 'YITH_Woocompare' ))){
                   echo jot_shop_add_to_compare_fltr($pid);
@@ -245,7 +245,7 @@ function jot_shop_product_cat_filter_default_loop($term_id,$prdct_optn){
                       jot_shop_whish_list($pid);
                     }
                       if( ( class_exists( 'WPCleverWoosw' ))){
-                      echo do_shortcode('[woosw id='.$pid.']');
+                      jot_shop_wpc_wish_list($pid);
                     }
                   
                   ?>
@@ -361,8 +361,8 @@ function jot_shop_product_filter_loop($args){
                                 </span>
                     </div>
                   <?php } 
-                          if( ( class_exists( 'WPCleverWooscp' ))){
-                    echo do_shortcode('[wooscp id='.$pid.']');
+                          if( ( class_exists( 'WPCleverWoosc' ))){
+                   jot_shop_wpc_wish_compare($pid);
                   }
                     if( ( class_exists( 'YITH_Woocompare' ))){
                   echo jot_shop_add_to_compare_fltr($pid);
@@ -371,7 +371,7 @@ function jot_shop_product_filter_loop($args){
                       echo jot_shop_whish_list($pid);
                     }
                       if( ( class_exists( 'WPCleverWoosw' ))){
-                      echo do_shortcode('[woosw id='.$pid.']');
+                      jot_shop_wpc_wish_list($pid);
                     }
                   
                   ?>
@@ -495,5 +495,15 @@ class Jot_Shop_List_Category_Images extends Walker_Category {
             $output .= "\t$link<br />\n";
         }
     }
+}
+}
+if (!function_exists('jot_shop_wpc_wish_list')) {
+function jot_shop_wpc_wish_list($pid=''){
+  echo do_shortcode('[woosw id='.$pid.']');
+}
+}
+if (!function_exists('jot_shop_wpc_compare')) {
+function jot_shop_wpc_compare($pid=''){
+  echo do_shortcode('[woosc id='.$pid.']');
 }
 }

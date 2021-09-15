@@ -1528,7 +1528,7 @@ $wp_customize->add_setting('cnt_ad_txt_color',
             array(
         'section'  => 'section_addnew_',
         'type'        => 'custom_message',
-        'description' => wp_kses_post( 'Check out <a target="_blank" href="//www.themehunk.com/product/oneline-single-page-wordpress-theme/">OnelinePro</a> for full control over <strong>section ordering</strong>!','oneline-lite' )
+        'description' => wp_kses_post( 'Check out <a target="_blank" href="//www.themehunk.com/product/oneline-single-page-wordpress-theme/">OnelinePro</a> for <strong>New Custom Section</strong>!','oneline-lite' )
     )));  
 
  // selective-refresh option added

@@ -30,6 +30,9 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 
 == Changelog ==
 
+= 2.5.8 =
+* shopline -  th advance product search plugin added.
+
 = 2.5.7 =
 * oneline-lite -  add new section text issue fixed.
 

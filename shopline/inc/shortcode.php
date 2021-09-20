@@ -852,25 +852,17 @@ if(is_plugin_active('yith-woocommerce-wishlist/init.php')){?>
                     <div class="centered">
                       <i id="close-btn" class="fa fa-times fa-2x"></i>
                        <div id='search-box' class="wow thmkfadeInDown" data-wow-duration="1s">
-                       <form action='<?php echo esc_url( home_url( '/'  ) ); ?>' id='search-form' class="woocommerce-product-search" method='get' target='_top'>
-<?php 
-if ( class_exists( 'WooCommerce' ) ):
-$args = array(
-   'taxonomy' => 'product_cat',
-   'name' => 'product_cat',
-   'value_field' => 'slug',
-   'class' => 'something'
-);
-wp_dropdown_categories( $args );
-endif;
-?>
-                       <input id='search-text' name='s' placeholder='<?php echo get_theme_mod('search_box_text',esc_attr_x( 'Search&hellip;', 'placeholder', 'woocommerce' )); ?>' value='<?php echo get_search_query(); ?>' type='text' title='<?php echo esc_attr_x( 'Search for:', 'label', 'woocommerce' ); ?>' />
-                        <button id='search-button' value="<?php echo esc_attr_x( '', 'submit button', 'woocommerce' ); ?>" type='submit'>                     
-                          <i id="search-btn1" class="fa fa-search"></i>
-                        </button>
-                        <input type="hidden" name="post_type" value="product" />
+
+                      <?php  if( class_exists('TH_Advance_Product_Search')){
+
+                          echo do_shortcode('[th-aps]');
                         
-                       </form>
+                          }else{
+                            
+                            get_product_search_form();
+                          
+                        } ?>
+                    
                    </div>
                   </div>
                 </div>

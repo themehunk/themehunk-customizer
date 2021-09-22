@@ -855,7 +855,7 @@ $buttontext  = ($buttontext!='')?$buttontext:"Get Link Page";
                       echo do_shortcode('[th-aps]');
                       } else {
                       $url = admin_url('themes.php?page=th_shopline&tab=actions_required');
-                      echo '<a href="https'.$url.'" target="_blank" class="plugin-active-msg">'.__('Please activate th advance product search plugin','shopline').'</a>';
+                      echo '<a href="'.$url.'" target="_blank" class="plugin-active-msg">'.__('Please activate "th advance product search plugin"','shopline').'</a>';
                       } ?>
                       
                     </div>

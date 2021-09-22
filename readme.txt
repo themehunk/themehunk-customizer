@@ -4,7 +4,7 @@ Author URI: : https://www.themehunk.com/
 Tags: themehunk, customizer, oneline-lite,Testimonial,Team, service
 Requires at least: 5.5
 Tested up to: 5.8.1
-Stable tag: 2.5.8
+Stable tag: 2.5.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,10 +30,8 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 
 == Changelog ==
 
-= 2.5.8 =
-* shopline -  th advance product search plugin added.
-
 = 2.5.7 =
+* shopline -  th advance product search plugin added.
 * oneline-lite -  add new section text issue fixed.
 
 = 2.5.6 =

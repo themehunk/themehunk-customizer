@@ -224,8 +224,9 @@ function big_store_product_cat_filter_default_loop($term_id,$prdct_optn){
                       big_store_whish_list_both($pid);
                     }
                       if(get_theme_mod( 'big_store_woo_quickview_enable', true )){
+                        $big_store_quickview_tooltip = esc_html(get_theme_mod( 'big_store_quickview_tooltip_txt' ));
                   ?>
-                   <div class="thunk-quickview">
+                   <div class="thunk-quickview" th-tooltip="<?php echo $big_store_quickview_tooltip; ?>">
                                <span class="quik-view">
                                    <a href="#" class="opn-quick-view-text" data-product_id="<?php echo esc_attr($pid); ?>">
                                       <span><?php _e('Quick View','big-store');?></span>
@@ -341,8 +342,10 @@ function big_store_product_filter_loop($args){
 
 
                       if(get_theme_mod( 'big_store_woo_quickview_enable', true )){
+                        $big_store_quickview_tooltip = esc_html(get_theme_mod( 'big_store_quickview_tooltip_txt' ));
                   ?>
-                   <div class="thunk-quickview">
+
+                   <div class="thunk-quickview" th-tooltip="<?php echo $big_store_quickview_tooltip; ?>">
                                <span class="quik-view">
                                    <a href="#" class="opn-quick-view-text" data-product_id="<?php echo esc_attr($pid); ?>">
                                       <span><?php _e('Quick View','big-store');?></span>

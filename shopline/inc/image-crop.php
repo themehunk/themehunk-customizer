@@ -220,7 +220,7 @@ if ((function_exists('is_multisite') && is_multisite()) || ($single_site = true)
  * @return type 
  */
 
-function th_thumbnail_resize($attach_id = null, $img_url = null, $width, $height, $crop = false, $jpeg_quality = 90) {
+/*function th_thumbnail_resize($attach_id = null, $img_url = null, $width, $height, $crop = false, $jpeg_quality = 90) {
     // this is an attachment, so we have the ID
     if ($attach_id) {
         $image_src = wp_get_attachment_image_src($attach_id, 'full');
@@ -302,6 +302,6 @@ function th_thumbnail_resize($attach_id = null, $img_url = null, $width, $height
         'height' => $image_src[2]
     );
     return $vt_image;
-}
+} */
 
 ?>

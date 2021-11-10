@@ -343,17 +343,6 @@ $wp_customize->add_control( 'jot_shop_lay3_3url', array(
         'section'  => 'jot_shop_top_slider_section',
          'type'    => 'text',
 ));
-$wp_customize->add_setting('jot_shop_lay3_heading_txt', array(
-        'default' =>__('Market','jot-shop'),
-        'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'jot_shop_sanitize_text',
-         'transport'         => 'postMessage',
-));
-$wp_customize->add_control( 'jot_shop_lay3_heading_txt', array(
-        'label'    => __('category Heading', 'jot-shop'),
-        'section'  => 'jot_shop_top_slider_section',
-         'type'    => 'text',
-));
 // Include category
 if (class_exists( 'Jot_Shop_Customize_Control_Checkbox_Multiple')) {
    $wp_customize->add_setting('jot_shop_include_category_slider', array(
@@ -422,19 +411,6 @@ if (class_exists( 'Jot_Shop_Customize_Control_Checkbox_Multiple')) {
             )
         )
     );
-
-$wp_customize->add_setting('jot_shop_lay3_bg_img_ovrly', array(
-        'default'        => '#eaeaea',
-        'capability'     => 'edit_theme_options',
-        'transport'         => 'postMessage',
-        'sanitize_callback' => 'jot_shop_sanitize_color'
-    ));
-$wp_customize->add_control( 
-    new  Jot_Shop_Customizer_Color_Control($wp_customize,'jot_shop_lay3_bg_img_ovrly', array(
-        'label'      => __('Slider Image Overlay Color', 'jot-shop' ),
-        'section'    => 'jot_shop_top_slider_section',
-        'settings'   => 'jot_shop_lay3_bg_img_ovrly',
-    ) ) ); 
 $wp_customize->add_setting('jot_shop_top_slider_doc', array(
     'sanitize_callback' => 'jot_shop_sanitize_text',
     ));

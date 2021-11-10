@@ -30,13 +30,13 @@ $wp_customize->add_control(
                             'url' => JOT_SHOP_SLIDER_LAYOUT_1,
                         ),
                         'slide-layout-2'   => array(
-                            'url' =>SLIDER_LAYOUT_2,
+                            'url' =>JOT_SHOP_SLIDER_LAYOUT_2,
                         ),
                         'slide-layout-3' => array(
-                            'url' => JOT_SHOP_SLIDER_LAYOUT_2,
+                            'url' => JOT_SHOP_SLIDER_LAYOUT_3,
                         ),
                         'slide-layout-4' => array(
-                            'url' => SLIDER_LAYOUT_4,
+                            'url' => JOT_SHOP_SLIDER_LAYOUT_4,
                         ),
 
                              

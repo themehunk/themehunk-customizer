@@ -2,7 +2,7 @@
 /*
   Plugin Name: ThemeHunk Customizer
   Description: With the help of ThemeHunk unlimited addon you can add unlimited number of columns for services, Testimonial, and Team with color options for each.
-  Version: 2.5.7
+  Version: 2.5.8
   Author: ThemeHunk
   Text Domain: themehunk-customizer
   Author URI: http://www.themehunk.com/
@@ -35,9 +35,15 @@ include_once( plugin_dir_path(__FILE__) . 'big-store/demo/import.php' );
 include_once( plugin_dir_path(__FILE__) . 'm-shop/demo/import.php' );	
 }
 elseif(in_array("jot-shop", $theme)){
+register_activation_hook( __FILE__, 'jot_shop_pro_deactivate' );
 include_once( plugin_dir_path(__FILE__) . 'jot-shop/demo/import.php' );	
 }
 
+function jot_shop_pro_deactivate() {
+       require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+       deactivate_plugins( plugin_basename('jot-shop-pro/jot-shop-pro.php' ) );
+       
+    }
 
 function themehunk_customizer_load_file(){
 	include_once(plugin_dir_path(__FILE__) . 'themehunk/customizer-font-selector/class/class-oneline-font-selector.php' );

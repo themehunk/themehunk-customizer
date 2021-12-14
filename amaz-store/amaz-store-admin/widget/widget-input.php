@@ -1,4 +1,5 @@
 <?php
+if (!class_exists('THunkWidgetHtml')) {
 class THunkWidgetHtml{
 	function radioBox($thi,$inst,$custarr){
 		$checked ='';
@@ -28,4 +29,5 @@ class THunkWidgetHtml{
 	        </p>
 	    <?php
 	}
+}
 }

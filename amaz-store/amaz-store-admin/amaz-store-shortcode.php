@@ -4,11 +4,11 @@ function amaz_store_shortcode_template($section_name=''){
 	switch ($section_name){
 	case 'amaz_store_show_frontpage':
 	$section = array(
-                                            'front-banner',
                                             'front-tabproduct',
+                                            'front-ribbon',
                                             'front-categoryslider',
                                             'front-productslider',
-                                            'front-ribbon',
+                                            'front-banner',   
                                             'front-productlist',                  
                                             'front-highlight',                                                   
                                                                                                                 

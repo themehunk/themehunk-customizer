@@ -51,7 +51,7 @@ $wp_customize->add_control( new amaz_store_Customizer_Buttonset_Control( $wp_cus
                 'section'               => 'amaz_store_ribbon',
                 'settings'              => 'amaz_store_ribbon_background',
                 'choices'               => array(
-                    'image'             => esc_html__( 'Image', 'amaz-store' ),
+                    'image'             => esc_html__( 'Image (Pro)', 'amaz-store' ),
                     'video'             => esc_html__( 'Video (Pro)', 'amaz-store' ), 
                 ),
         ) ) );
@@ -249,4 +249,19 @@ $wp_customize->add_control(new amaz_store_Misc_Control( $wp_customize, 'amaz-typ
         'url'         => '#',
         'label' => esc_html__( 'Get Pro', 'amaz-store' ),
         'priority'   =>100,
+    )));
+
+/****************/
+// Color Option For Pro
+/****************/
+$wp_customize->add_setting('amaz_store_color_optn_pro', array(
+    'sanitize_callback' => 'amaz_store_sanitize_text',
+    ));
+$wp_customize->add_control(new amaz_store_Misc_Control( $wp_customize, 'amaz_store_color_optn_pro',
+         array(
+        'section'     => 'amaz-store-gloabal-color',
+        'type'        => 'pro-link',
+        'url'         => '#',
+        'label' => esc_html__( 'To get more color options Go to Pro', 'amaz-store' ),
+        'priority'   =>98,
     )));

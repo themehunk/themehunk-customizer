@@ -21,7 +21,7 @@ require THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . 'amaz-store/customizer/section/frontp
  $wp_customize->add_setting('amaz_store_prd_shw_no', array(
             'default'           =>'20',
             'capability'        => 'edit_theme_options',
-            'sanitize_callback' =>'amaz_store_sanitize_number',
+            'sanitize_callback' =>'absint',
         )
     );
     $wp_customize->add_control('amaz_store_prd_shw_no', array(

@@ -3,36 +3,19 @@ add_filter( 'pt-ocdi/disable_pt_branding', '__return_true' );
 add_filter( 'pt-ocdi/regenerate_thumbnails_in_content_import', '__return_false' );
 
 function amaz_store_import_files(){
-  $file_url = 'https://themehunk.com/wp-content/uploads/sites-demo/jotshop/';
+  $file_url = 'https://themehunk.com/wp-content/uploads/sites-demo/amaz-store/';
   return apply_filters(
     'amaz_store_demo_site', array(
     array(
-        'import_file_name' => esc_html__('Amaz Store Default','amaz-store'),
-        'import_file_url'=> esc_url($file_url.'default/blog.xml'),
-        'import_customizer_file_url'=> esc_url($file_url.'default/customizer.dat'),
-        'import_widget_file_url'=> esc_url($file_url.'default/widgets.wie'),
-        'import_preview_image_url'=> esc_url($file_url.'default/thumb.png'),
-        'preview_url'=> esc_url('https://wpthemes.themehunk.com/jotshop/'),
+        'import_file_name' => esc_html__('Amaz Store Market','amaz-store'),
+        'import_file_url'=> esc_url($file_url.'blog.xml'),
+        'import_customizer_file_url'=> esc_url($file_url.'customizer.dat'),
+        'import_widget_file_url'=> esc_url($file_url.'widgets.wie'),
+        'import_preview_image_url'=> esc_url($file_url.'thumb.png'),
+        'preview_url'=> esc_url('https://themehunk.com/product/amaz-store/'),
         'import_notice' => __( 'Before importing the demo data, Install & Activate the recommended plugins.', 'amaz-store' ),
        ),
-    array(
-        'import_file_name' => esc_html__('Amaz Store Groceries','amaz-store'),
-        'import_file_url'=> esc_url($file_url.'groceries/blog.xml'),
-        'import_customizer_file_url'=> esc_url($file_url.'groceries/customizer.dat'),
-        'import_widget_file_url'=> esc_url($file_url.'groceries/widgets.wie'),
-        'import_preview_image_url'=> esc_url($file_url.'groceries/thumb.png'),
-        'preview_url'=> esc_url('https://wpthemes.themehunk.com/groceries-shop/'),
-        'import_notice' => __( 'Before importing the demo data, Install & Activate the recommended plugins.', 'amaz-store' ),
-       ),
-    array(
-        'import_file_name' => esc_html__('Amaz Store Electro','amaz-store'),
-        'import_file_url'=> esc_url($file_url.'electro/blog.xml'),
-        'import_customizer_file_url'=> esc_url($file_url.'electro/customizer.dat'),
-        'import_widget_file_url'=> esc_url($file_url.'electro/widgets.wie'),
-        'import_preview_image_url'=> esc_url($file_url.'electro/thumb.png'),
-        'preview_url'=> esc_url('https://wpthemes.themehunk.com/electro-shop/'),
-        'import_notice' => __( 'Before importing the demo data, Install & Activate the recommended plugins.', 'amaz-store' ),
-       ),
+   
      )
   );
 }

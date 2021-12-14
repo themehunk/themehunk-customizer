@@ -22,44 +22,6 @@ if(!function_exists('amaz_store_product_query')){
     }
 }
 
-if(!function_exists('amaz_store_product_slide_list_loop')){
-/********************************/
-//product slider loop
-/********************************/
-function amaz_store_product_slide_list_loop($term_id,$prdct_optn){  
-$args = amaz_store_product_query($term_id,$prdct_optn);
-    $products = wc_get_products( $args );
-    if (!empty($products)) {
-    foreach ($products as $product) {
-      $pid =  $product->get_id();
-      ?>
-        <div <?php post_class(); ?>>
-          <div class="thunk-list">
-               <div class="thunk-product-image">
-                <a href="<?php echo get_permalink($pid); ?>" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
-                  <?php echo get_the_post_thumbnail( $pid, 'woocommerce_thumbnail' ); ?>
-                  </a>
-               </div>
-               <div class="thunk-product-content">
-                  <a href="<?php echo get_permalink($pid); ?>" class="woocommerce-LoopProduct-title woocommerce-loop-product__link"><?php echo $product->get_title(); ?></a>
-                  <?php 
-                        $rat_product = wc_get_product($pid);
-                        $rating_count =  $rat_product->get_rating_count();
-                        $average =  $rat_product->get_average_rating();
-                        echo $rating_count = wc_get_rating_html( $average, $rating_count );
-                       ?>
-                  <div class="price"><?php echo $product->get_price_html(); ?></div>
-               </div>
-          </div>
-        </div>
-   <?php }
-    } else {
-      echo __( 'No products found','amaz-store' );
-    }
-    wp_reset_query();
-}
-}
-
 if(!function_exists('amaz_store_category_tab_list')){
 /**********************************************
 //Funtion Category list show
@@ -158,8 +120,16 @@ function amaz_store_product_cat_filter_default_loop($term_id,$prdct_optn){
     if (!empty($products)) {
     foreach ($products as $product) {
       $pid =  $product->get_id();
+      $attachment_ids = $product->get_gallery_image_ids($pid);
+      if(get_theme_mod( 'amaz_store_woo_product_animation' )=='swap' && count($attachment_ids) > '0'){
+                $swapclass ='product amaz-store-swap-item-hover';
+        }elseif(get_theme_mod( 'amaz_store_woo_product_animation' )=='slide' && count($attachment_ids) > '0'){
+                $swapclass ='product amaz-store-slide-item-hover';
+        }else{
+          $swapclass ='product';
+        }
       ?>
-        <div <?php post_class('product',$pid); ?>>
+        <div <?php post_class($swapclass,$pid); ?>>
           <div class="thunk-product-wrap">
           <div class="thunk-product">
             
@@ -288,7 +258,7 @@ function amaz_store_product_filter_loop($args){
        }
       ?>
         <div <?php post_class($swapclasses,$pid); ?>>
-          <div class="thunk-product-wrap">
+         <div class="thunk-product-wrap">
           <div class="thunk-product">
             
                <div class="thunk-product-image">
@@ -327,18 +297,36 @@ function amaz_store_product_filter_loop($args){
                            }
                   ?>
                   </a>
+                  <div class="thunk-icons-wrap">
+                    <?php  
+                if( class_exists( 'YITH_WCWL' )){
+                      amaz_store_whish_list($pid);
+                    }             
+                if( ( class_exists( 'YITH_Woocompare' ))){
+                  echo amaz_store_add_to_compare_fltr($pid);
+                }
+                if(get_theme_mod( 'amaz_store_woo_quickview_enable', true )){
+                  ?>
+                   <div class="thunk-quickview">
+                               <span class="quik-view">
+                                   <a href="#" class="opn-quick-view-text" data-product_id="<?php echo esc_attr($pid); ?>">
+                                      <span><?php _e('Quick View','amaz-store');?></span>
+                                   </a>
+                                </span>
+                    </div>
+                  <?php } 
+                  
+                  ?>
+                  </div>
 
-                   <?php  echo'<div class="add-to-cart">';
-                echo amaz_store_add_to_cart_url($product); 
-                 echo '</div>';
-                 ?>
+                   
                   
                </div>
 
                <div class="thunk-product-content">
-             <?php   if (class_exists('TH_Variation_Swatches_Pro')) {
+                <?php if (class_exists('TH_Variation_Swatches_Pro')) {
                         thvs_loop_available_attributes($product);
-                      } ?>
+                      }  ?>
                 <h2 class="woocommerce-loop-product__title"><a href="<?php echo get_permalink($pid); ?>" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><?php echo $product->get_title(); ?></a>
                 </h2>
                    <?php 
@@ -349,34 +337,18 @@ function amaz_store_product_filter_loop($args){
                        ?>
                   
                   <div class="price"><?php echo $product->get_price_html(); ?></div> 
+                  <?php
+                  amaz_store_show_stock_shop();
+                  amaz_store_display_specific_shipping_class();
+                  ?>
                </div>
                <div class="thunk-product-hover">     
-                    <?php 
-                      //echo amaz_store_add_to_cart_url($product);
-                      if(get_theme_mod( 'amaz_store_woo_quickview_enable', true )){
-                  ?>
-                   <div class="thunk-quickview">
-                               <span class="quik-view">
-                                   <a href="#" class="opn-quick-view-text" data-product_id="<?php echo esc_attr($pid); ?>">
-                                      <span><?php _e('Quick View','amaz-store');?></span>
-                                   </a>
-                                </span>
-                    </div>
-                  <?php } 
-                          if( ( class_exists( 'WPCleverWoosc' ))){
-                   amaz_store_wpc_wish_compare($pid);
-                  }
-                    if( ( class_exists( 'YITH_Woocompare' ))){
-                  echo amaz_store_add_to_compare_fltr($pid);
-                }
-                if( class_exists( 'YITH_WCWL' )){
-                      echo amaz_store_whish_list($pid);
-                    }
-                      if( ( class_exists( 'WPCleverWoosw' ))){
-                      amaz_store_wpc_wish_list($pid);
-                    }
-                  
-                  ?>
+
+                <?php  echo'<div class="th-add-to-cart">';
+                echo amaz_store_add_to_cart_url($product); 
+                 echo '</div>';
+                 ?>
+                    
                    
             </div>
           </div>
@@ -499,12 +471,12 @@ class amaz_store_List_Category_Images extends Walker_Category {
     }
 }
 }
-if (!function_exists('amaz_store_pro_scripts')) {
-  function amaz_store_pro_scripts(){
+if (!function_exists('amaz_store_localize_pro_scripts')) {
+  function amaz_store_localize_pro_scripts(){
   $localize = array(
                 'limit_repeater'  =>  false,
             );
  wp_localize_script( 'amaz_store_customizer-repeater-script', 'amaz_store_repeater',  $localize );
 }
-add_action( 'customize_controls_enqueue_scripts', 'amaz_store_pro_scripts' );
+add_action( 'customize_controls_enqueue_scripts', 'amaz_store_localize_pro_scripts' );
 }

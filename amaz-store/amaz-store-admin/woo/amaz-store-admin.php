@@ -480,3 +480,35 @@ if (!function_exists('amaz_store_localize_pro_scripts')) {
 }
 add_action( 'customize_controls_enqueue_scripts', 'amaz_store_localize_pro_scripts' );
 }
+/**************************************/
+//Below footer function
+/**************************************/
+if ( ! function_exists( 'amaz_store_below_footer_markup' ) ){  
+function amaz_store_below_footer_markup(){ ?>   
+<div class="below-footer">
+      <div class="container">
+        <div class="below-footer-bar thnk-col-1">
+          <div class="below-footer-col1"> 
+           <p class="footer-copyright">&copy;
+              <?php
+              echo date_i18n(
+                /* translators: Copyright date format, see https://www.php.net/date */
+                _x( 'Y', 'copyright date format', 'amaz-store' )
+              );
+              ?>
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+              <span class="powered-by-wordpress">
+              <span><?php _e( 'Designed by', 'amaz-store' ); ?></span>
+              <a href="<?php echo esc_url( __( 'https://themehunk.com/', 'amaz-store' ) ); ?>" target="_blank">
+                <?php _e( 'Themehunk', 'amaz-store' ); ?>
+              </a>
+            </span>
+            </p><!-- .footer-copyright -->
+           </div>
+        </div>
+      </div>
+</div>
+                  
+<?php }
+}
+add_action( 'amaz_store_below_footer', 'amaz_store_below_footer_markup' );

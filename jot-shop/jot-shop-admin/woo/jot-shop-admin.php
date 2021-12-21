@@ -238,8 +238,8 @@ function jot_shop_product_cat_filter_default_loop($term_id,$prdct_optn){
                           if( ( class_exists( 'WPCleverWoosc' ))){
                     jot_shop_wpc_compare($pid);
                   }
-                    if( ( function_exists( 'th_product_compare_loaded' ))){
-                  echo jot_shop_add_to_thcompare_fltr($pid);
+                    if( ( class_exists( 'th_product_compare' ))){
+                  echo jot_shop_add_to_compare_fltr($pid);
                 }
                 if( class_exists( 'YITH_WCWL' )){
                       jot_shop_whish_list($pid);
@@ -366,8 +366,8 @@ function jot_shop_product_filter_loop($args){
                   }
                    
 
-                if( ( function_exists( 'th_product_compare_loaded' ))){
-                  echo jot_shop_add_to_thcompare_fltr($pid);
+                if( ( class_exists( 'th_product_compare' ))){
+                  echo jot_shop_add_to_compare_fltr($pid);
                 }
 
                 if( class_exists( 'YITH_WCWL' )){

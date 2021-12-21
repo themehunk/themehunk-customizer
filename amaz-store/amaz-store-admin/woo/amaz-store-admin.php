@@ -171,10 +171,10 @@ function amaz_store_product_cat_filter_default_loop($term_id,$prdct_optn){
                   </a>
                   <div class="thunk-icons-wrap">
                     <?php  
-                if( class_exists( 'YITH_WCWL' )){
+                if (function_exists('amaz_store_whish_list')) {
                       amaz_store_whish_list($pid);
                     }             
-                if( ( class_exists( 'YITH_Woocompare' ))){
+                if (function_exists('amaz_store_add_to_compare_fltr')) {
                   echo amaz_store_add_to_compare_fltr($pid);
                 }
                 if(get_theme_mod( 'amaz_store_woo_quickview_enable', true )){
@@ -299,10 +299,10 @@ function amaz_store_product_filter_loop($args){
                   </a>
                   <div class="thunk-icons-wrap">
                     <?php  
-                if( class_exists( 'YITH_WCWL' )){
+                if (function_exists('amaz_store_whish_list')) {
                       amaz_store_whish_list($pid);
                     }             
-                if( ( class_exists( 'YITH_Woocompare' ))){
+                if (function_exists('amaz_store_add_to_compare_fltr')) {
                   echo amaz_store_add_to_compare_fltr($pid);
                 }
                 if(get_theme_mod( 'amaz_store_woo_quickview_enable', true )){

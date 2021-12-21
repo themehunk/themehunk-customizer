@@ -31,6 +31,7 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 == Changelog ==
 = 2.6.2 =
 * Amaz Store - Footer changed.
+* Amaz Store - Whislist and compare function changed.
 
 = 2.6.1 =
 * Amaz Store Banner added.

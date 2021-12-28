@@ -35,6 +35,19 @@ require THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . 'jot-shop/customizer/section/frontpag
             ),
         )
     ); 
+        if (class_exists('Jot_Shop_Misc_Control')) {
+    $wp_customize->add_setting('jot-shop-footer-pro-link', array(
+    'sanitize_callback' => 'jot_shop_sanitize_text',
+    ));
+$wp_customize->add_control(new Jot_Shop_Misc_Control( $wp_customize, 'jot-shop-footer-pro-link',
+            array(
+        'section'     => 'jot-shop-bottom-footer',
+        'type'        => 'pro-link',
+        'url'         => 'https://themehunk.com/product/jot-shop-pro/',
+        'label' => esc_html__( 'Get Pro', 'jot-shop' ),
+        'priority'   =>99,
+    )));
+}
 
 }
 add_action('customize_register','jot_shop_plugin_customize_register');

@@ -4,7 +4,7 @@ Author URI: : https://www.themehunk.com/
 Tags: themehunk, customizer, oneline-lite,Testimonial,Team, service
 Requires at least: 5.5
 Tested up to: 5.8.2
-Stable tag: 2.6.2
+Stable tag: 2.6.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,9 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 == Screenshots ==
 
 == Changelog ==
+= 2.6.3 =
+* Jot Shop - Bottom footer setting added.
+
 = 2.6.2 =
 * Amaz Store - Footer changed.
 * Amaz Store - Whislist and compare function changed.

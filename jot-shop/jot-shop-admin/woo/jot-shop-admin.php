@@ -235,18 +235,7 @@ function jot_shop_product_cat_filter_default_loop($term_id,$prdct_optn){
                                 </span>
                     </div>
                   <?php } 
-                          if( ( class_exists( 'WPCleverWoosc' ))){
-                    jot_shop_wpc_compare($pid);
-                  }
-                    if( ( class_exists( 'YITH_Woocompare' ))){
-                  echo jot_shop_add_to_compare_fltr($pid);
-                }
-                if( class_exists( 'YITH_WCWL' )){
-                      jot_shop_whish_list($pid);
-                    }
-                      if( ( class_exists( 'WPCleverWoosw' ))){
-                      jot_shop_wpc_wish_list($pid);
-                    }
+                          echo jot_shop_compare_wishlist_check();
                   
                   ?>
                    
@@ -361,18 +350,8 @@ function jot_shop_product_filter_loop($args){
                                 </span>
                     </div>
                   <?php } 
-                          if( ( class_exists( 'WPCleverWoosc' ))){
-                   jot_shop_wpc_wish_compare($pid);
-                  }
-                    if( ( class_exists( 'YITH_Woocompare' ))){
-                  echo jot_shop_add_to_compare_fltr($pid);
-                }
-                if( class_exists( 'YITH_WCWL' )){
-                      echo jot_shop_whish_list($pid);
-                    }
-                      if( ( class_exists( 'WPCleverWoosw' ))){
-                      jot_shop_wpc_wish_list($pid);
-                    }
+
+                    echo jot_shop_compare_wishlist_check();
                   
                   ?>
                    

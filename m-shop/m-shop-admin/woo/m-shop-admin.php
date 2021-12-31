@@ -809,4 +809,4 @@ function m_shop_below_footer_markup(){ ?>
                   
 <?php }
 }
-add_action( 'm_shop_below_footer', 'm_shop_below_footer_markup' );
+add_action( 'm_shop_default_below_footer', 'm_shop_below_footer_markup' );

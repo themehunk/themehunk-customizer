@@ -30,8 +30,12 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 
 == Changelog ==
 
+
 = 2.6.5 =
 * M-Shop - Footer below copyright added.
+* Big-Store - Footer below copyright added.
+* Big-Store - Customizer pro and docs button added.
+* Big-store - Below footer option disabled.
 
 = 2.6.4 =
 * M-Shop - Th product compare plugin added.

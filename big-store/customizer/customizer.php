@@ -37,5 +37,25 @@ require THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . 'big-store/customizer/section/frontpa
         )
     ); 
 
+
+
+/*************************/
+/* Footer Section for Pro*/
+/*************************/
+
+$wp_customize->add_setting('big-store-footer-pro-link', array(
+    'sanitize_callback' => 'big_store_store_sanitize_text',
+    ));
+$wp_customize->add_control(new Big_Store_Misc_Control( $wp_customize, 'big-store-footer-pro-link',
+            array(
+        'section'     => 'big-store-bottom-footer',
+        'type'        => 'pro-link',
+        'url'         => 'https://themehunk.com/product/big-store-pro/',
+        'label' => esc_html__( 'Get Pro', 'big-store' ),
+        'priority'   =>100,
+    )));
+
+
 }
 add_action('customize_register','big_store_plugin_customize_register');
+

@@ -32,6 +32,7 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 
 
 = 2.6.5 =
+* M-shop category filter ajax function issue fixed.
 * M-Shop - Footer below copyright added.
 * Big-Store - Footer below copyright added.
 * Big-Store - Customizer pro and docs button added.

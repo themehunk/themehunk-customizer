@@ -495,3 +495,37 @@ class Big_Store_List_Category_Images extends Walker_Category {
     }
 }
 }
+
+
+/**************************************/
+//Below footer function
+/**************************************/
+if ( ! function_exists( 'big_store_below_footer_markup' ) ){  
+function big_store_shop_below_footer_markup(){ ?>   
+<div class="below-footer">
+      <div class="container">
+        <div class="below-footer-bar thnk-col-1">
+          <div class="below-footer-col1"> 
+           <p class="footer-copyright">&copy;
+              <?php
+              echo date_i18n(
+                /* translators: Copyright date format, see https://www.php.net/date */
+                _x( 'Y', 'copyright date format', 'm-shop' )
+              );
+              ?>
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+              <span class="powered-by-wordpress">
+              <span><?php _e( 'Designed by', 'm-shop' ); ?></span>
+              <a href="<?php echo esc_url( __( 'https://themehunk.com/', 'm-shop' ) ); ?>" target="_blank">
+                <?php _e( 'Themehunk', 'm-shop' ); ?>
+              </a>
+            </span>
+            </p><!-- .footer-copyright -->
+           </div>
+        </div>
+      </div>
+</div>
+                  
+<?php }
+}
+add_action( 'big_store_shop_default_below_footer', 'big_store_shop_below_footer_markup' );

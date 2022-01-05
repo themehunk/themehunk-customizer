@@ -781,6 +781,7 @@ function m_shop_highlight_content($m_shop_highlight_content_id,$default){
 /**************************************/
 //Below footer function
 /**************************************/
+
 if ( ! function_exists( 'm_shop_below_footer_markup' ) ){  
 function m_shop_below_footer_markup(){ ?>   
 <div class="below-footer">

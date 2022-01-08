@@ -3,8 +3,8 @@ Contributors: ThemeHunk
 Author URI: : https://www.themehunk.com/
 Tags: themehunk, customizer, oneline-lite,Testimonial,Team, service
 Requires at least: 5.5
-Tested up to: 5.8.2
-Stable tag: 2.6.5
+Tested up to: 5.8.3
+Stable tag: 2.6.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,10 +30,11 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 
 == Changelog ==
 
-
-= 2.6.5 =
+= 2.6.6 =
 * M-shop category filter ajax function issue fixed.
 * M-Shop - Footer below copyright added.
+
+= 2.6.5 =
 * Big-Store - Footer below copyright added.
 * Big-Store - Customizer pro and docs button added.
 * Big-store - Below footer option disabled.

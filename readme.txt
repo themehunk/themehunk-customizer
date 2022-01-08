@@ -30,6 +30,9 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 
 == Changelog ==
 
+= 2.6.7 =
+* M-shop - Th all in one woo cart style issue fixed.
+
 = 2.6.6 =
 * M-shop category filter ajax function issue fixed.
 * M-Shop - Footer below copyright added.

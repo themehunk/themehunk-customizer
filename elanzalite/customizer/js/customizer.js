@@ -1,12 +1,16 @@
 jQuery(document).ready(function(){ 
+        wp.customize.section( 'sidebar-widgets-primary-sidebar' ).panel('elanzalite_magzine');
+    wp.customize.section( 'sidebar-widgets-primary-sidebar' ).priority('5');
+
 // Magzine widget 
     // Magzine widget 
-    wp.customize.section( 'sidebar-widgets-magzine-widget' ).panel('elanzalite_magzine');
-    wp.customize.section( 'sidebar-widgets-magzine-widget' ).priority('5');
 
     wp.customize.section( 'sidebar-widgets-magzine-sidebar-widget' ).panel('elanzalite_magzine');
     wp.customize.section( 'sidebar-widgets-magzine-sidebar-widget' ).priority('6');
-    wp.customize.control( 'elanzalite_magzine_layout' ).section( 'sidebar-widgets-magzine-sidebar-widget' );
+
+        return false;
+
+        wp.customize.control( 'elanzalite_magzine_layout' ).section( 'sidebar-widgets-magzine-sidebar-widget' );
 
 
     wp.customize('elanzalite_listing_layout', function( value ){

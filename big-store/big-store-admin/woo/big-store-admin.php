@@ -500,7 +500,7 @@ class Big_Store_List_Category_Images extends Walker_Category {
 /**************************************/
 //Below footer function
 /**************************************/
-if ( ! function_exists( 'big_store_below_footer_markup' ) ){  
+if ( ! function_exists( 'big_store_shop_below_footer_markup' ) ){  
 function big_store_shop_below_footer_markup(){ ?>   
 <div class="below-footer">
       <div class="container">

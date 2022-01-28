@@ -60,13 +60,10 @@ class ThemeHunk_Notify{
 	function notify(){
 		  $my_theme = wp_get_theme();
 		  $theme =  esc_html( $my_theme->get( 'TextDomain' ) );
-		$display = isset($_GET['notice-disable'])?'none':'block';
+		  $display = isset($_GET['notice-disable'])?'none':'block';
 
          require_once THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . 'notify/notify-html.php'; 
-
-
  } 
-
 
 }
 

@@ -2,7 +2,6 @@
 if ( ! class_exists( 'WooCommerce' ) ){
   return;
 }
-
 if(!function_exists('big_store_product_query')){
     function big_store_product_query($term_id,$prdct_optn){
    $limit_product = get_theme_mod('big_store_prd_shw_no','20');
@@ -524,8 +523,7 @@ function big_store_shop_below_footer_markup(){ ?>
            </div>
         </div>
       </div>
-</div>
-                  
+</div>            
 <?php }
 }
 add_action( 'big_store_shop_default_below_footer', 'big_store_shop_below_footer_markup' );

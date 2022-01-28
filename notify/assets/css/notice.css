@@ -40,3 +40,6 @@ margin-right:10px;
 font-size:15px;
 line-height:27px;
 }
+.thunk-review-thumbnail a{
+    display: block;
+}

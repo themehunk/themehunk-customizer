@@ -201,6 +201,7 @@ if(!function_exists('m_shop_product_cat_filter_default_loop')){
 //product cat filter loop
 /********************************/
 function m_shop_product_cat_filter_default_loop($term_id,$prdct_optn){
+  global $product;
 // product filter 
 $args = m_shop_product_query($term_id,$prdct_optn);
     $products = wc_get_products( $args );
@@ -292,7 +293,8 @@ $args = m_shop_product_query($term_id,$prdct_optn);
 
 if(!function_exists('m_shop_product_filter_loop')){
 
-function m_shop_product_filter_loop($args){  
+function m_shop_product_filter_loop($args){ 
+global $product; 
     $products = wc_get_products( $args );
     if (!empty($products)) {
     foreach ($products as $product) {

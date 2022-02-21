@@ -4,7 +4,7 @@ Author URI: : https://www.themehunk.com/
 Tags: themehunk, customizer, oneline-lite,Testimonial,Team, service
 Requires at least: 5.5
 Tested up to: 5.9
-Stable tag: 2.7.1
+Stable tag: 2.7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,11 +30,9 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 
 == Changelog ==
 
-= 2.7.1 =
-* Big Store Slider Layout issue resolved.
-
 = 2.7.0 =
 * M-Shop Add_To_Cart issue resolved.
+* Big Store Slider Layout issue resolved.
 
 = 2.6.9 =
 * Th Shop Mania - Banner added.

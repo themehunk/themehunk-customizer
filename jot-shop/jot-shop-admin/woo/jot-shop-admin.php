@@ -363,19 +363,15 @@ function jot_shop_product_filter_loop($args){
                                 </span>
                     </div>
                   <?php } 
-                          if( ( class_exists( 'WPCleverWoosc' ))){
-                   jot_shop_wpc_wish_compare($pid);
-                  }
-                    if( ( class_exists( 'YITH_Woocompare' ))){
-                  echo jot_shop_add_to_compare_fltr($pid);
-                }
+                          
+                          if(  class_exists( 'th_product_compare' )){
+                            echo jot_shop_add_to_compare_fltr($pid);
+                          }
+                    
                 if( class_exists( 'YITH_WCWL' )){
                       echo jot_shop_whish_list($pid);
                     }
-                      if( ( class_exists( 'WPCleverWoosw' ))){
-                      jot_shop_wpc_wish_list($pid);
-                    }
-                  
+                     
                   ?>
                    
             </div>

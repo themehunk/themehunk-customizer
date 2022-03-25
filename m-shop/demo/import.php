@@ -6,22 +6,22 @@ function m_shop_import_files(){
   return apply_filters(
     'm_shop_demo_site', array(
     array(
-        'import_file_name' => esc_html__('M Shop Default','m-shop'),
+        'import_file_name' => esc_html__('M Shop Default','themehunk-customizer'),
         'import_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/m-shop/default/blog.xml'),
         'import_customizer_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/m-shop/default/customizer.dat'),
         'import_widget_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/m-shop/default/widgets.wie'),
         'import_preview_image_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/m-shop/default/default.png'),
         'preview_url'=> esc_url('https://wpthemes.themehunk.com/m-shop/'),
-        'import_notice' => __( 'Before importing the demo data, Install & Activate the recommended plugins.', 'm-shop' ),
+        'import_notice' => __( 'Before importing the demo data, Install & Activate the recommended plugins.', 'themehunk-customizer' ),
        ),
     array(
-        'import_file_name' => esc_html__('Ice Cream Store','m-shop'),
+        'import_file_name' => esc_html__('Ice Cream Store','themehunk-customizer'),
         'import_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/m-shop/ice-cream/blog.xml'),
         'import_customizer_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/m-shop/ice-cream/customizer.dat'),
         'import_widget_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/m-shop/ice-cream/widgets.wie'),
         'import_preview_image_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/m-shop/ice-cream/ice-cream.png'),
         'preview_url'=> esc_url('https://wpthemes.themehunk.com/ice-cream-store/'),
-        'import_notice' => __( 'Before importing the demo data, Install & Activate the recommended plugins.', 'm-shop' ),
+        'import_notice' => __( 'Before importing the demo data, Install & Activate the recommended plugins.', 'themehunk-customizer' ),
        ),
     
      )

@@ -26,8 +26,8 @@ if ( ! function_exists( 'm_shop_add_to_compare_fltr' ) ){
           /**********************/
            function m_shop_whish_list($pid=''){
                 if( shortcode_exists( 'yith_wcwl_add_to_wishlist' )){
-                  echo '<div class="thunk-wishlist"><span class="thunk-wishlist-inner">'.do_shortcode('[yith_wcwl_add_to_wishlist product_id='.$pid.' icon="fa fa-heart" label='.__('wishlist','m-shop').'
-                   already_in_wishslist_text='.__('Already','m-shop').' browse_wishlist_text='.__('Added','m-shop').']' ).'</span></div>';
+                  echo '<div class="thunk-wishlist"><span class="thunk-wishlist-inner">'.do_shortcode('[yith_wcwl_add_to_wishlist product_id='.$pid.' icon="fa fa-heart" label='.__('wishlist','themehunk-customizer').'
+                   already_in_wishslist_text='.__('Already','themehunk-customizer').' browse_wishlist_text='.__('Added','themehunk-customizer').']' ).'</span></div>';
                  }
                   elseif( ( class_exists( 'WPCleverWoosw' ))){
             echo '<div class="thunk-wishlist"><span class="thunk-wishlist-inner">'.do_shortcode('[woosw id='.$pid.']').'</span></div>';
@@ -103,7 +103,7 @@ $args = m_shop_product_query($term_id,$prdct_optn);
         </div>
    <?php }
     } else {
-      echo __( 'No products found','m-shop' );
+      echo __( 'No products found','themehunk-customizer' );
     }
     wp_reset_query();
 }
@@ -262,7 +262,7 @@ $args = m_shop_product_query($term_id,$prdct_optn);
                                     <path d="M14,15h-4v-2h3v-3h2v4C15,14.6,14.6,15,14,15z M13,3h-3V1h4c0.6,0,1,0.4,1,1v4h-2V3z M6,3H3v3H1V2c0-0.6,0.4-1,1-1h4V3z
                                        M3,13h3v2H2c-0.6,0-1-0.4-1-1v-4h2V13z"></path>
                                     </svg>
-                                      <span><?php _e('Quick View','m-shop');?></span>
+                                      <span><?php _e('Quick View','themehunk-customizer');?></span>
                                    </a>
                                 </span>
                     </div>
@@ -285,7 +285,7 @@ $args = m_shop_product_query($term_id,$prdct_optn);
         </div>
    <?php }
     } else {
-      echo __( 'No products found','m-shop' );
+      echo __( 'No products found','themehunk-customizer' );
     }
     wp_reset_query();
 }
@@ -369,7 +369,7 @@ global $product;
                                     <path d="M14,15h-4v-2h3v-3h2v4C15,14.6,14.6,15,14,15z M13,3h-3V1h4c0.6,0,1,0.4,1,1v4h-2V3z M6,3H3v3H1V2c0-0.6,0.4-1,1-1h4V3z
                                        M3,13h3v2H2c-0.6,0-1-0.4-1-1v-4h2V13z"></path>
                                     </svg>
-                                      <span><?php _e('Quick View','m-shop');?></span>
+                                      <span><?php _e('Quick View','themehunk-customizer');?></span>
                                    </a>
                                 </span>
                     </div>
@@ -392,7 +392,7 @@ global $product;
         </div>
    <?php }
     } else {
-      echo __( 'No products found','m-shop' );
+      echo __( 'No products found','themehunk-customizer' );
     }
     wp_reset_query();
 }

@@ -16,7 +16,7 @@ else{
   <div class="thunk-heading-wrap">
   <div class="thunk-heading">
     <h4 class="thunk-title">
-    <span class="title"><?php echo esc_html(get_theme_mod('m_shop_product_img_sec_heading','Product Tab Image Carousel'));?></span>
+    <span class="title"><?php echo esc_html(get_theme_mod('m_shop_product_img_sec_heading',__('Product Tab Image Carousel','themehunk-customizer')));?></span>
    </h4>
   </div>
 <!-- tab head start -->

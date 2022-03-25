@@ -10,7 +10,7 @@ if(get_theme_mod('m_shop_disable_cat_sec',false) == true){
   <div class="thunk-heading-wrap">
   <div class="thunk-heading">
     <h4 class="thunk-title">
-    <span class="title"><?php echo esc_html(get_theme_mod('m_shop_cat_tab_heading','Tabbed Product Carousel'));?></span>
+    <span class="title"><?php echo esc_html(get_theme_mod('m_shop_cat_tab_heading',__('Tabbed Product Carousel','themehunk-customizer')));?></span>
    </h4>
   </div>
 <!-- tab head start -->

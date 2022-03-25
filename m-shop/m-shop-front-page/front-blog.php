@@ -8,10 +8,10 @@ if(get_theme_mod('m_shop_disable_blog_sec',false) == true){
  <div class="thunk-heading-wrap">
   <div class="thunk-heading">
     <h4 class="thunk-title">
-    <span class="title"><?php echo esc_html(get_theme_mod('m_shop_blog_heading','Blog'));?></span>
+    <span class="title"><?php echo esc_html(get_theme_mod('m_shop_blog_heading',__('Blog','themehunk-customizer')));?></span>
    </h4>
 </div>
-<div class="blog_cat_view"><a href="<?php echo esc_url(m_shop_get_blog_url(get_theme_mod('m_shop_blog_slider_cat'))); ?>"><?php echo esc_html('View All','m-shop');?></a></div>
+<div class="blog_cat_view"><a href="<?php echo esc_url(m_shop_get_blog_url(get_theme_mod('m_shop_blog_slider_cat'))); ?>"><?php echo esc_html__('View All','themehunk-customizer');?></a></div>
 </div>
 <div class="content-wrap">
     <div class="thunk-blog-wrap">

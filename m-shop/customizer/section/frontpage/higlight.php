@@ -4,7 +4,7 @@ $wp_customize->add_setting( 'm_shop_disable_highlight_sec', array(
                 'sanitize_callback'     => 'm_shop_sanitize_checkbox',
             ) );
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'm_shop_disable_highlight_sec', array(
-                'label'                 => esc_html__('Disable Section', 'm-shop'),
+                'label'                 => esc_html__('Disable Section', 'themehunk-customizer'),
                 'type'                  => 'checkbox',
                 'section'               => 'm_shop_highlight',
                 'settings'              => 'm_shop_disable_highlight_sec',
@@ -12,13 +12,13 @@ $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'm_shop_dis
 
 // section heading
 // $wp_customize->add_setting('m_shop_hglgt_heading', array(
-//         'default' => __('Highlight Feature','m-shop'),
+//         'default' => __('Highlight Feature','themehunk-customizer'),
 //         'capability'        => 'edit_theme_options',
 //         'sanitize_callback' => 'm_shop_sanitize_text',
 //         'transport'         => 'postMessage',
 // ));
 // $wp_customize->add_control( 'm_shop_hglgt_heading', array(
-//         'label'    => __('Section Heading', 'm-shop'),
+//         'label'    => __('Section Heading', 'themehunk-customizer'),
 //         'section'  => 'm_shop_highlight',
 //          'type'       => 'text',
 // ));
@@ -35,11 +35,11 @@ $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'm_shop_dis
             $wp_customize->add_control(
                 new M_Shop_Repeater(
                     $wp_customize, 'm_shop_highlight_content', array(
-                        'label'                                => esc_html__( 'Highlight Content', 'm-shop' ),
+                        'label'                                => esc_html__( 'Highlight Content', 'themehunk-customizer' ),
                         'section'                              => 'm_shop_highlight',
                         'priority'                             => 15,
-                        'add_field_label'                      => esc_html__( 'Add new Feature', 'm-shop' ),
-                        'item_name'                            => esc_html__( 'Feature', 'm-shop' ),
+                        'add_field_label'                      => esc_html__( 'Add new Feature', 'themehunk-customizer' ),
+                        'item_name'                            => esc_html__( 'Feature', 'themehunk-customizer' ),
                         
                         'customizer_repeater_title_control'    => true, 
                         'customizer_repeater_color_control'		=>	false, 
@@ -68,6 +68,6 @@ $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'm_shop_dis
         'section'     => 'm_shop_highlight',
         'type'        => 'doc-link',
         'url'         => 'https://themehunk.com/docs/m-shop/#highlight-section',
-        'description' => esc_html__( 'To know more go with this', 'm-shop' ),
+        'description' => esc_html__( 'To know more go with this', 'themehunk-customizer' ),
         'priority'   =>100,
     )));

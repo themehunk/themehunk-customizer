@@ -4,7 +4,7 @@ $wp_customize->add_setting( 'm_shop_disable_blog_sec', array(
                 'sanitize_callback'     => 'm_shop_sanitize_checkbox',
             ) );
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'm_shop_disable_blog_sec', array(
-                'label'                 => esc_html__('Disable Section', 'm-shop'),
+                'label'                 => esc_html__('Disable Section', 'themehunk-customizer'),
                 'type'                  => 'checkbox',
                  'priority'   => 1,
                 'section'               => 'm_shop_blog',
@@ -12,13 +12,13 @@ $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'm_shop_dis
             ) ) );
 
 $wp_customize->add_setting('m_shop_blog_heading', array(
-        'default' => __('Blog','m-shop'),
+        'default' => __('Blog','themehunk-customizer'),
         'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'm_shop_sanitize_text',
         'transport'         => 'postMessage',
 ));
 $wp_customize->add_control( 'm_shop_blog_heading', array(
-        'label'    => __('Section Heading', 'm-shop'),
+        'label'    => __('Section Heading', 'themehunk-customizer'),
         'section'  => 'm_shop_blog',
          'type'       => 'text',
 ));
@@ -40,7 +40,7 @@ function m_shop_post_category_list($arr='',$all=true){
 	'sanitize_callback' => 'm_shop_sanitize_select',
 	) );
 	$wp_customize->add_control( 'm_shop_blog_slider_cat', array(
-	'label'   => __('Select Category','m-shop'),
+	'label'   => __('Select Category','themehunk-customizer'),
 	'section' => 'm_shop_blog',
 	'type' => 'select',
 	'choices' => m_shop_post_category_list(),
@@ -53,7 +53,7 @@ function m_shop_post_category_list($arr='',$all=true){
         
    ));
    $wp_customize->add_control( 'm_shop_post_show', array(
-        'label'    => __('No. of Post to Show', 'm-shop'),
+        'label'    => __('No. of Post to Show', 'themehunk-customizer'),
         'section'  => 'm_shop_blog',
          'type'       => 'number',
   ));

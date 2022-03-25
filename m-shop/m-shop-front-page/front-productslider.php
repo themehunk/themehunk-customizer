@@ -8,10 +8,10 @@ if(get_theme_mod('m_shop_disable_product_slide_sec',false) == true){
  <div class="thunk-heading-wrap">
   <div class="thunk-heading">
     <h4 class="thunk-title">
-    <span class="title"><?php echo esc_html(get_theme_mod('m_shop_product_slider_heading','Product Carousel'));?></span>
+    <span class="title"><?php echo esc_html(get_theme_mod('m_shop_product_slider_heading',__('Product Carousel','themehunk-customizer')));?></span>
    </h4>
 </div>
-<div class="product_cat_view"><a href="<?php echo esc_url(m_shop_get_prdct_url(get_theme_mod('m_shop_product_slider_cat'))); ?>"><?php echo esc_html('View All','m-shop');?></a></div>
+<div class="product_cat_view"><a href="<?php echo esc_url(m_shop_get_prdct_url(get_theme_mod('m_shop_product_slider_cat'))); ?>"><?php echo esc_html__('View All','themehunk-customizer');?></a></div>
 </div>
 <div class="content-wrap">
     <div class="thunk-slide thunk-product-slide owl-carousel">

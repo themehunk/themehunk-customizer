@@ -4,7 +4,7 @@ $wp_customize->add_setting( 'm_shop_disable_ribbon_sec', array(
                 'sanitize_callback'     => 'm_shop_sanitize_checkbox',
             ) );
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'm_shop_disable_ribbon_sec', array(
-                'label'                 => esc_html__('Disable Section', 'm-shop'),
+                'label'                 => esc_html__('Disable Section', 'themehunk-customizer'),
                 'type'                  => 'checkbox',
                  'priority'   => 1,
                 'section'               => 'm_shop_ribbon',
@@ -16,13 +16,13 @@ $wp_customize->add_setting('m_shop_ribbon_background', array(
                 'sanitize_callback'     => 'm_shop_sanitize_select',
             ) );
 $wp_customize->add_control( new M_Shop_Customizer_Buttonset_Control( $wp_customize, 'm_shop_ribbon_background', array(
-                'label'                 => esc_html__( 'Choose Ribbon Background', 'm-shop' ),
+                'label'                 => esc_html__( 'Choose Ribbon Background', 'themehunk-customizer' ),
                  'priority'   => 2,
                 'section'               => 'm_shop_ribbon',
                 'settings'              => 'm_shop_ribbon_background',
                 'choices'               => array(
-                    'image'             => esc_html__( 'Image', 'm-shop' ),
-                    'video'             => esc_html__( 'Video', 'm-shop' ), 
+                    'image'             => esc_html__( 'Image', 'themehunk-customizer' ),
+                    'video'             => esc_html__( 'Video', 'themehunk-customizer' ), 
                 ),
         ) ) );
     $wp_customize->add_setting( 'm_shop_ribbon_bg_img_url', array(
@@ -63,7 +63,7 @@ $wp_customize->add_control( new M_Shop_Customizer_Buttonset_Control( $wp_customi
             $wp_customize,
             'm_shop_ribbon_bg_background_image',
             array(
-                'label'     => esc_html__( 'Background Image', 'm-shop' ),
+                'label'     => esc_html__( 'Background Image', 'themehunk-customizer' ),
                 'section'   => 'm_shop_ribbon',
                 'priority'   => 2,
                 'settings'    => array(
@@ -84,7 +84,7 @@ $wp_customize->add_control( new M_Shop_Customizer_Buttonset_Control( $wp_customi
        ));
     $wp_customize->add_control( new WP_Customize_Image_Control(
            $wp_customize, 'm_shop_ribbon_bg_video', array(
-           'label'    => __('Upload Background Video', 'oneline'),
+           'label'    => __('Upload Background Video', 'themehunk-customizer'),
            'section'  => 'm_shop_ribbon',
            'settings' => 'm_shop_ribbon_bg_video',
     )));
@@ -94,7 +94,7 @@ $wp_customize->add_control( new M_Shop_Customizer_Buttonset_Control( $wp_customi
     ));
     $wp_customize->add_control( new WP_Customize_Image_Control(
         $wp_customize, 'm_shop_ribbon_video_poster_image', array(
-        'label'    => __('Upload Video Poster Image', 'oneline'),
+        'label'    => __('Upload Video Poster Image', 'themehunk-customizer'),
         'section'  => 'm_shop_ribbon',
         'settings' => 'm_shop_ribbon_video_poster_image',
     )));
@@ -107,7 +107,7 @@ $wp_customize->add_setting('m_shop_ribbon_text', array(
         
   ));
 $wp_customize->add_control('m_shop_ribbon_text', array(
-        'label'    => __('Text', 'm-shop'),
+        'label'    => __('Text', 'themehunk-customizer'),
         'section'  => 'm_shop_ribbon',
         'settings' => 'm_shop_ribbon_text',
          'type'    => 'textarea',
@@ -121,7 +121,7 @@ $wp_customize->add_setting('m_shop_ribbon_btn_text', array(
         
   ));
 $wp_customize->add_control('m_shop_ribbon_btn_text', array(
-        'label'    => __('Button Text', 'm-shop'),
+        'label'    => __('Button Text', 'themehunk-customizer'),
         'section'  => 'm_shop_ribbon',
         'settings' => 'm_shop_ribbon_btn_text',
          'type'    => 'text',
@@ -134,7 +134,7 @@ $wp_customize->add_setting('m_shop_ribbon_btn_link', array(
         
   ));
 $wp_customize->add_control('m_shop_ribbon_btn_link', array(
-        'label'    => __('Button Link', 'm-shop'),
+        'label'    => __('Button Link', 'themehunk-customizer'),
         'section'  => 'm_shop_ribbon',
         'settings' => 'm_shop_ribbon_btn_link',
          'type'    => 'text',
@@ -150,7 +150,7 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
             new M_Shop_WP_Customizer_Range_Value_Control(
                 $wp_customize, 'm_shop_ribbon_top_padding', array(
-                    'label'       => esc_html__( 'Top Padding', 'm-shop' ),
+                    'label'       => esc_html__( 'Top Padding', 'themehunk-customizer' ),
                     'section'     => 'm_shop_ribbon',
                     'type'        => 'range-value',
                     'input_attr'  => array(
@@ -173,7 +173,7 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
             new M_Shop_WP_Customizer_Range_Value_Control(
                 $wp_customize, 'm_shop_ribbon_btm_padding', array(
-                    'label'       => esc_html__( 'Bottom Padding', 'm-shop' ),
+                    'label'       => esc_html__( 'Bottom Padding', 'themehunk-customizer' ),
                     'section'     => 'm_shop_ribbon',
                     'type'        => 'range-value',
                     'input_attr'  => array(
@@ -196,6 +196,6 @@ $wp_customize->add_control(new M_Shop_Misc_Control( $wp_customize, 'm_shop_ribbo
         'section'     => 'm_shop_ribbon',
         'type'        => 'doc-link',
         'url'         => 'https://themehunk.com/docs/m-shop/#ribbon-section',
-        'description' => esc_html__( 'To know more go with this', 'm-shop' ),
+        'description' => esc_html__( 'To know more go with this', 'themehunk-customizer' ),
         'priority'   =>100,
     )));

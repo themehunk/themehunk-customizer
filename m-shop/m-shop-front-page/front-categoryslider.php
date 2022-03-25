@@ -11,7 +11,7 @@ if(get_theme_mod('m_shop_disable_category_slide_sec',false) == true){
     <div class="thunk-heading-wrap">    
   <div class="thunk-heading">
     <h4 class="thunk-title">
-    <span class="title"><?php echo esc_html(get_theme_mod('m_shop_cat_slider_heading','Woo Category'));?></span>
+    <span class="title"><?php echo esc_html(get_theme_mod('m_shop_cat_slider_heading',__('Woo Category','themehunk-customizer')));?></span>
    </h4>
 </div>
 </div>
@@ -145,7 +145,7 @@ $category_list .='<div class="thunk-cat-box">
   <img src="'.esc_url($image).'">
         <div class="hover-area">
           <span class="cat-title">'.esc_html($product_category->name).'</span>
-          <div class="prd-total-number"><span class="item">'.$product_category->count.esc_html('Product','m-shop').'</span></div>
+          <div class="prd-total-number"><span class="item">'.$product_category->count.esc_html__('Product','themehunk-customizer').'</span></div>
               </div>
               <a href="'.esc_url($term_link).'"> </a>
       </div></div>';       

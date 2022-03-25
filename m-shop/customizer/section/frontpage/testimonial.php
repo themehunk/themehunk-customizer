@@ -4,7 +4,7 @@ $wp_customize->add_setting( 'm_shop_disable_testimonial_sec', array(
                 'sanitize_callback'     => 'm_shop_sanitize_checkbox',
             ) );
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'm_shop_disable_testimonial_sec', array(
-                'label'                 => esc_html__('Disable Section', 'm-shop'),
+                'label'                 => esc_html__('Disable Section', 'themehunk-customizer'),
                 'type'                  => 'checkbox',
                  'priority'   => 1,
                 'section'               => 'm_shop_testimonial',
@@ -22,11 +22,11 @@ $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'm_shop_dis
             $wp_customize->add_control(
                 new M_Shop_Repeater(
                     $wp_customize, 'm_shop_testimonials_content', array(
-                        'label'                                => esc_html__( 'Testimonials Content', 'm-shop' ),
+                        'label'                                => esc_html__( 'Testimonials Content', 'themehunk-customizer' ),
                         'section'                              => 'm_shop_testimonial',
                         'priority'                             => 15,
-                        'add_field_label'                      => esc_html__( 'Add new Testimonial', 'm-shop' ),
-                        'item_name'                            => esc_html__( 'Testimonial', 'm-shop' ),
+                        'add_field_label'                      => esc_html__( 'Add new Testimonial', 'themehunk-customizer' ),
+                        'item_name'                            => esc_html__( 'Testimonial', 'themehunk-customizer' ),
                         'customizer_repeater_icon_control'  => false,
                         'customizer_repeater_image_control'    => true,
                         'customizer_repeater_title_control'    => true,

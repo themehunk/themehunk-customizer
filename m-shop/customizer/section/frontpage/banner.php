@@ -4,7 +4,7 @@ $wp_customize->add_setting( 'm_shop_disable_banner_sec', array(
                 'sanitize_callback'     => 'm_shop_sanitize_checkbox',
             ) );
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'm_shop_disable_banner_sec', array(
-                'label'                 => esc_html__('Disable Section', 'm-shop'),
+                'label'                 => esc_html__('Disable Section', 'themehunk-customizer'),
                 'type'                  => 'checkbox',
                 'section'               => 'm_shop_banner',
                 'settings'              => 'm_shop_disable_banner_sec',
@@ -20,7 +20,7 @@ if(class_exists('M_Shop_WP_Customize_Control_Radio_Image')){
 $wp_customize->add_control(
             new M_Shop_WP_Customize_Control_Radio_Image(
                 $wp_customize, 'm_shop_banner_layout', array(
-                    'label'    => esc_html__( 'Layout', 'm-shop' ),
+                    'label'    => esc_html__( 'Layout', 'themehunk-customizer' ),
                     'section'  => 'm_shop_banner',
                     'choices'  => array(
                         'bnr-one'  => array(
@@ -54,7 +54,7 @@ $wp_customize->add_setting('m_shop_bnr_1_img', array(
         'sanitize_callback' => 'm_shop_sanitize_upload',
     ));
 $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'm_shop_bnr_1_img', array(
-        'label'          => __('Image 1', 'm-shop'),
+        'label'          => __('Image 1', 'themehunk-customizer'),
         'section'        => 'm_shop_banner',
         'settings'       => 'm_shop_bnr_1_img',
  )));
@@ -66,7 +66,7 @@ $wp_customize->add_setting('m_shop_bnr_1_url', array(
         'sanitize_callback' => 'm_shop_sanitize_text',
 ));
 $wp_customize->add_control( 'm_shop_bnr_1_url', array(
-        'label'    => __('url', 'm-shop'),
+        'label'    => __('url', 'themehunk-customizer'),
         'section'  => 'm_shop_banner',
          'type'    => 'text',
 ));
@@ -77,7 +77,7 @@ $wp_customize->add_setting('m_shop_bnr_2_img', array(
         'sanitize_callback' => 'm_shop_sanitize_upload',
     ));
 $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'm_shop_bnr_2_img', array(
-        'label'          => __('Image 2', 'm-shop'),
+        'label'          => __('Image 2', 'themehunk-customizer'),
         'section'        => 'm_shop_banner',
         'settings'       => 'm_shop_bnr_2_img',
  )));
@@ -89,7 +89,7 @@ $wp_customize->add_setting('m_shop_bnr_2_url', array(
         'sanitize_callback' => 'm_shop_sanitize_text',
 ));
 $wp_customize->add_control( 'm_shop_bnr_2_url', array(
-        'label'    => __('url', 'm-shop'),
+        'label'    => __('url', 'themehunk-customizer'),
         'section'  => 'm_shop_banner',
          'type'    => 'text',
 ));
@@ -101,7 +101,7 @@ $wp_customize->add_setting('m_shop_bnr_3_img', array(
         'sanitize_callback' => 'm_shop_sanitize_upload',
     ));
 $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'm_shop_bnr_3_img', array(
-        'label'          => __('Image 3', 'm-shop'),
+        'label'          => __('Image 3', 'themehunk-customizer'),
         'section'        => 'm_shop_banner',
         'settings'       => 'm_shop_bnr_3_img',
  )));
@@ -113,7 +113,7 @@ $wp_customize->add_setting('m_shop_bnr_3_url', array(
         'sanitize_callback' => 'm_shop_sanitize_text',
 ));
 $wp_customize->add_control( 'm_shop_bnr_3_url', array(
-        'label'    => __('url', 'm-shop'),
+        'label'    => __('url', 'themehunk-customizer'),
         'section'  => 'm_shop_banner',
          'type'    => 'text',
 ));
@@ -126,7 +126,7 @@ $wp_customize->add_setting('m_shop_bnr_4_img', array(
         'sanitize_callback' => 'm_shop_sanitize_upload',
     ));
 $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'm_shop_bnr_4_img', array(
-        'label'          => __('Image 4', 'm-shop'),
+        'label'          => __('Image 4', 'themehunk-customizer'),
         'section'        => 'm_shop_banner',
         'settings'       => 'm_shop_bnr_4_img',
  )));
@@ -136,7 +136,7 @@ $wp_customize->add_setting('m_shop_bnr_4_url', array(
         'sanitize_callback' => 'm_shop_sanitize_text',
 ));
 $wp_customize->add_control( 'm_shop_bnr_4_url', array(
-        'label'    => __('url', 'm-shop'),
+        'label'    => __('url', 'themehunk-customizer'),
         'section'  => 'm_shop_banner',
          'type'    => 'text',
 ));
@@ -148,7 +148,7 @@ $wp_customize->add_setting('m_shop_bnr_5_img', array(
         'sanitize_callback' => 'm_shop_sanitize_upload',
     ));
 $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'm_shop_bnr_5_img', array(
-        'label'          => __('Image 5', 'm-shop'),
+        'label'          => __('Image 5', 'themehunk-customizer'),
         'section'        => 'm_shop_banner',
         'settings'       => 'm_shop_bnr_5_img',
  )));
@@ -158,7 +158,7 @@ $wp_customize->add_setting('m_shop_bnr_5_url', array(
         'sanitize_callback' => 'm_shop_sanitize_text',
 ));
 $wp_customize->add_control( 'm_shop_bnr_5_url', array(
-        'label'    => __('url', 'm-shop'),
+        'label'    => __('url', 'themehunk-customizer'),
         'section'  => 'm_shop_banner',
          'type'    => 'text',
 ));
@@ -171,6 +171,6 @@ $wp_customize->add_control(new M_Shop_Misc_Control( $wp_customize, 'm_shop_bnr_d
         'section'     => 'm_shop_banner',
         'type'        => 'doc-link',
         'url'         => 'https://themehunk.com/docs/m-shop/#banner-section',
-        'description' => esc_html__( 'To know more go with this', 'm-shop' ),
+        'description' => esc_html__( 'To know more go with this', 'themehunk-customizer' ),
         'priority'   =>100,
     )));

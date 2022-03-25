@@ -25,7 +25,6 @@ require THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . 'm-shop/customizer/section/frontpage/
 /*************************/
 /* Footer Section for Pro*/
 /*************************/
-
 $wp_customize->add_setting('mshop-footer-pro-link', array(
     'sanitize_callback' => 'mshop_store_sanitize_text',
     ));
@@ -34,7 +33,7 @@ $wp_customize->add_control(new M_Shop_Misc_Control( $wp_customize, 'mshop-footer
         'section'     => 'm-shop-bottom-footer',
         'type'        => 'pro-link',
         'url'         => 'https://themehunk.com/product/m-shop-pro/',
-        'label' => esc_html__( 'Get Pro', 'm-shop' ),
+        'label' => esc_html__( 'Get Pro', 'themehunk-customizer' ),
         'priority'   =>100,
     )));
 

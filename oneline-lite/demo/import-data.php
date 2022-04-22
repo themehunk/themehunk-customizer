@@ -20,6 +20,14 @@ function onelinelite_import_files(){
       'import_preview_image_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/oneline-lite/dark/thumb.png'),
       'import_notice' => __( 'Before importing the demo data, Install & Activate the recommended plugins.', 'oneline-lite' ),
     ),  
+    array(
+      'import_file_name' => esc_html__('Coffee Shop','oneline-lite'),
+      'import_file_url'=>  esc_url('https://themehunk.com/wp-content/uploads/sites-demo/oneline-lite/coffee/blogs.xml'),
+      'import_customizer_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/oneline-lite/coffee/customizer.dat'),
+      'import_widget_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/oneline-lite/coffee/widgets.wie'),
+      'import_preview_image_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/oneline-lite/coffee/thumb.png'),
+      'import_notice' => __( 'Before importing the demo data, Install & Activate the recommended plugins.', 'oneline-lite' ),
+    ), 
      )
   );
 }

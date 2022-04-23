@@ -30,8 +30,11 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 
 == Changelog ==
 
-= 2.7.4 =
+= 2.7.5 =
 * Shopline Search issue fixed. 
+
+= 2.7.4 =
+* Oneline Coffee Shop Demo Added.
 
 = 2.7.3 =
 * M-Shop Translation issue fixed.

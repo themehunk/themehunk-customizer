@@ -152,7 +152,7 @@ h1.site-title a{color:{$site_title_color};}p.site-description{color:{$site_desc_
  .menu-item-has-children > a:before,.menu-item-has-children > a:after{
   background:{$top_menu_color};}
 }
-.cart-widget .fa-shopping-cart, .header-extra .fa-heart, .header-extra ul.hdr-icon-list li.accnt a.logged-in:before, .header-extra ul.hdr-icon-list li.accnt a.logged-out:before,#search-btn{color:{$top_icon_color};}
+.cart-widget .fa-shopping-cart, .header-extra .fa-heart, .header-extra ul.hdr-icon-list li.accnt a.logged-in:before, .header-extra ul.hdr-icon-list li.accnt a.logged-out:before,#search-btn,header .taiowc-icon .th-icon, header .taiowcp-icon .th-icon{color:{$top_icon_color};}
 @media screen and (max-width: 1024px){
 #pull{color:{$mob_icon_color};}
 .navigation.mobile-menu-wrapper, .navigation ul li li{background-color:{$mobile_menu_bg};}

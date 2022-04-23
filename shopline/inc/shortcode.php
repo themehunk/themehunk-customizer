@@ -829,39 +829,75 @@ $buttontext  = ($buttontext!='')?$buttontext:"Get Link Page";
                 </li>
                 <?php } ?>
                 <li class="top-list accnt"><?php  do_action('shopline_myaccount'); ?></li>
-                <li class="top-list cart">
-                  <div class="cart-widget tooltip">
-                    <span class="tooltiptext"><?php _e('Cart','shopline'); ?></span>
-                    <div onmouseover="openNav()" onmouseout="closeNav()">
-                      <?php do_action( 'shopline_header' ); ?>
-                    </div>
-                    <!-- side menu -->
-                    <!-- onmouseover="openNav()" -->
-                    <div onmouseover="openNav()" onmouseout="closeNav()" id="mySidenav" class="sidenav">
-                      <div id="accordion" class="woocommerce">
-                        <?php do_action( 'shopline_cart' ); ?>
-                      </div>
-                    </div>
-                  </div>
-                </li>
+        
                 <li class="top-list search-icon"><i id="search-btn" class="fa fa-search"></i></li>
                 <!-- serach box overlay -->
                 <div id="search-overlay" class="block">
                   <div class="centered">
                     <i id="close-btn" class="fa fa-times fa-2x"></i>
                     <div id='search-box' class="wow thmkfadeInDown" data-wow-duration="1s">
+
                       <?php
-                      if(class_exists('TH_Advance_Product_Search')){
-                      echo do_shortcode('[th-aps]');
-                      } else {
-                      $url = admin_url('themes.php?page=th_shopline&tab=actions_required');
-                      echo '<a href="'.$url.'" target="_blank" class="plugin-active-msg">'.__('Please activate "th advance product search plugin"','shopline').'</a>';
-                      } ?>
+                    if ( shortcode_exists('th-aps') ){
+
+                    echo do_shortcode('[th-aps]');
+
+                    }elseif( shortcode_exists('tapsp') ){
+
+                    echo do_shortcode('[tapsp]');
+
+                    }elseif(!shortcode_exists('th-aps') &&  !shortcode_exists('tapsp') && is_user_logged_in()){
+
+                        $url =admin_url('plugin-install.php?s=th%20advance%20product%20search&tab=search&type=term');
+                          echo '<a href="'.$url.'" target="_blank" class="plugin-active-msg">'.__('Please Install "th advance product search" Plugin','shopline').'</a>';
+
+
+                    }
+
+                  ?>
                       
                     </div>
                   </div>
                 </div>
                 <!-- serach box overlay -->
+
+                        <li class="top-list cart">
+                  <div class="cart-widget tooltip">
+                     <?php if ( shortcode_exists('taiowc') ){ ?>
+
+              
+
+              <?php echo do_shortcode('[taiowc]');?>
+
+              
+
+             <?php  }elseif ( shortcode_exists('taiowcp') ){ ?>
+
+             
+
+              <?php echo do_shortcode('[taiowcp]');?>
+
+             
+
+             <?php  } elseif ( !shortcode_exists('taiowc') && !shortcode_exists('taiowcp') && is_user_logged_in()) {
+
+                $url = admin_url('plugin-install.php?s=th%20all%20in%20one%20woo%20cart&tab=search&type=term');
+
+                ?>
+
+                <a target="_blank" class="cart-plugin-active-msg" href="<?php echo esc_url($url);?>">
+
+                  <?php _e('Add Cart','shopline-pro');?>
+                  
+                </a>
+
+
+                <?php      
+
+            }?>
+                  
+                  </div>
+                </li>
               </ul>
               <?php  elseif($section=='slideproduct'): ?>
               <?php

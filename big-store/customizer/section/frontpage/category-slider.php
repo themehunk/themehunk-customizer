@@ -4,7 +4,7 @@ $wp_customize->add_setting( 'big_store_disable_category_slide_sec', array(
                 'sanitize_callback'     => 'big_store_sanitize_checkbox',
             ) );
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'big_store_disable_category_slide_sec', array(
-                'label'                 => esc_html__('Disable Section', 'big-store'),
+                'label'                 => esc_html__('Disable Section (Pro)', 'big-store'),
                 'type'                  => 'checkbox',
                 'section'               => 'big_store_cat_slide_section',
                 'settings'              => 'big_store_disable_category_slide_sec',
@@ -78,7 +78,7 @@ $wp_customize->add_control(
     $wp_customize->add_control('big_store_cat_item_no', array(
             'type'        => 'number',
             'section'     => 'big_store_cat_slide_section',
-            'label'       => __( 'No. of Column to show', 'big-store' ),
+            'label'       => __( 'No. of Column to show (Pro)', 'big-store' ),
             'input_attrs' => array(
                 'min'  => 4,
                 'step' => 1,
@@ -92,7 +92,7 @@ $wp_customize->add_control(
     'sanitize_callback' => 'big_store_sanitize_checkbox',
   ) );
   $wp_customize->add_control( new Big_Store_Toggle_Control( $wp_customize, 'big_store_category_slider_optn', array(
-    'label'       => esc_html__( 'Slide Auto Play', 'big-store' ),
+    'label'       => esc_html__( 'Slide Auto Play (Pro)', 'big-store' ),
     'section'     => 'big_store_cat_slide_section',
     'type'        => 'toggle',
     'settings'    => 'big_store_category_slider_optn',

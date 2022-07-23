@@ -4,7 +4,7 @@ $wp_customize->add_setting( 'big_store_disable_ribbon_sec', array(
                 'sanitize_callback'     => 'big_store_sanitize_checkbox',
             ) );
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'big_store_disable_ribbon_sec', array(
-                'label'                 => esc_html__('Disable Section', 'big-store'),
+                'label'                 => esc_html__('Disable Section (Pro)', 'big-store'),
                 'type'                  => 'checkbox',
                  'priority'   => 1,
                 'section'               => 'big_store_ribbon',
@@ -22,7 +22,7 @@ $wp_customize->add_control( new Big_Store_Customizer_Buttonset_Control( $wp_cust
                 'settings'              => 'big_store_ribbon_background',
                 'choices'               => array(
                     'image'             => esc_html__( 'Image', 'big-store' ),
-                    'video'             => esc_html__( 'Video', 'big-store' ), 
+                    'video'             => esc_html__( 'Video (Pro)', 'big-store' ), 
                 ),
         ) ) );
     $wp_customize->add_setting( 'big_store_ribbon_bg_img_url', array(

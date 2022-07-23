@@ -4,7 +4,7 @@ $wp_customize->add_setting( 'big_store_disable_banner_sec', array(
                 'sanitize_callback'     => 'big_store_sanitize_checkbox',
             ) );
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'big_store_disable_banner_sec', array(
-                'label'                 => esc_html__('Disable Section', 'big-store'),
+                'label'                 => esc_html__('Disable Section (Pro)', 'big-store'),
                 'type'                  => 'checkbox',
                 'section'               => 'big_store_banner',
                 'settings'              => 'big_store_disable_banner_sec',
@@ -13,7 +13,7 @@ $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'big_store_
 if(class_exists('Big_Store_WP_Customize_Control_Radio_Image')){
         $wp_customize->add_setting(
             'big_store_banner_layout', array(
-                'default'           => 'bnr-two',
+                'default'           => 'bnr-one',
                 'sanitize_callback' => 'big_store_sanitize_radio',
             )
         );

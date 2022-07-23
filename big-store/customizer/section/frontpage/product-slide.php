@@ -55,7 +55,7 @@ $wp_customize->add_control( 'big_store_product_slide_optn', array(
         'section' => 'big_store_product_slide_section',
         'type'    => 'select',
         'choices'    => array(
-        'recent'     => __('Recent (Pro)','big-store'),
+        'recent'     => __('Recent','big-store'),
         'featured'   => __('Featured (Pro)','big-store'),
         'random'     => __('Random (Pro)','big-store'),
             

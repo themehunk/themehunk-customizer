@@ -51,7 +51,7 @@ $wp_customize->add_control( 'big_store_product_img_sec_optn', array(
         'section' => 'big_store_product_tab_image',
         'type'    => 'select',
         'choices'    => array(
-        'recent'     => __('Recent (Pro)','big-store'),
+        'recent'     => __('Recent','big-store'),
         'featured'   => __('Featured (Pro)','big-store'),
         'random'     => __('Random (Pro)','big-store'),
             

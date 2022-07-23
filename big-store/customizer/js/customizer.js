@@ -40,7 +40,7 @@ jQuery('#big_store_banner_layout-bnr-two').attr("disabled",true);
 jQuery('#_customize-input-big_store_product_list_optn option[value="featured"],#_customize-input-big_store_product_list_optn option[value="random"]').attr("disabled",true);
 jQuery('#customize-control-big_store_single_row_prdct_list input,#customize-control-big_store_product_list_slide_optn input').attr("disabled",true);
 
-jQuery('#customize-control-big_store_category_tab_list,#customize-control-big_store_product_img_sec_cat_list').append("<h4>(To Select More Feature Available In Pro Version)</h4>");
+jQuery('#customize-control-big_store_category_tab_list,#customize-control-big_store_product_img_sec_cat_list,#customize-control-big_store_include_category_slider').append("<h4>(To Select More Feature Available In Pro Version)</h4>");
 
 jQuery('#customize-control-big_store_top_slide_content').append("<h4>(To Add More Slides Feature Available In Pro Version)</h4>");
 

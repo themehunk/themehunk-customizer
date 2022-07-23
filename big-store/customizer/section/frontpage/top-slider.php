@@ -77,7 +77,7 @@ $wp_customize->add_control(
     'sanitize_callback' => 'big_store_sanitize_checkbox',
   ) );
   $wp_customize->add_control( new Big_Store_Toggle_Control( $wp_customize, 'big_store_top_slider_optn', array(
-    'label'       => esc_html__( 'Slide Auto Play', 'big-store' ),
+    'label'       => esc_html__( 'Slide Auto Play (Pro)', 'big-store' ),
     'section'     => 'big_store_top_slider_section',
     'type'        => 'toggle',
     'settings'    => 'big_store_top_slider_optn',

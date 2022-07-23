@@ -70,7 +70,7 @@ $wp_customize->add_control(
 
 }  
     $wp_customize->add_setting('big_store_cat_item_no', array(
-            'default'           =>10,
+            'default'           =>6,
             'capability'        => 'edit_theme_options',
             'sanitize_callback' =>'big_store_sanitize_number',
         )

@@ -4,7 +4,7 @@ $wp_customize->add_setting( 'big_store_disable_product_list_sec', array(
                 'sanitize_callback'     => 'big_store_sanitize_checkbox',
             ) );
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'big_store_disable_product_list_sec', array(
-                'label'                 => esc_html__('Disable Section', 'big-store'),
+                'label'                 => esc_html__('Disable Section (Pro)', 'big-store'),
                 'type'                  => 'checkbox',
                 'section'               => 'big_store_product_slide_list',
                 'settings'              => 'big_store_disable_product_list_sec',
@@ -44,9 +44,9 @@ $wp_customize->add_control('big_store_product_list_optn', array(
         'section' => 'big_store_product_slide_list',
         'type'    => 'select',
         'choices'    => array(
-        'recent'     => __('Recent','big-store'),
-        'featured'   => __('Featured','big-store'),
-        'random'     => __('Random','big-store'),   
+        'recent'     => __('Recent (Pro)','big-store'),
+        'featured'   => __('Featured (Pro)','big-store'),
+        'random'     => __('Random (Pro)','big-store'),   
         ),
     ));
 
@@ -55,7 +55,7 @@ $wp_customize->add_setting( 'big_store_single_row_prdct_list', array(
                 'sanitize_callback'     => 'big_store_sanitize_checkbox',
             ) );
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'big_store_single_row_prdct_list', array(
-                'label'                 => esc_html__('Enable Single Row Slide', 'big-store'),
+                'label'                 => esc_html__('Enable Single Row Slide (Pro)', 'big-store'),
                 'type'                  => 'checkbox',
                 'section'               => 'big_store_product_slide_list',
                 'settings'              => 'big_store_single_row_prdct_list',
@@ -68,7 +68,7 @@ $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'big_store_
     'sanitize_callback' => 'big_store_sanitize_checkbox',
   ) );
   $wp_customize->add_control( new Big_Store_Toggle_Control( $wp_customize, 'big_store_product_list_slide_optn', array(
-    'label'       => esc_html__( 'Slide Auto Play', 'big-store' ),
+    'label'       => esc_html__( 'Slide Auto Play (Pro)', 'big-store' ),
     'section'     => 'big_store_product_slide_list',
     'type'        => 'toggle',
     'settings'    => 'big_store_product_list_slide_optn',

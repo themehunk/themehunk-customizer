@@ -1,4 +1,8 @@
 <?php
+function big_store_customizer_script_registers_lite(){
+wp_enqueue_script( 'big_store_custom_customizer_script_lite', THEMEHUNK_CUSTOMIZER_PLUGIN_URL . '/big-store/customizer/js/customizer.js', array("jquery"), '', true  );
+}
+add_action('customize_controls_enqueue_scripts', 'big_store_customizer_script_registers_lite', 108 );
 if ( ! class_exists( 'WooCommerce' ) ){
   return;
 }

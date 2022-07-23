@@ -3,11 +3,11 @@ if(get_theme_mod('big_store_disable_top_slider_sec',false) == true){
     return;
   }
 ?>
-<section class="thunk-slider-section   <?php echo esc_attr(get_theme_mod('big_store_top_slide_layout','slide-layout-1'));?>">
+<section class="thunk-slider-section   <?php echo esc_attr(get_theme_mod('big_store_top_slide_layout','slide-layout-3'));?>">
   
 <?php 
 big_store_display_customizer_shortcut( 'big_store_top_slider_section' );
-if(get_theme_mod('big_store_top_slide_layout','slide-layout-1')=='slide-layout-3'):
+if(get_theme_mod('big_store_top_slide_layout','slide-layout-3')=='slide-layout-3'):
 ?>
 <div class="container">
     <div class="thunk-slider-content-wrap">
@@ -43,7 +43,7 @@ if(get_theme_mod('big_store_top_slide_layout','slide-layout-1')=='slide-layout-3
         </div>
       </div>
     </div>
- <?php elseif(get_theme_mod('big_store_top_slide_layout','slide-layout-1')=='slide-layout-4'):?>
+ <?php elseif(get_theme_mod('big_store_top_slide_layout','slide-layout-3')=='slide-layout-4'):?>
  <div class="thunk-slider-content-wrap">
       <div class="container">
         <div class="thunk-slider-content-bar">
@@ -53,7 +53,7 @@ if(get_theme_mod('big_store_top_slide_layout','slide-layout-1')=='slide-layout-3
         </div>
       </div>
   </div>  
- <?php elseif(get_theme_mod('big_store_top_slide_layout','slide-layout-1')=='slide-layout-2'):?>
+ <?php elseif(get_theme_mod('big_store_top_slide_layout','slide-layout-3')=='slide-layout-2'):?>
  <div class="thunk-slider-content-wrap">
       <div class="container">
         <div class="thunk-slider-content-bar">
@@ -82,7 +82,7 @@ if(get_theme_mod('big_store_top_slide_layout','slide-layout-1')=='slide-layout-3
         </div>
       </div>
   </div>
-  <?php elseif(get_theme_mod('big_store_top_slide_layout','slide-layout-1')=='slide-layout-1'):?>
+  <?php elseif(get_theme_mod('big_store_top_slide_layout','slide-layout-3')=='slide-layout-1'):?>
  <div class="thunk-slider-content-wrap">
       
         <div class="thunk-slider-content-bar">

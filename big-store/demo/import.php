@@ -6,24 +6,6 @@ function big_store_import_files(){
   return apply_filters(
     'big_store_demo_site', array(
     array(
-        'import_file_name' => esc_html__('Big Store Default','big-store'),
-        'import_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/big-store/default/blog.xml'),
-        'import_customizer_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/big-store/default/customizer.dat'),
-        'import_widget_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/big-store/default/widgets.wie'),
-        'import_preview_image_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/big-store/default/default.png'),
-        'preview_url'=> esc_url('https://wpthemes.themehunk.com/big-store/'),
-        'import_notice' => __( 'Before importing the demo data, Install & Activate the recommended plugins.', 'big-store' ),
-       ),
-    array(
-        'import_file_name' => esc_html__('Big Store Groceries','big-store'),
-        'import_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/big-store/groceries/blog.xml'),
-        'import_customizer_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/big-store/groceries/customizer.dat'),
-        'import_widget_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/big-store/groceries/widgets.wie'),
-        'import_preview_image_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/big-store/groceries/groceries.png'),
-        'preview_url'=> esc_url('https://wpthemes.themehunk.com/bigstore-groceries/'),
-        'import_notice' => __( 'Before importing the demo data, Install & Activate the recommended plugins.', 'big-store' ),
-       ),
-    array(
         'import_file_name' => esc_html__('Big Store Electro','big-store'),
         'import_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/big-store/electro/blog.xml'),
         'import_customizer_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/big-store/electro/customizer.dat'),
@@ -32,15 +14,33 @@ function big_store_import_files(){
         'preview_url'=> esc_url('https://wpthemes.themehunk.com/big-store-electro/'),
         'import_notice' => __( 'Before importing the demo data, Install & Activate the recommended plugins.', 'big-store' ),
        ),
-     array(
-        'import_file_name' => esc_html__('Gym Store','big-store'),
-        'import_file_url'=> esc_url('http://themehunk.com/wp-content/uploads/sites-demo/big-store/gym-store/blog.xml'),
-        'import_customizer_file_url'=> esc_url('http://themehunk.com/wp-content/uploads/sites-demo/big-store/gym-store/customizer.dat'),
-        'import_widget_file_url'=> esc_url('http://themehunk.com/wp-content/uploads/sites-demo/big-store/gym-store/widgets.wie'),
-        'import_preview_image_url'=> esc_url('http://themehunk.com/wp-content/uploads/sites-demo/big-store/gym-store/gym-store.png'),
-        'preview_url'=> esc_url('https://wpthemes.themehunk.com/gym-store/'),
-        'import_notice' => __( 'Before importing the demo data, Install & Activate the recommended plugins.', 'big-store' ),
-       ),
+    // array(
+    //     'import_file_name' => esc_html__('Big Store Default','big-store'),
+    //     'import_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/big-store/default/blog.xml'),
+    //     'import_customizer_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/big-store/default/customizer.dat'),
+    //     'import_widget_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/big-store/default/widgets.wie'),
+    //     'import_preview_image_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/big-store/default/default.png'),
+    //     'preview_url'=> esc_url('https://wpthemes.themehunk.com/big-store/'),
+    //     'import_notice' => __( 'Before importing the demo data, Install & Activate the recommended plugins.', 'big-store' ),
+    //    ),
+    // array(
+    //     'import_file_name' => esc_html__('Big Store Groceries','big-store'),
+    //     'import_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/big-store/groceries/blog.xml'),
+    //     'import_customizer_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/big-store/groceries/customizer.dat'),
+    //     'import_widget_file_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/big-store/groceries/widgets.wie'),
+    //     'import_preview_image_url'=> esc_url('https://themehunk.com/wp-content/uploads/sites-demo/big-store/groceries/groceries.png'),
+    //     'preview_url'=> esc_url('https://wpthemes.themehunk.com/bigstore-groceries/'),
+    //     'import_notice' => __( 'Before importing the demo data, Install & Activate the recommended plugins.', 'big-store' ),
+    //    ),
+    //  array(
+    //     'import_file_name' => esc_html__('Gym Store','big-store'),
+    //     'import_file_url'=> esc_url('http://themehunk.com/wp-content/uploads/sites-demo/big-store/gym-store/blog.xml'),
+    //     'import_customizer_file_url'=> esc_url('http://themehunk.com/wp-content/uploads/sites-demo/big-store/gym-store/customizer.dat'),
+    //     'import_widget_file_url'=> esc_url('http://themehunk.com/wp-content/uploads/sites-demo/big-store/gym-store/widgets.wie'),
+    //     'import_preview_image_url'=> esc_url('http://themehunk.com/wp-content/uploads/sites-demo/big-store/gym-store/gym-store.png'),
+    //     'preview_url'=> esc_url('https://wpthemes.themehunk.com/gym-store/'),
+    //     'import_notice' => __( 'Before importing the demo data, Install & Activate the recommended plugins.', 'big-store' ),
+    //    ),
      )
   );
 }

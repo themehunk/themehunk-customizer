@@ -9,6 +9,7 @@ jQuery('input[id=big_store_above_header_layout-abv-none],input[id=big_store_abov
 jQuery('input[id=big_store_top_slide_layout-slide-layout-1],#customize-control-big_store_disable_top_slider_sec input,#customize-control-big_store_top_slider_optn input').attr("disabled",true);
 jQuery('#customize-control-big_store_include_category_slider li input').attr("disabled",true);
 jQuery('#customize-control-big_store_include_category_slider li:nth-of-type(1) input,#customize-control-big_store_include_category_slider li:nth-of-type(2) input,#customize-control-big_store_include_category_slider li:nth-of-type(3) input').attr("disabled",false);
+jQuery('#customize-control-big_store_top_slide_content .customizer-repeater-new-field,#customize-control-big_store_top_slide_content .social-repeater-general-control-remove-field').remove();
 
 //Tabbed Product Carousel
 jQuery('#customize-control-big_store_disable_cat_sec input,#customize-control-big_store_disable_category_slide_sec input,#customize-control-big_store_disable_product_img_sec input,#customize-control-big_store_disable_ribbon_sec input,#customize-control-big_store_disable_product_slide_sec input,#customize-control-big_store_disable_banner_sec input,#customize-control-big_store_disable_product_list_sec input,#customize-control-big_store_disable_highlight_sec input').attr("disabled",true);
@@ -36,9 +37,11 @@ jQuery('#customize-control-big_store_single_row_prdct_slide input,#customize-con
 //Banner
 jQuery('#big_store_banner_layout-bnr-two').attr("disabled",true);
 // Product List Carousel
-
 jQuery('#_customize-input-big_store_product_list_optn option[value="featured"],#_customize-input-big_store_product_list_optn option[value="random"]').attr("disabled",true);
 jQuery('#customize-control-big_store_single_row_prdct_list input,#customize-control-big_store_product_list_slide_optn input').attr("disabled",true);
 
-jQuery('#customize-control-big_store_category_tab_list,#customize-control-big_store_product_img_sec_cat_list').append("<h4>(To Select More Feature Available In Pro Version)</h4>");
+jQuery('#customize-control-big_store_category_tab_list,#customize-control-big_store_product_img_sec_cat_list,#customize-control-big_store_include_category_slider').append("<h4>(To Select More Feature Available In Pro Version)</h4>");
+
+jQuery('#customize-control-big_store_top_slide_content').append("<h4>(To Add More Slides Feature Available In Pro Version)</h4>");
+
 });

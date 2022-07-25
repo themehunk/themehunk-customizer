@@ -7,6 +7,12 @@ wp_enqueue_script( 'bigstorecustomizer_script', THEMEHUNK_CUSTOMIZER_PLUGIN_URL 
 
 add_action('customize_controls_enqueue_scripts', 'big_store_customizer_script_registers_lite', 108 );
 
+function big_store_customizer_style_registers_lite(){
+wp_enqueue_style( 'bigstorecustomizer_style', THEMEHUNK_CUSTOMIZER_PLUGIN_URL . '/big-store/customizer/customizer.css'); 
+}
+
+add_action('customize_controls_print_styles', 'big_store_customizer_style_registers_lite', 108 );
+
 if ( ! class_exists( 'WooCommerce' ) ){
   return;
 }

@@ -46,7 +46,7 @@ $wp_customize->add_control(
             $wp_customize->add_setting(
              'big_store_top_slide_content', array(
              'sanitize_callback' => 'big_store_repeater_sanitize',  
-             'default'           => Big_Store_Defaults_Models::instance()->get_slider_default(),
+             'default'           => Big_Store_Top_Slider_Default_Setting_Models::instance()->get_slider_default(),
                 )
             );
             $wp_customize->add_control(

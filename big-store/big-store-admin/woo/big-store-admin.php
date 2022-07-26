@@ -541,3 +541,53 @@ function big_store_shop_below_footer_markup(){ ?>
 <?php }
 }
 add_action( 'big_store_shop_default_below_footer', 'big_store_shop_below_footer_markup' );
+
+class Big_Store_Top_Slider_Default_Setting_Models{
+
+  public static function instance() {
+    static $instance = false;
+    if ( $instance === false ) {
+      // Late static binding (PHP 5.3+)
+      $instance = new static();
+    }
+
+    return $instance;
+  }
+
+  /**
+   * Get default values for features section.
+   *
+   * @since 1.0.0
+   * @access public
+   */
+  public function get_slider_default() {
+    return apply_filters(
+      'big_store_slider_default_content', json_encode(
+      array(
+      array(
+            'image_url' =>  '',
+
+            'title'     => '',
+            
+            'subtitle'  => '',
+            'text'      => '',
+            'link'       => '',
+
+          ),
+      array(
+            'image_url' =>  '',
+
+            'title'     => '',
+            
+            'subtitle'  => '',
+            'text'      => '',
+            'link'       => '',
+
+          ),
+      )
+    )
+
+    );
+    
+  }
+}

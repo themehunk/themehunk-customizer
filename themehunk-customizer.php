@@ -10,7 +10,7 @@
   if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
   
 // Version constant for easy CSS refreshes
-define('THEMEHUNK_CUSTOMIZER_VERSION', '2.7.2');
+define('THEMEHUNK_CUSTOMIZER_VERSION', '2.7.6');
 define('THEMEHUNK_CUSTOMIZER_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('THEMEHUNK_CUSTOMIZER_PLUGIN_PATH', plugin_dir_path(__FILE__) );
 include_once(plugin_dir_path(__FILE__) . 'notify/notify.php' );

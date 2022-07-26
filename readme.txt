@@ -31,7 +31,7 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 == Changelog ==
 
 = 2.7.6 =
-* Pro features in Big Store Pro removed.
+* Pro features limit Added.
 
 = 2.7.5 =
 * Shopline Search issue fixed. 

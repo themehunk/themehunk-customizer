@@ -4,7 +4,7 @@ Author URI: : https://www.themehunk.com/
 Tags: themehunk, customizer, oneline-lite,Testimonial,Team, service
 Requires at least: 5.5
 Tested up to: 6.1
-Stable tag: 2.7.6
+Stable tag: 2.7.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,12 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 == Screenshots ==
 
 == Changelog ==
+
+= 2.7.8 =
+* Big Store - * TH Compare Pro Integrated.
+
+= 2.7.7 =
+* Version Update.
 
 = 2.7.6 =
 * Pro features limit Added.

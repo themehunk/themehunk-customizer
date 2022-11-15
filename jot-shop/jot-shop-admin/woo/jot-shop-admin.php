@@ -236,7 +236,7 @@ function jot_shop_product_cat_filter_default_loop($term_id,$prdct_optn){
                     </div>
                   <?php } 
 
-                      if( ( class_exists( 'th_product_compare' ))){
+                     if(class_exists('th_product_compare') || class_exists('Tpcp_product_compare')){
                       echo jot_shop_add_to_compare_fltr($pid);
                         }
                           elseif( ( class_exists( 'WPCleverWoosc' ))){
@@ -364,7 +364,7 @@ function jot_shop_product_filter_loop($args){
                     </div>
                   <?php } 
                           
-                          if(  class_exists( 'th_product_compare' )){
+                          if(class_exists('th_product_compare') || class_exists('Tpcp_product_compare')){
                             echo jot_shop_add_to_compare_fltr($pid);
                           }
                     

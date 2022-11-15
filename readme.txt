@@ -32,6 +32,8 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 
 = 2.7.8 =
 * Big Store - * TH Compare Pro Integrated.
+* M Shop - TH Compare Pro Integrated.
+* Jot Shop - TH Compare Pro Integrated.
 
 = 2.7.7 =
 * Version Update.

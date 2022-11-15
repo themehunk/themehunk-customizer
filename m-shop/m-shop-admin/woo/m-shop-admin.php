@@ -7,7 +7,7 @@ if ( ! function_exists( 'm_shop_add_to_compare_fltr' ) ){
         // Th Product compare
         /**********************/
         function m_shop_add_to_compare_fltr($pid){
-    if(class_exists(('th_product_compare')  ) ){
+    if(class_exists('th_product_compare') || class_exists('Tpcp_product_compare')){
     echo '<div class="thunk-compare"><span class="compare-list"><div class="woocommerce product compare-button">
           <a class="th-product-compare-btn compare button" data-th-product-id="'.$pid.'"></a>
           </div></span></div>';

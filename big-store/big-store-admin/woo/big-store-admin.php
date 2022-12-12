@@ -5,7 +5,9 @@ function big_store_customizer_script_registers_lite(){
 wp_enqueue_script( 'bigstorecustomizer_script', THEMEHUNK_CUSTOMIZER_PLUGIN_URL . '/big-store/customizer/js/customizer.js', array("jquery"), '', true  );  
 }
 
+if (!function_exists('big_store_pro_load_plugin')) {
 add_action('customize_controls_enqueue_scripts', 'big_store_customizer_script_registers_lite', 108 );
+}
 
 function big_store_customizer_style_registers_lite(){
 wp_enqueue_style( 'bigstorecustomizer_style', THEMEHUNK_CUSTOMIZER_PLUGIN_URL . '/big-store/customizer/customizer.css'); 

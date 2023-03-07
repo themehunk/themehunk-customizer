@@ -89,16 +89,16 @@ function themehunk_customizer_load_plugin() {
 		themehunk_customizer_load_file();
 		include_once( plugin_dir_path(__FILE__) . 'elanzalite/include.php' );
 	}
-	elseif(in_array("big-store", $theme)){
+	elseif(in_array("big-store", $theme) && class_exists('WooCommerce')){
 		include_once( plugin_dir_path(__FILE__) . 'big-store/include.php' );
 	}
-		elseif(in_array("m-shop", $theme)){
+		elseif(in_array("m-shop", $theme) && class_exists('WooCommerce') ){
 		include_once( plugin_dir_path(__FILE__) . 'm-shop/include.php' );
 	}
-	elseif(in_array("jot-shop", $theme)){
+	elseif(in_array("jot-shop", $theme) && class_exists('WooCommerce')){
 		include_once( plugin_dir_path(__FILE__) . 'jot-shop/include.php' );
 	}
-	elseif(in_array("amaz-store", $theme)){
+	elseif(in_array("amaz-store", $theme) && class_exists('WooCommerce')){
 		include_once( plugin_dir_path(__FILE__) . 'amaz-store/include.php' );
 	}
 }

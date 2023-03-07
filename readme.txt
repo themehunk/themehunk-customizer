@@ -32,6 +32,7 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 
 = 2.7.9 =
 * Big Store - Big Store Pro working issue resolved.
+* WooCommerce condition added in themehunk_customizer_load_plugin.
 
 = 2.7.8 =
 * Big Store - * TH Compare Pro Integrated.

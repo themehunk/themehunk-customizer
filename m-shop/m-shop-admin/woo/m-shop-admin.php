@@ -44,7 +44,7 @@ if(!function_exists('m_shop_product_query')){
     if($term_id){
         $term_args = array('hide_empty' => 1,'slug'    => $term_id);
         $product_categories = get_terms( 'product_cat', $term_args);
-    $product_cat_slug =  $product_categories[0]->slug;
+    $product_cat_slug =  isset($product_categories[0]->slug)? $product_categories[0]->slug:0;
     $args['category'] = $product_cat_slug;
     }
     if($prdct_optn=='random'){

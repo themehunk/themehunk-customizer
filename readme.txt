@@ -3,8 +3,8 @@ Contributors: ThemeHunk
 Author URI: : https://www.themehunk.com/
 Tags: themehunk, customizer, oneline-lite,Testimonial,Team, service
 Requires at least: 5.5
-Tested up to: 6.1
-Stable tag: 2.7.9
+Tested up to: 6.4.2
+Stable tag: 2.8.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,9 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 == Screenshots ==
 
 == Changelog ==
+
+= 2.8.0 =
+* M Shop : * Attempt to read property "slug" on null in m_shop_product_query issue resolved.
 
 = 2.7.9 =
 * Big Store - Big Store Pro working issue resolved.

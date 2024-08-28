@@ -1,4 +1,5 @@
-.customize-control.lite label{
+.customize-control.lite label,
+.customize-control label{
 	position: relative;
 }
 .customize-control.lite label:after{
@@ -14,6 +15,7 @@
 	top: 0;
 	font-size: 21px;
 }
-#customize-control-big_store_above_header_layout label:nth-of-type(3):after{
+#customize-control-big_store_above_header_layout label:nth-of-type(3):after,
+#customize-control-big_store_above_footer_layout label:nth-of-type(3):after{
 	display: none;
 }

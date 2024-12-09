@@ -5,6 +5,14 @@ if ( ! function_exists( 'shopline_product_remove' ) ) :
 add_action( 'wp_ajax_shopline_product_remove', 'shopline_product_remove' );
 add_action( 'wp_ajax_nopriv_shopline_product_remove', 'shopline_product_remove' );
 function shopline_product_remove() {
+
+  if ( ! current_user_can( 'administrator' ) ) {
+  
+    wp_die( - 1, 403 );
+    
+} 
+check_ajax_referer('shopline_nonce','nonce'); 
+
     global $woocommerce;
     $cart = $woocommerce->cart;
 foreach ($woocommerce->cart->get_cart() as $cart_item_key => $cart_item){
@@ -24,6 +32,12 @@ if ( ! function_exists( 'shopline_product_count_update' ) ) :
 add_action( 'wp_ajax_shopline_product_count_update', 'shopline_product_count_update' );
 add_action( 'wp_ajax_nopriv_shopline_product_count_update', 'shopline_product_count_update' );
 function shopline_product_count_update() {
+  if ( ! current_user_can( 'administrator' ) ) {
+  
+    wp_die( - 1, 403 );
+    
+} 
+check_ajax_referer('shopline_nonce','nonce'); 
         global $woocommerce; ?>
         <a href="<?php echo wc_get_cart_url(); ?>" class="cart-contents" ><i class="fa fa-shopping-cart"></i><div class="cart-crl"><?php echo $woocommerce->cart->cart_contents_count; ?></div></a>     
     <?php
@@ -43,6 +57,13 @@ add_action('wp_ajax_shopline_popup_product', 'shopline_popup_product');
 add_action( 'wp_ajax_nopriv_shopline_popup_product', 'shopline_popup_product' );
 
 function shopline_popup_product() {
+if ( ! current_user_can( 'administrator' ) ) {
+  
+    wp_die( - 1, 403 );
+    
+} 
+check_ajax_referer('shopline_nonce','nonce'); 
+
    if(isset($_POST['popup'])){
    $productId = $_POST['popup'];
 

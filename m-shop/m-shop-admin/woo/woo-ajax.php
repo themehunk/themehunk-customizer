@@ -6,8 +6,6 @@ if ( ! class_exists( 'WooCommerce' ) ){
 //category product section product ajax filter
 /***************************/
 
-
-
 if( !function_exists('m_shop_cat_filter_ajax')){
 
 add_action('wp_ajax_m_shop_cat_filter_ajax', 'm_shop_cat_filter_ajax');

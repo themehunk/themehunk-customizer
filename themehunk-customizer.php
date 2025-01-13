@@ -2,7 +2,7 @@
 /*
   Plugin Name: ThemeHunk Customizer
   Description: With the help of ThemeHunk unlimited addon you can add unlimited number of columns for services, Testimonial, and Team with color options for each.
-  Version: 2.8.2
+  Version: 2.8.3
   Author: ThemeHunk
   Text Domain: themehunk-customizer
   Author URI: http://www.themehunk.com/
@@ -10,7 +10,7 @@
   if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
   
 // Version constant for easy CSS refreshes
-define('THEMEHUNK_CUSTOMIZER_VERSION', '2.8.1');
+define('THEMEHUNK_CUSTOMIZER_VERSION', '2.8.3');
 define('THEMEHUNK_CUSTOMIZER_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('THEMEHUNK_CUSTOMIZER_PLUGIN_PATH', plugin_dir_path(__FILE__) );
 include_once(plugin_dir_path(__FILE__) . 'notify/notify.php' );
@@ -30,7 +30,10 @@ include_once( plugin_dir_path(__FILE__) . 'shopline/demo/import-shopline-data.ph
 }elseif(in_array("featuredlite", $theme)){
 include_once( plugin_dir_path(__FILE__) . 'featuredlite/demo/import-data.php');
 }elseif(in_array("big-store", $theme)){
-include_once( plugin_dir_path(__FILE__) . 'big-store/demo/import.php' );	
+
+require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
+// include_once( plugin_dir_path(__FILE__) . 'big-store/demo/import.php' );	
+
 }elseif(in_array("m-shop", $theme)){
 include_once( plugin_dir_path(__FILE__) . 'm-shop/demo/import.php' );	
 }

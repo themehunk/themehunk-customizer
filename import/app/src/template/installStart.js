@@ -82,7 +82,7 @@ function getThemeData(type){
 
   jotshop:[
     { 
-      type:'plugin', template: 'free', name: 'jopt-shop',free:themehunkCustomizer,paid:'jot-shop-pro', builder:'customizer'
+      type:'plugin', template: 'free', name: 'jot-shop',free:themehunkCustomizer,paid:'jot-shop-pro', builder:'customizer'
     },
     ],
 
@@ -104,11 +104,11 @@ function getThemeData(type){
       },
       ],
 
-  elanzalite:[
-      { 
-        type:'theme', template: 'free', name: 'elanzalite',free:themehunkCustomizer,paid:'elanza-pro', builder:'customizer'
-      },
-      ],
+  // elanzalite:[
+  //     { 
+  //       type:'theme', template: 'free', name: 'elanzalite',free:themehunkCustomizer,paid:'elanza-pro', builder:'customizer'
+  //     },
+  //     ],
   
 
   

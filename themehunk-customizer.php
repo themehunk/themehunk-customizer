@@ -24,22 +24,21 @@ function themehunk_customizer_text_domain(){
 
 $theme = themehunk_customizer_text_domain(); 
 if(in_array("oneline-lite", $theme)){
-include_once( plugin_dir_path(__FILE__) . 'oneline-lite/demo/import-data.php' );
-}elseif(in_array("shopline", $theme)){
-include_once( plugin_dir_path(__FILE__) . 'shopline/demo/import-shopline-data.php');
-}elseif(in_array("featuredlite", $theme)){
-include_once( plugin_dir_path(__FILE__) . 'featuredlite/demo/import-data.php');
-}elseif(in_array("big-store", $theme)){
-
 require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
-// include_once( plugin_dir_path(__FILE__) . 'big-store/demo/import.php' );	
 
+}elseif(in_array("shopline", $theme)){
+require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
+}elseif(in_array("featuredlite", $theme)){
+require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
+}elseif(in_array("big-store", $theme)){
+require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
 }elseif(in_array("m-shop", $theme)){
-include_once( plugin_dir_path(__FILE__) . 'm-shop/demo/import.php' );	
+require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
 }
 elseif(in_array("jot-shop", $theme)){
 register_activation_hook( __FILE__, 'jot_shop_pro_deactivate' );
-include_once( plugin_dir_path(__FILE__) . 'jot-shop/demo/import.php' );	
+require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
+// include_once( plugin_dir_path(__FILE__) . 'jot-shop/demo/import.php' );	
 }
 elseif(in_array("amaz-store", $theme)){
 register_activation_hook( __FILE__, 'themehunk_pro_plugin_deactivate' );

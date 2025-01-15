@@ -8,11 +8,11 @@ import almairashop from '../../assets/json/almaira.json';
 import portfoliolite from '../../assets/json/portfolioline.json';
 import bigstore from '../../assets/json/big-store.json';
 import amazstore from '../../assets/json/amaz-store.json';
-// import mshop from '../../assets/json/m-shop.json';
-// import jotshop from '../../assets/json/jotshop.json';
-// import onelinelite from '../../assets/json/oneline.json';
-// import shopline from '../../assets/json/big-store.json';
-// import featuredlite from '../../assets/json/big-store.json';
+import mshop from '../../assets/json/m-shop.json';
+import jotshop from '../../assets/json/jotshop.json';
+import onelinelite from '../../assets/json/oneline.json';
+import shopline from '../../assets/json/shopline-pro.json';
+import featured from '../../assets/json/featured.json';
 
 
 const gutenbergtmpl = ['th-shop-mania','gutenberg'];
@@ -35,6 +35,15 @@ switch(HCLOCAL.themeName) {
         break;
     case 'jot-shop':
         jsonData = gutenberg.concat(jotshop);
+        break;
+    case 'oneline-lite':
+        jsonData = gutenberg.concat(onelinelite);
+        break;
+    case 'shopline':
+        jsonData = gutenberg.concat(shopline);
+        break;
+    case 'featuredlite':
+        jsonData = gutenberg.concat(featured);
         break;
     case 'th-shop-mania':
          jsonData = gutenberg.concat(thshopmania);

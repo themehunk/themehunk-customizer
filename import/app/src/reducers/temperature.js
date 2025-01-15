@@ -7,7 +7,7 @@ import openmart from '../../assets/json/open-mart.json';
 import almairashop from '../../assets/json/almaira.json';
 import portfoliolite from '../../assets/json/portfolioline.json';
 import bigstore from '../../assets/json/big-store.json';
-// import amazstore from '../../assets/json/amaze-store.json';
+import amazstore from '../../assets/json/amaz-store.json';
 // import mshop from '../../assets/json/m-shop.json';
 // import jotshop from '../../assets/json/jotshop.json';
 // import onelinelite from '../../assets/json/oneline.json';

@@ -64,9 +64,51 @@ function getThemeData(type){
 
   bigstore:[
     { 
-      type:'theme', template: 'free', name: 'big-store',free:themehunkCustomizer,paid:'big-store-pro', builder:'customizer'
+      type:'plugin', template: 'free', name: 'big-store',free:themehunkCustomizer,paid:'big-store-pro', builder:'customizer'
     },
     ],
+
+  amazstore:[
+    { 
+      type:'plugin', template: 'free', name: 'amaz-store',free:themehunkCustomizer,paid:'amaz-store-pro', builder:'customizer'
+    },
+    ],
+
+  mshop:[
+    { 
+      type:'plugin', template: 'free', name: 'm-shop',free:themehunkCustomizer,paid:'m-shop-pro', builder:'customizer'
+    },
+    ],
+
+  jotshop:[
+    { 
+      type:'plugin', template: 'free', name: 'jopt-shop',free:themehunkCustomizer,paid:'jot-shop-pro', builder:'customizer'
+    },
+    ],
+
+  onelinelite:[
+      { 
+        type:'theme', template: 'free', name: 'oneline-lite',free:themehunkCustomizer,paid:'oneline', builder:'customizer'
+      },
+      ],
+  
+  shopline:[
+      { 
+        type:'theme', template: 'free', name: 'shopline',free:themehunkCustomizer,paid:'shopline-pro', builder:'customizer'
+      },
+      ],
+
+  featuredlite:[
+      { 
+        type:'theme', template: 'free', name: 'featuredlite',free:themehunkCustomizer,paid:'featuredpro', builder:'customizer'
+      },
+      ],
+
+  elanzalite:[
+      { 
+        type:'theme', template: 'free', name: 'elanzalite',free:themehunkCustomizer,paid:'elanza-pro', builder:'customizer'
+      },
+      ],
   
 
   
@@ -82,6 +124,13 @@ switch(type){
   case "almaira" : return themeList[0].almaira[0];
   case "gogo" : return themeList[0].gogo[0];
   case "big-store" : return themeList[0].bigstore[0];
+  case "amaz-store" : return themeList[0].amazstore[0];
+  case "m-shop" : return themeList[0].mshop[0];
+  case "jot-shop" : return themeList[0].jotshop[0];
+  case "oneline-lite" : return themeList[0].onelinelite[0];
+  case "shopline" : return themeList[0].shopline[0];
+  case "featuredlite" : return themeList[0].featuredlite[0];
+  case "elanzalite" : return themeList[0].elanzalite[0];
   default: return  themeList[0].shopmania[0];
 }
 
@@ -138,7 +187,7 @@ export default function installStart(props){
           'X-WP-Nonce': HCLOCAL.security,
       },
         body: new URLSearchParams({
-            action: 'hunk_companion_import_process', // Specify the WordPress AJAX action
+            action: 'themehunk_customizer_import_process', // Specify the WordPress AJAX action
             vsecurity: HCLOCAL.security,
             data: JSON.stringify(dataToSend), // Convert the data to JSON and send it
         }),

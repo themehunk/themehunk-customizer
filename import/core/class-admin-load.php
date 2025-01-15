@@ -1,10 +1,10 @@
 <?php defined( 'ABSPATH' ) or exit;
 
 // Exit if accessed directly.
-if ( ! class_exists( 'HUNK_COMPANION_SITES_ADMIN_LOAD' ) ) {
+if ( ! class_exists( 'THEMEHUNK_CUSTOMIZER_SITES_ADMIN_LOAD' ) ) {
 
 
-    class HUNK_COMPANION_SITES_ADMIN_LOAD {
+    class THEMEHUNK_CUSTOMIZER_SITES_ADMIN_LOAD {
 
 		private static $_instance = null;
 			/**
@@ -38,7 +38,7 @@ if ( ! class_exists( 'HUNK_COMPANION_SITES_ADMIN_LOAD' ) ) {
 
     }
 
-	HUNK_COMPANION_SITES_ADMIN_LOAD::get_instance();
+	THEMEHUNK_CUSTOMIZER_SITES_ADMIN_LOAD::get_instance();
 
 }
 

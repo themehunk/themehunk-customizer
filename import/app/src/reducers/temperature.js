@@ -7,6 +7,12 @@ import openmart from '../../assets/json/open-mart.json';
 import almairashop from '../../assets/json/almaira.json';
 import portfoliolite from '../../assets/json/portfolioline.json';
 import bigstore from '../../assets/json/big-store.json';
+// import amazstore from '../../assets/json/amaze-store.json';
+// import mshop from '../../assets/json/m-shop.json';
+// import jotshop from '../../assets/json/jotshop.json';
+// import onelinelite from '../../assets/json/oneline.json';
+// import shopline from '../../assets/json/big-store.json';
+// import featuredlite from '../../assets/json/big-store.json';
 
 
 const gutenbergtmpl = ['th-shop-mania','gutenberg'];
@@ -20,6 +26,15 @@ let  jsonData = '';
 switch(HCLOCAL.themeName) {
     case 'big-store':
          jsonData = gutenberg.concat(bigstore);
+        break;
+    case 'amaz-store':
+        jsonData = gutenberg.concat(amazstore);
+        break;
+    case 'm-shop':
+        jsonData = gutenberg.concat(mshop);
+        break;
+    case 'jot-shop':
+        jsonData = gutenberg.concat(jotshop);
         break;
     case 'th-shop-mania':
          jsonData = gutenberg.concat(thshopmania);

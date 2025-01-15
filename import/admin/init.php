@@ -4,12 +4,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 	
 // Exit if accessed directly.
-if ( ! class_exists( 'HUNK_COMPANION_SITES_BUILDER_MENU' ) ) {
+if ( ! class_exists( 'THEMEHUNK_CUSTOMIZER_SITES_BUILDER_MENU' ) ) {
 
     /**
 	 * hunk-companion sites Admin Menu Settings
 	 */
-    class HUNK_COMPANION_SITES_BUILDER_MENU {
+    class THEMEHUNK_CUSTOMIZER_SITES_BUILDER_MENU {
 
         static public $plugin_slug = 'themehunk-site-library';
 
@@ -227,5 +227,5 @@ if ( ! class_exists( 'HUNK_COMPANION_SITES_BUILDER_MENU' ) ) {
 
     }
 
-    new HUNK_COMPANION_SITES_BUILDER_MENU;
+    new THEMEHUNK_CUSTOMIZER_SITES_BUILDER_MENU;
 }

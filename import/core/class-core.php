@@ -4,12 +4,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 	
 // Exit if accessed directly.
-if ( ! class_exists( 'HUNK_COMPANION_SITES_BUILDER_CORE' ) ) {
+if ( ! class_exists( 'THEMEHUNK_CUSTOMIZER_SITES_BUILDER_CORE' ) ) {
 
     /**
 	 * AI SITE builder CORE Menu Settings
 	 */
-    class HUNK_COMPANION_SITES_BUILDER_CORE {
+    class THEMEHUNK_CUSTOMIZER_SITES_BUILDER_CORE {
 
         public function core_data($data){
                         $url = '';

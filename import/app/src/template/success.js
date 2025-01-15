@@ -39,7 +39,7 @@ const getEditUrl = async () =>{
         'X-WP-Nonce': HCLOCAL.security,
     },
       body: new URLSearchParams({
-          action: 'hunk_companion_sites_core', // Specify the WordPress AJAX action
+          action: 'themehunk_customizer_sites_core', // Specify the WordPress AJAX action
           security: HCLOCAL.security,
           data: JSON.stringify(dataToSend), // Convert the data to JSON and send it
       }),

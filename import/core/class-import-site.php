@@ -97,16 +97,16 @@ if ( ! class_exists( 'THEMEHUNK_CUSTOMIZER_SITES_IMPORT' ) ) {
 					if ( isset( $xml_path['data']['file'] ) ) {
 						$data        = HUNK_COMPAION_WXR_IMPORTER::instance()->get_xml_data( $xml_path['data']['file'] );
 						$data['xml'] = $xml_path['data'];
-						$data['update'] = __( 'xml file download completed.', 'hunk-companion' ) ;
+						$data['update'] = __( 'xml file download completed.', 'themehunk-customizer' ) ;
 						wp_send_json_success( $data );
 					} else {
-						wp_send_json_error( __( 'There was an error downloading the XML file.', 'hunk-companion' ) );
+						wp_send_json_error( __( 'There was an error downloading the XML file.', 'themehunk-customizer' ) );
 					}
 				} else {
 					wp_send_json_error( $xml_path['data'] );
 				}
 			} else {
-				wp_send_json_error( __( 'Invalid site XML file!', 'hunk-companion' ) );
+				wp_send_json_error( __( 'Invalid site XML file!', 'themehunk-customizer' ) );
 			}
 		}
 
@@ -125,7 +125,7 @@ if ( ! class_exists( 'THEMEHUNK_CUSTOMIZER_SITES_IMPORT' ) ) {
 				wp_send_json_success( array('success'=>$return) );
 
 			} else {
-				wp_send_json_error( __( 'Customizer data is empty!', 'hunk-companion' ) );
+				wp_send_json_error( __( 'Customizer data is empty!', 'themehunk-customizer' ) );
 			}
 
 		}
@@ -138,9 +138,9 @@ if ( ! class_exists( 'THEMEHUNK_CUSTOMIZER_SITES_IMPORT' ) ) {
 			 //	Themehunk_Importer_Log::add( 'Imported - Site Options ' . json_encode( $options_data ) );
 				$options_importer = HUNK_COMPAION_OPTIONS_IMPORT::instance();
 				$options_importer->import_options_data( $options_data );
-				wp_send_json_success( __( 'Site options data is update successfully.', 'hunk-companion' ) );
+				wp_send_json_success( __( 'Site options data is update successfully.', 'themehunk-customizer' ) );
 			 } else {
-			 	wp_send_json_error( __( 'Site options are empty!', 'hunk-companion' ) );
+			 	wp_send_json_error( __( 'Site options are empty!', 'themehunk-customizer' ) );
 			 }
 
 
@@ -161,9 +161,9 @@ if ( ! class_exists( 'THEMEHUNK_CUSTOMIZER_SITES_IMPORT' ) ) {
 
 				$status  = $widgets_importer->import_widgets_data( $widgets_data );
 
-				wp_send_json_success( __( 'Widget data is update successfully.', 'hunk-companion' ) );
+				wp_send_json_success( __( 'Widget data is update successfully.', 'themehunk-customizer' ) );
 			} else {
-				wp_send_json_error( __( 'Widget data is empty!', 'hunk-companion' ) );
+				wp_send_json_error( __( 'Widget data is empty!', 'themehunk-customizer' ) );
 			}
 
 		}

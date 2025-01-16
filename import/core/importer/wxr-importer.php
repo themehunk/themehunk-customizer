@@ -64,7 +64,7 @@ class HUNK_COMPAION_WXR_IMPORTER {
 		}
 
 		add_filter( 'upload_mimes', array( $this, 'custom_upload_mimes' ) );
-		add_action( 'wp_ajax_hunk-companion-sites-wxr-import', array( $this, 'xml_data_import' ) );
+		add_action( 'wp_ajax_themehunk-customizer-sites-wxr-import', array( $this, 'xml_data_import' ) );
 		add_filter( 'wxr_importer.pre_process.user', '__return_null' );
 	}
 
@@ -78,7 +78,7 @@ class HUNK_COMPAION_WXR_IMPORTER {
 		if ( wp_doing_ajax() ) {
 
 			// Verify Nonce.
-			check_ajax_referer( 'hunk-companion-sites', '_ajax_nonce' );
+			check_ajax_referer( 'themehunk-customizer-sites', '_ajax_nonce' );
 
 			if ( ! current_user_can( 'manage_options' ) ) {
 				wp_send_json_error();
@@ -194,8 +194,8 @@ class HUNK_COMPAION_WXR_IMPORTER {
 	public function get_xml_data( $path ) {
 
 		$args = array(
-			'action'  => 'hunk-companion-sites-wxr-import',
-			'_ajax_nonce' => wp_create_nonce( 'hunk-companion-sites' ),
+			'action'  => 'themehunk-customizer-sites-wxr-import',
+			'_ajax_nonce' => wp_create_nonce( 'themehunk-customizer-sites' ),
 			'id'      => '1',
 			'xml_url' => $path,
 		);

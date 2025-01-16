@@ -124,7 +124,7 @@ return (
   <div className='asib-tmpl-footer'>
     <h3>{template.title}</h3>
     {template.free_paid =="free" && <b className='freetag'>Free</b>}
-    {template.free_paid =="paid" && <a className='aisb-pro' data-pro='Premium' ><img src={`${HCLOCAL.rootPath}import/admin/assets/images/pro.svg`}  alt="Premium" /></a>}
+    {template.free_paid =="paid" && <a className='aisb-pro' data-pro='Premium' ><img src={`${THCLOCAL.rootPath}import/admin/assets/images/pro.svg`}  alt="Premium" /></a>}
   </div>
 </div>
 </div>);

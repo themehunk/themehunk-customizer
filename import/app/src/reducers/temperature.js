@@ -1,11 +1,4 @@
 import gutenberg from '../../assets/json/gutenberg.json';
-import thshopmania from '../../assets/json/th-shop-mania.json';
-import topstore from '../../assets/json/top-store-pro.json';
-import openshop from '../../assets/json/openshop-pro.json';
-import gogolite from '../../assets/json/gogo.json';
-import openmart from '../../assets/json/open-mart.json';
-import almairashop from '../../assets/json/almaira.json';
-import portfoliolite from '../../assets/json/portfolioline.json';
 import bigstore from '../../assets/json/big-store.json';
 import amazstore from '../../assets/json/amaz-store.json';
 import mshop from '../../assets/json/m-shop.json';
@@ -19,11 +12,11 @@ const gutenbergtmpl = ['th-shop-mania','gutenberg'];
 const customizer = ['top-store', 'top-store-pro', 'gogo','openshop-pro','open-shop', 'royal-shop','big-store','jotshop','open-mart','m-shop','shopline-pro','amaz-store','almaira','almaira-shop','novelpro','oneline','portfoliolite','portfolioline','featured'];
 const elementor = ['th-shop-mania','elementor'];
 
-//let jsonTheme = HCLOCAL.themeName.replace(/-/g, "");
-//HCLOCAL.themeName - current theme name
-// builderHandel(HCLOCAL.themeName) - builder name like elementor, customizer or gutenberg
+//let jsonTheme = THCLOCAL.themeName.replace(/-/g, "");
+//THCLOCAL.themeName - current theme name
+// builderHandel(THCLOCAL.themeName) - builder name like elementor, customizer or gutenberg
 let  jsonData = '';
-switch(HCLOCAL.themeName) {
+switch(THCLOCAL.themeName) {
     case 'big-store':
          jsonData = gutenberg.concat(bigstore);
         break;
@@ -45,27 +38,6 @@ switch(HCLOCAL.themeName) {
     case 'featuredlite':
         jsonData = gutenberg.concat(featured);
         break;
-    case 'th-shop-mania':
-         jsonData = gutenberg.concat(thshopmania);
-        break;
-    case 'top-store':
-         jsonData = gutenberg.concat(topstore);
-        break;
-    case 'open-shop':
-            jsonData = gutenberg.concat(openshop);
-           break;
-    case 'gogo':
-            jsonData = gogolite.concat();
-           break;
-    case 'open-mart':
-            jsonData = gutenberg.concat(openmart);
-           break;
-    case 'almaira-shop':
-            jsonData = almairashop.concat();
-           break;
-    case 'portfoliolite':
-            jsonData = portfoliolite.concat();
-           break;
     default:
          jsonData = gutenberg.concat(thshopmania);
     }
@@ -82,7 +54,7 @@ const builderHandel = (builder) => {
 }
 
 
-const defaultJsonData = jsonData.filter(template => builderHandel(template.builder_theme) === builderHandel(HCLOCAL.themeName) && template.category.includes('all'));
+const defaultJsonData = jsonData.filter(template => builderHandel(template.builder_theme) === builderHandel(THCLOCAL.themeName) && template.category.includes('all'));
 
 const templateData = ( state = defaultJsonData, action) =>{
 
@@ -94,7 +66,7 @@ const templateData = ( state = defaultJsonData, action) =>{
 
 }
 
-const reduxBuildrName = ( state = builderHandel(HCLOCAL.themeName), action) =>{
+const reduxBuildrName = ( state = builderHandel(THCLOCAL.themeName), action) =>{
     switch(action.type){
         case "BUILDER_NAME" : return action.payload;
         default: return state;
@@ -102,7 +74,7 @@ const reduxBuildrName = ( state = builderHandel(HCLOCAL.themeName), action) =>{
 
 }
 
-const templateSelect = ( state = {cate:'all',builder:builderHandel(HCLOCAL.themeName)}, action) =>{
+const templateSelect = ( state = {cate:'all',builder:builderHandel(THCLOCAL.themeName)}, action) =>{
 
     switch(action.type){
         case "CATE_BUILDER" : return {cate:action.payload,builder:action.builderload};

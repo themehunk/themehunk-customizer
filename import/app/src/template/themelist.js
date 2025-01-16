@@ -2,7 +2,7 @@
 export default function getThemeData(type){
 
     let thCustomizer = 'themehunk-customizer/themehunk-customizer.php';
-    let hunkCompanion = 'hunk-companion/hunk-companion.php';
+    let hunkCompanion = 'themehunk-customizer/themehunk-customizer.php';
 
     
   const themeList = [ { 

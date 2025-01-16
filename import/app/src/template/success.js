@@ -33,14 +33,14 @@ export default function success(){
 const getEditUrl = async () =>{
   try {
     const dataToSend = { data: templType,type:'edit' }; // Customize the data to send
-    const response = await fetch(HCLOCAL.ajaxurl, {
+    const response = await fetch(THCLOCAL.ajaxurl, {
       method: 'POST',
       headers: {
-        'X-WP-Nonce': HCLOCAL.security,
+        'X-WP-Nonce': THCLOCAL.security,
     },
       body: new URLSearchParams({
           action: 'themehunk_customizer_sites_core', // Specify the WordPress AJAX action
-          security: HCLOCAL.security,
+          security: THCLOCAL.security,
           data: JSON.stringify(dataToSend), // Convert the data to JSON and send it
       }),
   })
@@ -64,14 +64,14 @@ const getEditUrl = async () =>{
       
 
       const handleClick= () =>{
-        // window.location.replace(HCLOCAL.baseurl);
+        // window.location.replace(THCLOCAL.baseurl);
    
-         window.open(HCLOCAL.baseurl, '_blank');
+         window.open(THCLOCAL.baseurl, '_blank');
    
        }
 
        const handleCustomize= () =>{
-        // window.location.replace(HCLOCAL.baseurl);
+        // window.location.replace(THCLOCAL.baseurl);
    
          window.open(customizeUrl, '_blank');
    

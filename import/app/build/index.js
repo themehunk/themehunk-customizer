@@ -18821,7 +18821,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const gutenbergtmpl = ['th-shop-mania', 'gutenberg'];
-const customizer = ['top-store', 'top-store-pro', 'gogo', 'openshop-pro', 'open-shop', 'royal-shop', 'big-store', 'jotshop', 'open-mart', 'm-shop', 'shopline-pro', 'amaz-store', 'almaira', 'almaira-shop', 'novelpro', 'oneline', 'portfoliolite', 'portfolioline', 'featured'];
+const customizer = ['big-store', 'big-store-pro', 'jot-shop', 'jot-shop-pro', 'm-shop', 'm-shop-pro', 'shopline', 'shopline-pro', 'amaz-store', 'amaz-store-pro', 'oneline-lite', 'oneline', 'featuredlite', 'featured'];
 const elementor = ['th-shop-mania', 'elementor'];
 
 //let jsonTheme = THCLOCAL.themeName.replace(/-/g, "");
@@ -18853,6 +18853,7 @@ switch (THCLOCAL.themeName) {
   default:
     jsonData = _assets_json_gutenberg_json__WEBPACK_IMPORTED_MODULE_0__.concat(thshopmania);
 }
+console.log(THCLOCAL.themeName);
 const builderHandel = builder => {
   if (customizer.includes(builder)) {
     return 'customizer';
@@ -20049,15 +20050,17 @@ function getThemeData(type) {
       template: 'free',
       name: 'featuredlite',
       free: themehunkCustomizer,
-      paid: 'featuredpro',
+      paid: 'featured',
+      builder: 'customizer'
+    }],
+    elanzalite: [{
+      type: 'theme',
+      template: 'free',
+      name: 'elanzalite',
+      free: themehunkCustomizer,
+      paid: 'elanza-pro',
       builder: 'customizer'
     }]
-
-    // elanzalite:[
-    //     { 
-    //       type:'theme', template: 'free', name: 'elanzalite',free:themehunkCustomizer,paid:'elanza-pro', builder:'customizer'
-    //     },
-    //     ],
   }];
   switch (type) {
     case "big-store":

@@ -53,15 +53,15 @@ function getThemeData(type){
 
   featuredlite:[
       { 
-        type:'theme', template: 'free', name: 'featuredlite',free:themehunkCustomizer,paid:'featuredpro', builder:'customizer'
+        type:'theme', template: 'free', name: 'featuredlite',free:themehunkCustomizer,paid:'featured', builder:'customizer'
       },
       ],
 
-  // elanzalite:[
-  //     { 
-  //       type:'theme', template: 'free', name: 'elanzalite',free:themehunkCustomizer,paid:'elanza-pro', builder:'customizer'
-  //     },
-  //     ],
+  elanzalite:[
+      { 
+        type:'theme', template: 'free', name: 'elanzalite',free:themehunkCustomizer,paid:'elanza-pro', builder:'customizer'
+      },
+      ],
   
 
   

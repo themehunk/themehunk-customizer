@@ -9,7 +9,7 @@ import featured from '../../assets/json/featured.json';
 
 
 const gutenbergtmpl = ['th-shop-mania','gutenberg'];
-const customizer = ['top-store', 'top-store-pro', 'gogo','openshop-pro','open-shop', 'royal-shop','big-store','jotshop','open-mart','m-shop','shopline-pro','amaz-store','almaira','almaira-shop','novelpro','oneline','portfoliolite','portfolioline','featured'];
+const customizer = ['big-store','big-store-pro','jot-shop','jot-shop-pro','m-shop','m-shop-pro','shopline','shopline-pro','amaz-store','amaz-store-pro','oneline-lite','oneline','featuredlite','featured'];
 const elementor = ['th-shop-mania','elementor'];
 
 //let jsonTheme = THCLOCAL.themeName.replace(/-/g, "");
@@ -42,7 +42,7 @@ switch(THCLOCAL.themeName) {
          jsonData = gutenberg.concat(thshopmania);
     }
 
-
+console.log(THCLOCAL.themeName);
 const builderHandel = (builder) => {
         if (customizer.includes(builder)) {
             return 'customizer';

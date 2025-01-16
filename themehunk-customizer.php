@@ -38,13 +38,11 @@ require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
 elseif(in_array("jot-shop", $theme)){
 register_activation_hook( __FILE__, 'jot_shop_pro_deactivate' );
 require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
-// include_once( plugin_dir_path(__FILE__) . 'jot-shop/demo/import.php' );	
 }
 elseif(in_array("amaz-store", $theme)){
 register_activation_hook( __FILE__, 'themehunk_pro_plugin_deactivate' );
 
 require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
-// include_once( plugin_dir_path(__FILE__) . 'amaz-store/demo/import.php' );	
 }
 
 function jot_shop_pro_deactivate() {

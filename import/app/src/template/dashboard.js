@@ -17,7 +17,7 @@ export default function dashboard(props){
     //thunk_started
     setActiveTab(active);
     let welcomeSlug = 'thunk_started';
-    switch(HCLOCAL.themeName){
+    switch(THCLOCAL.themeName){
 
       case 'th-shop-mania':
         welcomeSlug = 'th_shop_mania_thunk_started';
@@ -29,7 +29,7 @@ export default function dashboard(props){
 
     }
 
-    window.location.href = HCLOCAL.baseurl+'wp-admin/themes.php?page='+welcomeSlug;
+    window.location.href = THCLOCAL.baseurl+'wp-admin/themes.php?page='+welcomeSlug;
   }
 
   const btnStyle= { color:"#fff", 
@@ -44,12 +44,12 @@ return(<div className='aisb-dashboard'>
   ]}>
 <FlexBlock className='aisb-logo'>
 <Logo/>
-<h2><a href='https://themehunk.com'>{__('ThemeHunk', 'hunk-companion')} </a></h2>
+<h2><a href='https://themehunk.com'>{__('ThemeHunk', 'themehunk-customizer')} </a></h2>
 </FlexBlock>
 
 <FlexBlock className='th-menu-wrap'>
-<div className={`th-menu-item ${activeTab==='w' && 'active'}`} onClick={()=>handleClick('w','')}>{__('Welcome', 'hunk-companion')}</div>
-<div className={`th-menu-item ${activeTab==='si' && 'active'}`}>{__('Import Sites', 'hunk-companion')}</div>
+<div className={`th-menu-item ${activeTab==='w' && 'active'}`} onClick={()=>handleClick('w','')}>{__('Welcome', 'themehunk-customizer')}</div>
+<div className={`th-menu-item ${activeTab==='si' && 'active'}`}>{__('Import Sites', 'themehunk-customizer')}</div>
 </FlexBlock>
 
 <FlexItem>
@@ -74,11 +74,11 @@ return(<div className='aisb-dashboard'>
 
   <a href={window.location.href+'&template=step'}>
   <h2 className='create-website'>
-  <img src={HCLOCAL.pluginpath+'admin/assets/svg/create-site.svg'} />
+  <img src={THCLOCAL.pluginpath+'admin/assets/svg/create-site.svg'} />
     Create My Website
   </h2></a>
 
-  {HCLOCAL.themeName==='th-shop-mania' && <iframe width="600" height="315" src="https://www.youtube.com/embed/MjVBKQblHW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>}
+  {THCLOCAL.themeName==='th-shop-mania' && <iframe width="600" height="315" src="https://www.youtube.com/embed/MjVBKQblHW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>}
 
 
   </div>

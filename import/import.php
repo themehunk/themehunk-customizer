@@ -1,6 +1,6 @@
 <?php
 /**
- * Type:  Hunk Companion Site Import Builder
+ * Type:  Themehunk Customizer Site Import Builder
  *
  */
 

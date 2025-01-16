@@ -86,7 +86,7 @@ const MenuProps = {
 };
 
 const getCategory = () =>{
-  switch(HCLOCAL.themeName) {
+  switch(THCLOCAL.themeName) {
       case 'th-shop-mania':
            return ['all','free','latest',"woocommerce",'multivendor','multipurpose'];
           break;
@@ -134,20 +134,20 @@ const processString = (str) => {
           
          { reduxBuildrName==='elementor' && <MenuItem value='elementor' onClick={()=>handelIconClick('elementor')}>
           <div className={`column-icon ${bulderType=='elementor'?'active':'icon'}`} id="elementor" >
-        <img src={`${HCLOCAL.pluginpath}admin/assets/images/elementor.png`} alt="Elementor Template" />
+        <img src={`${THCLOCAL.pluginpath}admin/assets/images/elementor.png`} alt="Elementor Template" />
         <div className="image-text-builder-icon">Elementor</div>
         </div>
           </MenuItem>}
 
           { reduxBuildrName==='elementor' && <MenuItem value={'gutenberg'} onClick={()=>handelIconClick('gutenberg')}>
           <div className={`column-icon ${bulderType=='gutenberg'?'active':'icon'}`} id="gutenberg" >
-        <img src={`${HCLOCAL.pluginpath}admin/assets/images/gutenberg.png`}  alt="Block Templates" />
+        <img src={`${THCLOCAL.pluginpath}admin/assets/images/gutenberg.png`}  alt="Block Templates" />
         <div className="image-text-builder-icon" >Gutenberg</div>
         </div>
           </MenuItem> }
           { reduxBuildrName==='customizer' && <MenuItem value={'customizer'} onClick={()=>handelIconClick('customizer')}><div className={`column-icon ${bulderType=='customizer'?'active':'icon'}`} id="customizer" >
-        <img src={`${HCLOCAL.pluginpath}admin/assets/images/wp.png`} alt="Customizer Template" />
-        <div className="image-text-builder-icon">{processString(HCLOCAL.themeName)}</div>
+        <img src={`${THCLOCAL.pluginpath}admin/assets/images/wp.png`} alt="Customizer Template" />
+        <div className="image-text-builder-icon">{processString(THCLOCAL.themeName)}</div>
         </div></MenuItem> }
         </Select>
       </FormControl>

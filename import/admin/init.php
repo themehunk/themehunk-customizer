@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! class_exists( 'THEMEHUNK_CUSTOMIZER_SITES_BUILDER_MENU' ) ) {
 
     /**
-	 * hunk-companion sites Admin Menu Settings
+	 * themehunk-customizer sites Admin Menu Settings
 	 */
     class THEMEHUNK_CUSTOMIZER_SITES_BUILDER_MENU {
 
@@ -134,72 +134,43 @@ if ( ! class_exists( 'THEMEHUNK_CUSTOMIZER_SITES_BUILDER_MENU' ) ) {
                         $slug = $theme->get('TextDomain');
                     }
 
-            $upgrade = array('top-store'=> array(
-                                    "pro"=>'/product/top-store-pro',
-                                    "slug"=>'top-store',
-                                    "version"=>''
-                        ),
+            $upgrade = array(
                         'big-store'=> array(
-                            "pro"=>'/big-store',
+                            "pro"=>'/big-store-pro',
                             "slug"=>'big-store',
                             "version"=>''
                         ),
                         'm-shop'=> array(
-                            "pro"=>'/product/m-shop',
+                            "pro"=>'/m-shop-pro',
                             "slug"=>'m-shop',
                             "version"=>''
                         ),
                         'amaz-store'=> array(
-                            "pro"=>'/product/amaz-store',
+                            "pro"=>'/amaz-store-pro',
                             "slug"=>'amaz-store',
                             "version"=>''
                         ),
                         'jot-shop'=> array(
-                            "pro"=>'/product/jot-shop',
+                            "pro"=>'/jot-shop-pro',
                             "slug"=>'jot-shop',
                             "version"=>''
                         ),
                         'oneline-lite'=> array(
-                            "pro"=>'/oneline-lite',
+                            "pro"=>'/oneline',
                             "slug"=>'oneline-lite',
                             "version"=>''
                         ),
                         'featuredlite'=> array(
-                            "pro"=>'/featuredlite',
+                            "pro"=>'/featured',
                             "slug"=>'featuredlite',
                             "version"=>''
                         ),
                         'shopline'=> array(
-                            "pro"=>'/shopline',
+                            "pro"=>'/shopline-pro',
                             "slug"=>'shopline',
                             "version"=>''
                         ),
-                        'open-shop'=> array(
-                            "pro"=>'/product/open-shop-pro',
-                            "slug"=>'open-shop',
-                            "version"=>''
-                        ),
-                        'gogo'=> array(
-                            "pro"=>'/product/gogo-amazing-wordpress-theme',
-                            "slug"=>'gogo',
-                            "version"=>''
-                        ),
-                        'almaira-shop'=> array(
-                            "pro"=>'/product/almaira-pro-multipurpose-responsive-ecommerce-theme',
-                            "slug"=>'almaira-shop',
-                            "version"=>''
-                        ),
-                        'open-mart'=> array(
-                            "pro"=>'/product/open-mart',
-                            "slug"=>'open-mart',
-                            "version"=>''
-                        ),
-                        'portfoliolite'=> array(
-                            "pro"=>'/product/portfolioline-multipurpose-showcase-theme',
-                            "slug"=>'portfoliolite',
-                            "version"=>''
-                        ),
-
+                       
 
             );
 
@@ -236,19 +207,19 @@ if ( ! class_exists( 'THEMEHUNK_CUSTOMIZER_SITES_BUILDER_MENU' ) ) {
 
             }
 
-			wp_enqueue_style( 'hunk-companion-admin', THEMEHUNK_CUSTOMIZER_WEBSITE_URL . 'admin/assets/css/admin.css', 1.0, 'true' );
-            wp_enqueue_script( 'hunk-companion-block-admin', THEMEHUNK_CUSTOMIZER_WEBSITE_URL . 'app/build/index.js', array( 'wp-element','wp-components', 'wp-i18n','wp-api-fetch','wp-url' ), '1.0', true );
+			wp_enqueue_style( 'themehunk-customizer-admin', THEMEHUNK_CUSTOMIZER_WEBSITE_URL . 'admin/assets/css/admin.css', 1.0, 'true' );
+            wp_enqueue_script( 'themehunk-customizer-block-admin', THEMEHUNK_CUSTOMIZER_WEBSITE_URL . 'app/build/index.js', array( 'wp-element','wp-components', 'wp-i18n','wp-api-fetch','wp-url' ), '1.0', true );
            //$theme = wp_get_theme();
 
            $site = self::upgrade_to_pro();
-            wp_localize_script( 'hunk-companion-block-admin', 'HCLOCAL',
+            wp_localize_script( 'themehunk-customizer-block-admin', 'THCLOCAL',
             array( 
                 'ajaxurl' => admin_url( 'admin-ajax.php' ),
                 'baseurl' => site_url( '/' ),
                 'pluginpath'=>THEMEHUNK_CUSTOMIZER_WEBSITE_URL,
                 'rootPath' => THEMEHUNK_CUSTOMIZER_PLUGIN_URL,
                 'themeName' => $site['slug'],
-                'security' => wp_create_nonce( 'hc_import_nonce' ),
+                'security' => wp_create_nonce( 'thc_import_nonce' ),
                 'upgrade'=> esc_url('https://themehunk.com'.$site['pro'])           
                  )
         );

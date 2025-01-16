@@ -64,7 +64,7 @@ export default function ImportAPI(props) {
   const [apiUrl, setApiUrl] = useState(props.apiurl);
   const [apiData, setApiData] = useState(null);
   const [updateStart, setupdateStart] = useState(false);
-  const [ajaxUrl, setAjaxUrl] = useState(HCLOCAL.ajaxurl);
+  const [ajaxUrl, setAjaxUrl] = useState(THCLOCAL.ajaxurl);
 
 
     /*** All Import data
@@ -75,11 +75,11 @@ export default function ImportAPI(props) {
            const response = await fetch(ajaxUrl, {
             method: 'POST',
             headers: {
-              'X-WP-Nonce': HCLOCAL.security,
+              'X-WP-Nonce': THCLOCAL.security,
           },
             body: new URLSearchParams({
                 action: 'themehunk_customizer_handler_data', // Specify the WordPress AJAX action
-                security: HCLOCAL.security,
+                security: THCLOCAL.security,
                 data: JSON.stringify(dataToSend), // Convert the data to JSON and send it
             }),
         });
@@ -137,11 +137,11 @@ const importXml = async (xml_url) =>{
           const response = await fetch(ajaxUrl, {
             method: 'POST',
             headers: {
-              'X-WP-Nonce': HCLOCAL.security,
+              'X-WP-Nonce': THCLOCAL.security,
           },
             body: new URLSearchParams({
                 action: 'themehunk_customizer_import_xml', // Specify the WordPress AJAX action
-                security: HCLOCAL.security,
+                security: THCLOCAL.security,
                 data: JSON.stringify(dataToSend), // Convert the data to JSON and send it
             }),
         }).then(response => response.json())
@@ -172,11 +172,11 @@ const importCustomizer = async () =>{
       const response = await fetch(ajaxUrl, {
         method: 'POST',
         headers: {
-          'X-WP-Nonce': HCLOCAL.security,
+          'X-WP-Nonce': THCLOCAL.security,
         },
         body: new URLSearchParams({
             action: 'themehunk_customizer_import_cutomizer', // Specify the WordPress AJAX action
-            security: HCLOCAL.security,
+            security: THCLOCAL.security,
             data: JSON.stringify(dataToSend), // Convert the data to JSON and send it
         }),
     })
@@ -213,11 +213,11 @@ const importOptions = async () =>{
    await fetch(ajaxUrl, {
       method: 'POST',
       headers: {
-        'X-WP-Nonce': HCLOCAL.security,
+        'X-WP-Nonce': THCLOCAL.security,
     },
       body: new URLSearchParams({
           action: 'themehunk_customizer_mport_options', // Specify the WordPress AJAX action
-          security: HCLOCAL.security,
+          security: THCLOCAL.security,
           data: JSON.stringify(dataToSend), // Convert the data to JSON and send it
       }),
   }).then(response => response.json())
@@ -255,11 +255,11 @@ const importOptions = async () =>{
          await fetch(ajaxUrl, {
             method: 'POST',
             headers: {
-              'X-WP-Nonce': HCLOCAL.security,
+              'X-WP-Nonce': THCLOCAL.security,
           },
             body: new URLSearchParams({
                 action: 'themehunk_customizer_import_widgets', // Specify the WordPress AJAX action
-                security: HCLOCAL.security,
+                security: THCLOCAL.security,
                 data: JSON.stringify(dataToSend), // Convert the data to JSON and send it
             }),
         }).then(response => response.json())

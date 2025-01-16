@@ -67,7 +67,7 @@ if ( ! class_exists( 'HUNK_COMPAION_IMPORTER_LOG' ) ) :
 		function has_file_read_write() {
 
 			// Get user credentials for WP file-system API.
-			$themehunk_import = wp_nonce_url( admin_url( 'themes.php?page=hunk-companion' ), 'themehunk' );
+			$themehunk_import = wp_nonce_url( admin_url( 'themes.php?page=themehunk-customizer' ), 'themehunk' );
 			$creds              = request_filesystem_credentials( $themehunk_import, '', false, false, null );
 			if ( false === $creds ) {
 				return;
@@ -177,7 +177,7 @@ if ( ! class_exists( 'HUNK_COMPAION_IMPORTER_LOG' ) ) :
 		 * @param  string $dir_name Directory Name.
 		 * @return array    Uploads directory array.
 		 */
-		public static function log_dir( $dir_name = 'hunk-companion' ) {
+		public static function log_dir( $dir_name = 'themehunk-customizer' ) {
 
 			$upload_dir = wp_upload_dir();
 

@@ -22,7 +22,7 @@ class THEMEHUNK_CUSTOMIZER_SITES_APP{
 
   }
     public function import_process(){
-      if ( ! isset( $_POST['vsecurity'] ) || ! wp_verify_nonce( $_POST['vsecurity'], 'hc_import_nonce' ) ) {
+      if ( ! isset( $_POST['vsecurity'] ) || ! wp_verify_nonce( $_POST['vsecurity'], 'thc_import_nonce' ) ) {
         wp_send_json_error( array( 'message' => 'Invalid nonce.' ) );
     }
   
@@ -60,7 +60,7 @@ class THEMEHUNK_CUSTOMIZER_SITES_APP{
 
   public function import_data() {
 
-    if ( ! isset( $_POST['security'] ) || ! wp_verify_nonce( $_POST['security'], 'hc_import_nonce' ) ) {
+    if ( ! isset( $_POST['security'] ) || ! wp_verify_nonce( $_POST['security'], 'thc_import_nonce' ) ) {
       wp_send_json_error( array( 'message' => 'Invalid nonce.' ) );
       wp_die();
   }
@@ -79,7 +79,7 @@ class THEMEHUNK_CUSTOMIZER_SITES_APP{
 
   public function import_xml() {
 
-    if ( ! isset( $_POST['security'] ) || ! wp_verify_nonce( $_POST['security'], 'hc_import_nonce' ) ) {
+    if ( ! isset( $_POST['security'] ) || ! wp_verify_nonce( $_POST['security'], 'thc_import_nonce' ) ) {
       wp_send_json_error( array( 'message' => 'Invalid nonce.' ) );
       wp_die();
   }
@@ -98,7 +98,7 @@ class THEMEHUNK_CUSTOMIZER_SITES_APP{
 
   public  function init_cutomizer() {
 
-    if ( ! isset( $_POST['security'] ) || ! wp_verify_nonce( $_POST['security'], 'hc_import_nonce' ) ) {
+    if ( ! isset( $_POST['security'] ) || ! wp_verify_nonce( $_POST['security'], 'thc_import_nonce' ) ) {
       wp_send_json_error( array( 'message' => 'Invalid nonce.' ) );
       wp_die();
   }
@@ -114,7 +114,7 @@ class THEMEHUNK_CUSTOMIZER_SITES_APP{
 
   public function init_options() {
 
-    if ( ! isset( $_POST['security'] ) || ! wp_verify_nonce( $_POST['security'], 'hc_import_nonce' ) ) {
+    if ( ! isset( $_POST['security'] ) || ! wp_verify_nonce( $_POST['security'], 'thc_import_nonce' ) ) {
       wp_send_json_error( array( 'message' => 'Invalid nonce.' ) );
       wp_die();
   }
@@ -130,7 +130,7 @@ class THEMEHUNK_CUSTOMIZER_SITES_APP{
 
   public function init_widgets() {
 
-    if ( ! isset( $_POST['security'] ) || ! wp_verify_nonce( $_POST['security'], 'hc_import_nonce' ) ) {
+    if ( ! isset( $_POST['security'] ) || ! wp_verify_nonce( $_POST['security'], 'thc_import_nonce' ) ) {
       wp_send_json_error( array( 'message' => 'Invalid nonce.' ) );
       wp_die();
   }
@@ -146,7 +146,7 @@ class THEMEHUNK_CUSTOMIZER_SITES_APP{
 
   public function init_site_url(){
 
-    if ( ! isset( $_POST['security'] ) || ! wp_verify_nonce( $_POST['security'], 'hc_import_nonce' ) ) {
+    if ( ! isset( $_POST['security'] ) || ! wp_verify_nonce( $_POST['security'], 'thc_import_nonce' ) ) {
       wp_send_json_error( array( 'message' => 'Invalid nonce.' ) );
       wp_die();
   }

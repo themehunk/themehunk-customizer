@@ -4,12 +4,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 	
 // Exit if accessed directly.
-if ( ! class_exists( 'HUNK_COMPANION_SITES_BUILDER_MENU' ) ) {
+if ( ! class_exists( 'THEMEHUNK_CUSTOMIZER_SITES_BUILDER_MENU' ) ) {
 
     /**
 	 * hunk-companion sites Admin Menu Settings
 	 */
-    class HUNK_COMPANION_SITES_BUILDER_MENU {
+    class THEMEHUNK_CUSTOMIZER_SITES_BUILDER_MENU {
 
         static public $plugin_slug = 'themehunk-site-library';
 
@@ -144,6 +144,36 @@ if ( ! class_exists( 'HUNK_COMPANION_SITES_BUILDER_MENU' ) ) {
                             "slug"=>'big-store',
                             "version"=>''
                         ),
+                        'm-shop'=> array(
+                            "pro"=>'/product/m-shop',
+                            "slug"=>'m-shop',
+                            "version"=>''
+                        ),
+                        'amaz-store'=> array(
+                            "pro"=>'/product/amaz-store',
+                            "slug"=>'amaz-store',
+                            "version"=>''
+                        ),
+                        'jot-shop'=> array(
+                            "pro"=>'/product/jot-shop',
+                            "slug"=>'jot-shop',
+                            "version"=>''
+                        ),
+                        'oneline-lite'=> array(
+                            "pro"=>'/oneline-lite',
+                            "slug"=>'oneline-lite',
+                            "version"=>''
+                        ),
+                        'featuredlite'=> array(
+                            "pro"=>'/featuredlite',
+                            "slug"=>'featuredlite',
+                            "version"=>''
+                        ),
+                        'shopline'=> array(
+                            "pro"=>'/shopline',
+                            "slug"=>'shopline',
+                            "version"=>''
+                        ),
                         'open-shop'=> array(
                             "pro"=>'/product/open-shop-pro',
                             "slug"=>'open-shop',
@@ -227,5 +257,5 @@ if ( ! class_exists( 'HUNK_COMPANION_SITES_BUILDER_MENU' ) ) {
 
     }
 
-    new HUNK_COMPANION_SITES_BUILDER_MENU;
+    new THEMEHUNK_CUSTOMIZER_SITES_BUILDER_MENU;
 }

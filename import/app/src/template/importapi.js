@@ -78,7 +78,7 @@ export default function ImportAPI(props) {
               'X-WP-Nonce': HCLOCAL.security,
           },
             body: new URLSearchParams({
-                action: 'hunk_companion_handler_data', // Specify the WordPress AJAX action
+                action: 'themehunk_customizer_handler_data', // Specify the WordPress AJAX action
                 security: HCLOCAL.security,
                 data: JSON.stringify(dataToSend), // Convert the data to JSON and send it
             }),
@@ -140,7 +140,7 @@ const importXml = async (xml_url) =>{
               'X-WP-Nonce': HCLOCAL.security,
           },
             body: new URLSearchParams({
-                action: 'hunk_companion_import_xml', // Specify the WordPress AJAX action
+                action: 'themehunk_customizer_import_xml', // Specify the WordPress AJAX action
                 security: HCLOCAL.security,
                 data: JSON.stringify(dataToSend), // Convert the data to JSON and send it
             }),
@@ -175,7 +175,7 @@ const importCustomizer = async () =>{
           'X-WP-Nonce': HCLOCAL.security,
         },
         body: new URLSearchParams({
-            action: 'hunk_companion_import_cutomizer', // Specify the WordPress AJAX action
+            action: 'themehunk_customizer_import_cutomizer', // Specify the WordPress AJAX action
             security: HCLOCAL.security,
             data: JSON.stringify(dataToSend), // Convert the data to JSON and send it
         }),
@@ -216,7 +216,7 @@ const importOptions = async () =>{
         'X-WP-Nonce': HCLOCAL.security,
     },
       body: new URLSearchParams({
-          action: 'hunk_companion_mport_options', // Specify the WordPress AJAX action
+          action: 'themehunk_customizer_mport_options', // Specify the WordPress AJAX action
           security: HCLOCAL.security,
           data: JSON.stringify(dataToSend), // Convert the data to JSON and send it
       }),
@@ -258,7 +258,7 @@ const importOptions = async () =>{
               'X-WP-Nonce': HCLOCAL.security,
           },
             body: new URLSearchParams({
-                action: 'hunk_companion_import_widgets', // Specify the WordPress AJAX action
+                action: 'themehunk_customizer_import_widgets', // Specify the WordPress AJAX action
                 security: HCLOCAL.security,
                 data: JSON.stringify(dataToSend), // Convert the data to JSON and send it
             }),

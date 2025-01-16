@@ -1,6 +1,6 @@
 <?php defined( 'ABSPATH' ) or exit;
 // Exit if accessed directly.
-if ( ! class_exists( 'HUNK_COMPANION_SITES_BUILDER_SETUP' ) ) {
+if ( ! class_exists( 'THEMEHUNK_CUSTOMIZER_SITES_BUILDER_SETUP' ) ) {
 
     // Check if needed functions exists - if not, require them
 if ( ! function_exists( 'get_plugins' ) || ! function_exists( 'is_plugin_active' ) ) {
@@ -8,7 +8,7 @@ if ( ! function_exists( 'get_plugins' ) || ! function_exists( 'is_plugin_active'
 }
 
 
-    class HUNK_COMPANION_SITES_BUILDER_SETUP {
+    class THEMEHUNK_CUSTOMIZER_SITES_BUILDER_SETUP {
 
         function __construct($params)
         {

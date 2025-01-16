@@ -235,7 +235,7 @@ class HUNK_COMPAION_OPTIONS_IMPORT {
 
 				if ( ! empty( $cat['slug'] ) && ! empty( $cat['thumbnail_src'] ) ) {
 
-					$image = (object) HUNK_COMPANION_SITES_HELPER::_sideload_image( $cat['thumbnail_src'] );
+					$image = (object) THEMEHUNK_CUSTOMIZER_SITES_HELPER::_sideload_image( $cat['thumbnail_src'] );
 
 					if ( ! is_wp_error( $image ) ) {
 
@@ -262,7 +262,7 @@ class HUNK_COMPAION_OPTIONS_IMPORT {
 	 */
 	private function insert_logo( $image_url = '' ) {
 
-		$data = (object) HUNK_COMPANION_SITES_HELPER::_sideload_image( $image_url );
+		$data = (object) THEMEHUNK_CUSTOMIZER_SITES_HELPER::_sideload_image( $image_url );
 
 		if ( ! is_wp_error( $data ) ) {
 

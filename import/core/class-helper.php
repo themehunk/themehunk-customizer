@@ -1,9 +1,9 @@
 <?php defined( 'ABSPATH' ) or exit;
 
 
-if ( ! class_exists( 'HUNK_COMPANION_SITES_HELPER' ) ) :
+if ( ! class_exists( 'THEMEHUNK_CUSTOMIZER_SITES_HELPER' ) ) :
 
-	class HUNK_COMPANION_SITES_HELPER {
+	class THEMEHUNK_CUSTOMIZER_SITES_HELPER {
 		/**
 		 * Instance of themehunk_site_library
 		 *
@@ -261,6 +261,6 @@ static public function _import_settings( $options = array() ) {
 	}
 }
 
-		HUNK_COMPANION_SITES_HELPER::get_instance();
+		THEMEHUNK_CUSTOMIZER_SITES_HELPER::get_instance();
 
 endif;

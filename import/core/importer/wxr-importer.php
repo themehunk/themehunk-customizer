@@ -276,7 +276,7 @@ class HUNK_COMPAION_WXR_IMPORTER {
 	 */
 	public function get_importer() {
 		$options  = apply_filters(
-			'hunk_companion_xml_import_options', array(
+			'themehunk_customizer_xml_import_options', array(
 				'fetch_attachments' => true,
 				'default_author'    => get_current_user_id(),
 			)

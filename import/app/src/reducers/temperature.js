@@ -1,72 +1,102 @@
-import gutenberg from '../../assets/json/gutenberg.json';
 import bigstore from '../../assets/json/big-store.json';
 import amazstore from '../../assets/json/amaz-store.json';
 import mshop from '../../assets/json/m-shop.json';
 import jotshop from '../../assets/json/jotshop.json';
 import onelinelite from '../../assets/json/oneline.json';
-import shopline from '../../assets/json/shopline-pro.json';
+import shopline from '../../assets/json/shopline.json';
 import featured from '../../assets/json/featured.json';
 
 
 const gutenbergtmpl = ['th-shop-mania','gutenberg'];
-const customizer = ['big-store','big-store-pro','jot-shop','jot-shop-pro','m-shop','m-shop-pro','shopline','shopline-pro','amaz-store','amaz-store-pro','oneline-lite','oneline','featuredlite','featured'];
+const customizer = ['big-store','big-store-pro','jot-shop','jot-shop-pro','m-shop','m-shop-pro','shopline','amaz-store','amaz-store-pro','oneline-lite','oneline','featuredlite','featured'];
 const elementor = ['th-shop-mania','elementor'];
 
 //let jsonTheme = THCLOCAL.themeName.replace(/-/g, "");
 //THCLOCAL.themeName - current theme name
 // builderHandel(THCLOCAL.themeName) - builder name like elementor, customizer or gutenberg
-let  jsonData = '';
-switch(THCLOCAL.themeName) {
-    case 'big-store':
-         jsonData = gutenberg.concat(bigstore);
-        break;
-    case 'amaz-store':
-        jsonData = gutenberg.concat(amazstore);
-        break;
-    case 'm-shop':
-        jsonData = gutenberg.concat(mshop);
-        break;
-    case 'jot-shop':
-        jsonData = gutenberg.concat(jotshop);
-        break;
-    case 'oneline-lite':
-        jsonData = gutenberg.concat(onelinelite);
-        break;
-    case 'shopline':
-        jsonData = gutenberg.concat(shopline);
-        break;
-    case 'featuredlite':
-        jsonData = gutenberg.concat(featured);
-        break;
-    default:
-         jsonData = gutenberg.concat(thshopmania);
-    }
+const themeDataMap = {
+    'big-store': bigstore,
+    'amaz-store': amazstore,
+    'm-shop': mshop,
+    'jot-shop': jotshop,
+    'oneline-lite': onelinelite,
+    'shopline': shopline,
+    'featuredlite': featured,
+};
+const jsonData = themeDataMap[THCLOCAL.themeName];
 
-console.log(THCLOCAL.themeName);
-const builderHandel = (builder) => {
-        if (customizer.includes(builder)) {
-            return 'customizer';
-        } else if(elementor.includes(builder)){
-            return 'elementor';
-        } else if(gutenbergtmpl.includes(builder)){
-            return 'gutenberg';
+// switch(THCLOCAL.themeName) {
+//     case 'big-store':
+//          jsonData = gutenberg.concat(bigstore);
+//         break;
+//     case 'amaz-store':
+//         jsonData = gutenberg.concat(amazstore);
+//         break;
+//     case 'm-shop':
+//         jsonData = gutenberg.concat(mshop);
+//         break;
+//     case 'jot-shop':
+//         jsonData = jotshop.concat(jotshop);
+//         break;
+//     case 'oneline-lite':
+//         jsonData = gutenberg.concat(onelinelite);
+//         break;
+//     case 'shopline':
+//         jsonData = gutenberg.concat(shopline);
+//         break;
+//     case 'featuredlite':
+//         jsonData = gutenberg.concat(featured);
+//         break;
+//     default:
+//          jsonData = gutenberg.concat(thshopmania);
+//     }
+
+
+const getBuilder = (builder) => 
+    customizer.includes(builder) ? 'customizer' :
+    elementor.includes(builder) ? 'elementor' :
+    gutenbergtmpl.includes(builder) ? 'gutenberg' :
+    null;
+
+    const defaultJsonData = jsonData.filter(
+        ({ builder_theme, category }) =>
+            getBuilder(builder_theme) === getBuilder(THCLOCAL.themeName) && category.includes('all')
+    );
+
+
+
+    const templateData = (state = defaultJsonData, action) => {
+        if (action.type === "TEMPLATE_DATA") {
+            return jsonData.filter(
+                ({ builder_theme, category }) =>
+                    getBuilder(builder_theme) === action.payload && category.includes(action.cate)
+            );
         }
-}
+        return state;
+    };
+
+// const builderHandel = (builder) => {    
+//         if (customizer.includes(builder)) {
+//             return 'customizer';
+//         } else if(elementor.includes(builder)){
+//             return 'elementor';
+//         } else if(gutenbergtmpl.includes(builder)){
+//             return 'gutenberg';
+//         }
+// }
 
 
-const defaultJsonData = jsonData.filter(template => builderHandel(template.builder_theme) === builderHandel(THCLOCAL.themeName) && template.category.includes('all'));
+//const defaultJsonData = jsonData.filter(template => builderHandel(template.builder_theme) === builderHandel(THCLOCAL.themeName) && template.category.includes('all'));
+// const templateData = ( state = defaultJsonData, action) =>{
+//     switch(action.type){
+//         case "TEMPLATE_DATA" : return  jsonData.filter(template => builderHandel(template.builder_theme) === action.payload && template.category.includes(action.cate));
+//         default: return state;
+//     }
 
-const templateData = ( state = defaultJsonData, action) =>{
+// }
 
-    switch(action.type){
-        case "TEMPLATE_DATA" : return  jsonData.filter(template => builderHandel(template.builder_theme) === action.payload && template.category.includes(action.cate));
+const reduxBuildrName = ( state = getBuilder(THCLOCAL.themeName), action) =>{
 
-        default: return state;
-    }
-
-}
-
-const reduxBuildrName = ( state = builderHandel(THCLOCAL.themeName), action) =>{
     switch(action.type){
         case "BUILDER_NAME" : return action.payload;
         default: return state;
@@ -74,7 +104,7 @@ const reduxBuildrName = ( state = builderHandel(THCLOCAL.themeName), action) =>{
 
 }
 
-const templateSelect = ( state = {cate:'all',builder:builderHandel(THCLOCAL.themeName)}, action) =>{
+const templateSelect = ( state = {cate:'all',builder:getBuilder(THCLOCAL.themeName)}, action) =>{
 
     switch(action.type){
         case "CATE_BUILDER" : return {cate:action.payload,builder:action.builderload};

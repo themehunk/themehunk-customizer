@@ -41,7 +41,6 @@ require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
 }
 elseif(in_array("amaz-store", $theme)){
 register_activation_hook( __FILE__, 'themehunk_pro_plugin_deactivate' );
-
 require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
 }
 

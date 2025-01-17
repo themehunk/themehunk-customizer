@@ -136,37 +136,37 @@ if ( ! class_exists( 'THEMEHUNK_CUSTOMIZER_SITES_BUILDER_MENU' ) ) {
 
             $upgrade = array(
                         'big-store'=> array(
-                            "pro"=>'/big-store-pro',
+                            "pro"=>'/product/big-store-pro',
                             "slug"=>'big-store',
                             "version"=>''
                         ),
                         'm-shop'=> array(
-                            "pro"=>'/m-shop-pro',
+                            "pro"=>'/product/m-shop-pro/',
                             "slug"=>'m-shop',
                             "version"=>''
                         ),
                         'amaz-store'=> array(
-                            "pro"=>'/amaz-store-pro',
+                            "pro"=>'/product/amaz-store/',
                             "slug"=>'amaz-store',
                             "version"=>''
                         ),
                         'jot-shop'=> array(
-                            "pro"=>'/jot-shop-pro',
+                            "pro"=>'/product/jot-shop-pro',
                             "slug"=>'jot-shop',
                             "version"=>''
                         ),
                         'oneline-lite'=> array(
-                            "pro"=>'/oneline',
+                            "pro"=>'/product/oneline-single-page-wordpress-theme/',
                             "slug"=>'oneline-lite',
                             "version"=>''
                         ),
                         'featuredlite'=> array(
-                            "pro"=>'/featured',
+                            "pro"=>'/product/featured/',
                             "slug"=>'featuredlite',
                             "version"=>''
                         ),
                         'shopline'=> array(
-                            "pro"=>'/shopline-pro',
+                            "pro"=>'/product/shopperline-pro/',
                             "slug"=>'shopline',
                             "version"=>''
                         ),
@@ -207,12 +207,12 @@ if ( ! class_exists( 'THEMEHUNK_CUSTOMIZER_SITES_BUILDER_MENU' ) ) {
 
             }
 
-			wp_enqueue_style( 'themehunk-customizer-admin', THEMEHUNK_CUSTOMIZER_WEBSITE_URL . 'admin/assets/css/admin.css', 1.0, 'true' );
-            wp_enqueue_script( 'themehunk-customizer-block-admin', THEMEHUNK_CUSTOMIZER_WEBSITE_URL . 'app/build/index.js', array( 'wp-element','wp-components', 'wp-i18n','wp-api-fetch','wp-url' ), '1.0', true );
+			wp_enqueue_style( 'themehunk-customizer-blocks-css', THEMEHUNK_CUSTOMIZER_WEBSITE_URL . 'admin/assets/css/admin.css', 1.0, 'true' );
+            wp_enqueue_script( 'themehunk-customizer-blocks-js', THEMEHUNK_CUSTOMIZER_WEBSITE_URL . 'app/build/index.js', array( 'wp-element','wp-components', 'wp-i18n','wp-api-fetch','wp-url' ), '1.0', true );
            //$theme = wp_get_theme();
 
            $site = self::upgrade_to_pro();
-            wp_localize_script( 'themehunk-customizer-block-admin', 'THCLOCAL',
+            wp_localize_script( 'themehunk-customizer-blocks-js', 'THCLOCAL',
             array( 
                 'ajaxurl' => admin_url( 'admin-ajax.php' ),
                 'baseurl' => site_url( '/' ),

@@ -27,17 +27,6 @@ const imageHandel = (template)=> {
   modal.style.display = "block";
 
 // captionText.innerHTML = template;
-
-// modalImg.src = parsedData.demo_url+'/?hide';
-
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-// // When the user clicks on <span> (x), close the modal
-//   span.onclick = function() { 
-//     modal.style.display = "none";
-//     document.body.style.overflow = "auto";
-//     modalImg.src = '';
-//   }
 }
 
 const tmplStyleHide = {
@@ -48,21 +37,33 @@ const tmplStyleShow = {
   display: 'block',
 };
 
-const customizer = ['topstore','top-store-pro','big-store','openshop-pro','jotshop','open-mart','m-shop','shopline-pro','amaz-store','almaira','almaira-shop','gogo','novelpro','oneline','portfolioline','portfoliolite','featured'];
-const elementor = ['th-shop-mania','elementor','royal-shop'];
 
-const gutenbergtmpl = ['th-shop-mania','blockline','blockline-pro','blur','blur-pro','gutenberg'];
+const builderCategories = new Map([
+  ['customizer', ['topstore', 'top-store-pro', 'big-store', 'openshop-pro', 'jotshop', 'open-mart', 'm-shop', 'shopline-pro', 'amaz-store', 'almaira', 'almaira-shop', 'gogo', 'novelpro', 'oneline', 'portfolioline', 'portfoliolite', 'featured']],
+  ['elementor', ['th-shop-mania', 'elementor', 'royal-shop']],
+  ['gutenberg', ['th-shop-mania', 'blockline', 'blockline-pro', 'blur', 'blur-pro', 'gutenberg']],
+]);
 
-const builderHandel = (builder) => {
-  if (customizer.includes(builder)) {
-    return 'customizer';
-  } else if(elementor.includes(builder)){
-    return 'elementor';
-  } else if(gutenbergtmpl.includes(builder)){
-    return 'gutenberg';
- }
+const builderHandel = (builder) =>
+  Array.from(builderCategories).find(([_, list]) => list.includes(builder))?.[0] || null;
 
-}
+
+
+// const customizer = ['topstore','top-store-pro','big-store','openshop-pro','jotshop','open-mart','m-shop','shopline-pro','amaz-store','almaira','almaira-shop','gogo','novelpro','oneline','portfolioline','portfoliolite','featured'];
+// const elementor = ['th-shop-mania','elementor','royal-shop'];
+
+// const gutenbergtmpl = ['th-shop-mania','blockline','blockline-pro','blur','blur-pro','gutenberg'];
+
+// const builderHandel = (builder) => {
+//   if (customizer.includes(builder)) {
+//     return 'customizer';
+//   } else if(elementor.includes(builder)){
+//     return 'elementor';
+//   } else if(gutenbergtmpl.includes(builder)){
+//     return 'gutenberg';
+//  }
+
+// }
 
 const imgload = () =>{
 
@@ -89,7 +90,6 @@ const filteredUsers = jsonData.filter(template =>
   template.title.toLowerCase().includes(searchTerm.toLowerCase())
 );
 
-
 return (
         <div class="asib-main-tmpl">
 {/* {loader==false && <SkeletonTemplate/>} */}
@@ -107,7 +107,7 @@ return (
 {<div class="image-container">
   
       { filteredUsers.sort((a, b) => {
-    if (templateSelect.cate === "latest") {
+    if (templateSelect.cate === "free") {
       
       return a.id > b.id ? -1 : 1;
     } else {

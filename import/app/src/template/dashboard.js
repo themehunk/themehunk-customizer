@@ -23,6 +23,18 @@ export default function dashboard(props){
         welcomeSlug = 'th_shop_mania_thunk_started';
       break;
 
+      case 'amaz-store':
+        welcomeSlug = 'amaz_store_thunk_started';
+      break;
+
+      case 'jot-shop':
+        welcomeSlug = 'jot_shop_thunk_started';
+      break;
+
+      case 'elanzalite':
+        welcomeSlug = 'th_elanzalite';
+      break;
+
       default:
          welcomeSlug = 'thunk_started';
         break;

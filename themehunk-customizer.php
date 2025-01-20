@@ -24,12 +24,12 @@ function themehunk_customizer_text_domain(){
 
 $theme = themehunk_customizer_text_domain(); 
 if(in_array("oneline-lite", $theme)){
-require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
+//require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
 
 }elseif(in_array("shopline", $theme)){
-require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
+// require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
 }elseif(in_array("featuredlite", $theme)){
-require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
+// require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
 }elseif(in_array("big-store", $theme)){
 require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
 }elseif(in_array("m-shop", $theme)){

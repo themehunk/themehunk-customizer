@@ -107,7 +107,7 @@ if ( ! class_exists( 'THEMEHUNK_CUSTOMIZER_SITES_BUILDER_MENU' ) ) {
         static public function add_admin_menu() {
             add_action( 'admin_body_class', __CLASS__ . '::admin_classes');    
             $parent_page    = 'themes.php';
-			$page_title     = __('TH Import Sites','themehunk-site-library');
+			$page_title     = __('TH Demo Import','themehunk-site-library');
 			$capability     = 'manage_options';
 			$page_menu_slug = self::$plugin_slug;
 			$page_menu_func = __CLASS__ . '::sites_callback';

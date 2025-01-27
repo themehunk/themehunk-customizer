@@ -40,12 +40,12 @@ function themehunk_customizer_load_plugin() {
 	include_once( plugin_dir_path(__FILE__) . 'themehunk/color-picker/color-picker.php' );
 	$theme = themehunk_customizer_text_domain(); 
 	if(in_array("oneline-lite", $theme)){
-		// require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
+		require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
 		add_action('widgets_init', 'themehunk_customizer_widgets_init');
 		include_once( plugin_dir_path(__FILE__) . 'oneline-lite/include.php' );
 		
 	}elseif(in_array("featuredlite", $theme)){
-		// require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
+		require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
 		add_action('widgets_init', 'themehunk_customizer_widgets_init');
 		include_once( plugin_dir_path(__FILE__) . 'featuredlite/include.php' );
 	}elseif(in_array("shopline", $theme)){

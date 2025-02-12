@@ -49,7 +49,7 @@ function themehunk_customizer_load_plugin() {
 		add_action('widgets_init', 'themehunk_customizer_widgets_init');
 		include_once( plugin_dir_path(__FILE__) . 'featuredlite/include.php' );
 	}elseif(in_array("shopline", $theme)){
-		// require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
+		require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
 		include_once( plugin_dir_path(__FILE__) . 'shopline/include.php' );
 		include_once(plugin_dir_path(__FILE__) . 'themehunk/customizer-tabs/class/class-themehunk-customize-control-tabs.php' );
 		include_once(plugin_dir_path(__FILE__) . 'themehunk/customizer-radio-image/class/class-themehunk-customize-control-radio-image.php' );

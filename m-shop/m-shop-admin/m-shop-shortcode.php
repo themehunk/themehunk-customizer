@@ -1,5 +1,8 @@
 <?php 
 if ( ! defined( 'ABSPATH' ) ) exit; 
+if ( ! class_exists( 'WooCommerce' ) ){
+    return;
+  }
 function m_shop_shortcode_template($section_name=''){
 	switch ($section_name){
 	case 'm_shop_show_frontpage':

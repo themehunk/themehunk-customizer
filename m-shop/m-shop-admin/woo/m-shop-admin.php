@@ -1,7 +1,4 @@
 <?php
-if ( ! class_exists( 'WooCommerce' ) ){
-  return;
-}
 if ( ! function_exists( 'm_shop_add_to_compare_fltr' ) ){ 
          /*********************/
         // Th Product compare

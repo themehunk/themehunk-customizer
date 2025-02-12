@@ -1,5 +1,8 @@
 <?php 
 if ( ! defined( 'ABSPATH' ) ) exit; 
+if ( ! class_exists( 'WooCommerce' ) ){
+    return;
+  }
 function big_store_shortcode_template($section_name=''){
 	switch ($section_name){
 	case 'big_store_show_frontpage':

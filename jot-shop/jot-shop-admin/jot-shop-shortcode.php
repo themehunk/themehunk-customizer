@@ -1,5 +1,8 @@
 <?php 
 if ( ! defined( 'ABSPATH' ) ) exit; 
+if ( ! class_exists( 'WooCommerce' ) ){
+    return;
+  }
 function jot_shop_shortcode_template($section_name=''){
 	switch ($section_name){
 	case 'jot_shop_show_frontpage':

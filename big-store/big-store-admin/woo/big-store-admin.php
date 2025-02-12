@@ -15,9 +15,6 @@ wp_enqueue_style( 'bigstorecustomizer_style', THEMEHUNK_CUSTOMIZER_PLUGIN_URL . 
 
 add_action('customize_controls_print_styles', 'big_store_customizer_style_registers_lite', 108 );
 
-if ( ! class_exists( 'WooCommerce' ) ){
-  return;
-}
 if(!function_exists('big_store_product_query')){
     function big_store_product_query($term_id,$prdct_optn){
    $limit_product = get_theme_mod('big_store_prd_shw_no','20');

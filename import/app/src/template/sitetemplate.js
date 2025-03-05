@@ -39,7 +39,7 @@ const tmplStyleShow = {
 
 
 const builderCategories = new Map([
-  ['customizer', ['topstore', 'top-store-pro', 'big-store', 'openshop-pro', 'jotshop', 'open-mart', 'm-shop', 'shopline-pro', 'amaz-store', 'almaira', 'almaira-shop', 'gogo', 'novelpro', 'oneline', 'portfolioline', 'portfoliolite', 'featured']],
+  ['customizer', ['topstore', 'top-store-pro', 'big-store', 'bevro','openshop-pro', 'jotshop', 'open-mart', 'm-shop', 'shopline-pro', 'amaz-store', 'almaira', 'almaira-shop', 'gogo', 'novelpro', 'oneline', 'portfolioline', 'portfoliolite', 'featured']],
   ['elementor', ['th-shop-mania', 'elementor', 'royal-shop']],
   ['gutenberg', ['th-shop-mania', 'blockline', 'blockline-pro', 'blur', 'blur-pro', 'gutenberg']],
 ]);

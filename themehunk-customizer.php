@@ -77,6 +77,9 @@ function themehunk_customizer_load_plugin() {
 		require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
 		include_once( plugin_dir_path(__FILE__) . 'amaz-store/include.php' );
 	}
+	elseif(in_array("bevro", $theme)){
+		require_once( THEMEHUNK_CUSTOMIZER_PLUGIN_PATH . '/import/import.php' );
+	}
 }
 
 ?>

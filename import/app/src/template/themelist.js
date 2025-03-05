@@ -65,6 +65,12 @@ bigstore:[
   },
 ],
 
+bevro:[
+  { 
+    type:'plugin', template: 'free', name: 'bevro',free:thCustomizer,paid:'bevro-pro' 
+  },
+],
+
 jotshop:[
   { 
     type:'plugin', template: 'free', name: 'jot-shop',free:thCustomizer,paid:'jot-shop-pro' 
@@ -112,6 +118,7 @@ novelpro:[
     case "jotshop" : return themeList[0].jotshop[0];
     case "m-shop" : return themeList[0].mshop[0];
     case "big-store" : return themeList[0].bigstore[0];
+    case "bevro" : return themeList[0].bevro[0];
     case "open-mart" : return themeList[0].openmart[0];
     case "oneline" : return themeList[0].oneline[0];
     case "featured" : return themeList[0].featured[0];

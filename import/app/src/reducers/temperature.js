@@ -5,6 +5,7 @@ import jotshop from '../../assets/json/jotshop.json';
 import onelinelite from '../../assets/json/oneline.json';
 import shopline from '../../assets/json/shopline.json';
 import featured from '../../assets/json/featured.json';
+import bevro from '../../assets/json/bevro.json';
 
 
 const gutenbergtmpl = ['th-shop-mania','gutenberg'];
@@ -16,6 +17,7 @@ const elementor = ['th-shop-mania','elementor'];
 // builderHandel(THCLOCAL.themeName) - builder name like elementor, customizer or gutenberg
 const themeDataMap = {
     'big-store': bigstore,
+    'bevro': bevro,
     'amaz-store': amazstore,
     'm-shop': mshop,
     'jot-shop': jotshop,

@@ -21,6 +21,12 @@ function getThemeData(type){
     },
     ],
 
+  bevro:[
+    { 
+        type:'plugin', template: 'free', name: 'bevro',free:themehunkCustomizer,paid:'bevro-pro', builder:'customizer'
+    },
+    ],
+
   amazstore:[
     { 
       type:'plugin', template: 'free', name: 'amaz-store',free:themehunkCustomizer,paid:'amaz-store-pro', builder:'customizer'
@@ -70,6 +76,7 @@ function getThemeData(type){
 
 switch(type){
   case "big-store" : return themeList[0].bigstore[0];
+  case "bevro" : return themeList[0].bevro[0];
   case "amaz-store" : return themeList[0].amazstore[0];
   case "m-shop" : return themeList[0].mshop[0];
   case "jot-shop" : return themeList[0].jotshop[0];

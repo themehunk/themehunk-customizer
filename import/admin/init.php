@@ -170,6 +170,11 @@ if ( ! class_exists( 'THEMEHUNK_CUSTOMIZER_SITES_BUILDER_MENU' ) ) {
                             "slug"=>'shopline',
                             "version"=>''
                         ),
+                        'bevro'=> array(
+                            "pro"=>'/product/bevro-pro',
+                            "slug"=>'bevro',
+                            "version"=>''
+                        ),
                        
 
             );

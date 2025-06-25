@@ -3,8 +3,8 @@ Contributors: ThemeHunk
 Author URI: : https://www.themehunk.com/
 Tags: themehunk, customizer, oneline-lite,Testimonial,Team, service
 Requires at least: 5.5
-Tested up to: 6.7
-Stable tag: 2.8.3
+Tested up to: 6.8
+Stable tag: 2.8.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,9 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 == Screenshots ==
 
 == Changelog ==
+
+= 2.8.4 =
+Update: Text conditional issue resolved.
 
 = 2.8.3 =
 * Update: Bevro: Added in this plugin

@@ -484,13 +484,15 @@ $wp_customize->add_control('slidr_button',
            )
         );
         //First slider image
+$first_slider_image =  get_template_directory_uri() . '/images/slider.jpeg'; // fallback image 
+
         $wp_customize->add_section('section_slider_first', array(
             'title'    => __('First Slider Setting', 'oneline-lite'),
             'priority' => 1,
              'panel'  => 'slider_panel',
          ));
          $wp_customize->add_setting('first_slider_image', array(
-            'default'           => '',
+            'default'           => $first_slider_image,
             'capability'        => 'edit_theme_options',
             'sanitize_callback' => 'themehunk_customizer_sanitize_upload'
         ));
@@ -500,7 +502,7 @@ $wp_customize->add_control('slidr_button',
             'settings' => 'first_slider_image',
         )));
         $wp_customize->add_setting('first_slider_heading', array(
-            'default'           => __('Heading','oneline-lite'),
+            'default'           => __('Every Client Deserves an Innovative Product','oneline-lite'),
             'capability'        => 'edit_theme_options',
             'sanitize_callback' => 'themehunk_customizer_sanitize_textarea',
         ));
@@ -523,7 +525,7 @@ $wp_customize->add_control('slidr_button',
              'type'       => 'text',
         ));
         $wp_customize->add_setting('first_button_text', array(
-            'default'           => '#',
+            'default'           => 'Get IT NOW',
             'capability'        => 'edit_theme_options',
             'sanitize_callback' => 'sanitize_text_field',
         ));

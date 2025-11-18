@@ -9,29 +9,67 @@ if ( ! function_exists( 'm_shop_add_to_compare_fltr' ) ){
           <a class="th-product-compare-btn compare button" data-th-product-id="'.$pid.'"></a>
           </div></span></div>';
 
-           }elseif( ( class_exists( 'WPCleverWooscp' ))){
-           echo '<div class="thunk-compare">'.do_shortcode('[wooscp id='.$pid.']').'</div>';
-         }
+           }
 
         }
 
 }
 
- if ( ! function_exists( 'm_shop_whish_list' ) ){ 
-          /**********************/
-          /** wishlist **/
-          /**********************/
-           function m_shop_whish_list($pid=''){
-                if( shortcode_exists( 'yith_wcwl_add_to_wishlist' )){
-                  echo '<div class="thunk-wishlist"><span class="thunk-wishlist-inner">'.do_shortcode('[yith_wcwl_add_to_wishlist product_id='.$pid.' icon="fa fa-heart" label='.__('wishlist','themehunk-customizer').'
-                   already_in_wishslist_text='.__('Already','themehunk-customizer').' browse_wishlist_text='.__('Added','themehunk-customizer').']' ).'</span></div>';
-                 }
-                  elseif( ( class_exists( 'WPCleverWoosw' ))){
-            echo '<div class="thunk-wishlist"><span class="thunk-wishlist-inner">'.do_shortcode('[woosw id='.$pid.']').'</span></div>';
-       }
-           } 
-}
+     function m_shop_whish_list($pid=''){
+            global $product;
+            $product_id = $product->get_id();
+               if( shortcode_exists( 'thwl_add_to_wishlist' )){ ?>
+        <div class="thunk-wishlist">
+            <span class="thunk-wishlist-inner">
+                <?php 
+                    if( shortcode_exists( 'thwl_add_to_wishlist' )) {
+                        echo do_shortcode('[thwl_add_to_wishlist 
+                            product_id="' . esc_attr($product_id) . '" 
+                            add_icon="th-icon th-icon-heart1" 
+                            add_text="" 
+                            add_browse_icon="th-icon th-icon-favorite"
+                            browse_text=""
+                            theme_style="yes"
+                            icon_style="icon_only_no_style"
+                            custom_class="th-wishlist-integrated"
+                        ]');
+                    }
+                    elseif (shortcode_exists('yith_wcwl_add_to_wishlist')) {
+                       echo do_shortcode('[yith_wcwl_add_to_wishlist 
+                    product_id="' . esc_attr($pid) . '" 
+                    icon="th-icon th-icon-heart1" 
+                    label="' . esc_attr__('wishlist', 'm-shop') . '" 
+                    already_in_wishslist_text="' . esc_attr__('Already', 'm-shop') . '" 
+                    browse_wishlist_text="' . esc_attr__('Added', 'm-shop') . '"
+                ]'); 
+                    }
+                ?>
+            </span>
+        </div>
 
+   <?php    }
+    elseif (shortcode_exists('yith_wcwl_add_to_wishlist')) { ?>
+   <div class="thunk-wishlist">
+    <span class="thunk-wishlist-inner">
+        <div 
+            th-tooltip="<?php echo esc_attr__('Wishlist', 'm-shop'); ?>" 
+            class="wishlist-tooltip"
+        >
+            <?php 
+                echo do_shortcode('[yith_wcwl_add_to_wishlist 
+                    product_id="' . esc_attr($pid) . '" 
+                    icon="th-icon th-icon-heart1" 
+                    label="' . esc_attr__('wishlist', 'm-shop') . '" 
+                    already_in_wishslist_text="' . esc_attr__('Already', 'm-shop') . '" 
+                    browse_wishlist_text="' . esc_attr__('Added', 'm-shop') . '"
+                ]'); 
+            ?>
+        </div>
+    </span>
+</div>
+
+ <?php  }
+           }
 
 if(!function_exists('m_shop_product_query')){
     function m_shop_product_query($term_id,$prdct_optn){

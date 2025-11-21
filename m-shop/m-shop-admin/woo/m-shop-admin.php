@@ -14,7 +14,7 @@ if ( ! function_exists( 'm_shop_add_to_compare_fltr' ) ){
         }
 
 }
-
+if(!function_exists('m_shop_whish_list')){
      function m_shop_whish_list($pid=''){
             global $product;
             $product_id = $product->get_id();
@@ -70,6 +70,7 @@ if ( ! function_exists( 'm_shop_add_to_compare_fltr' ) ){
 
  <?php  }
            }
+       }
 
 if(!function_exists('m_shop_product_query')){
     function m_shop_product_query($term_id,$prdct_optn){
@@ -591,7 +592,7 @@ if($m_shop_banner_layout=='bnr-one'){?>
  
 }
 }
-if ( ! function_exists( 'm_shop_top_single_slider_content' ) ){ 
+if ( ! function_exists( 'm_shop_top_slider_content' ) ){ 
 /**********************/
 // Top Slider Function
 /**********************/

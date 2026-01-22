@@ -30,13 +30,18 @@ class THunkcustomizer_RecentPost extends WP_Widget {
         $sort_by = isset($instance['sort_by']) ? esc_attr($instance['sort_by']) : 'date';      
         $sort_order='DESC';
         //Excerpt more filter
-        $new_excerpt_more = create_function('$more', 'return " ";');
+        $new_excerpt_more = '';
         add_filter('excerpt_more', $new_excerpt_more);
+        
         // Excerpt length filter
-        $new_excerpt_length = create_function('$length', "return " . $excerpt_length . ";");
-        if (isset($instance["excerpt_length"])){
-            add_filter('excerpt_length', $new_excerpt_length);
-        }
+            if (isset($instance["excerpt_length"])) {
+                $new_excerpt_length = (int) $excerpt_length;
+
+                add_filter('excerpt_length', function ($length) use ($excerpt_length_value) {
+                    return $new_excerpt_length;
+                });
+            }
+
         // post info array.
         $my_args = array(
             'post_type' => 'post',

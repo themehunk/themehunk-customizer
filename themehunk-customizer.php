@@ -6,6 +6,8 @@
   Author: ThemeHunk
   Text Domain: themehunk-customizer
   Author URI: http://www.themehunk.com/
+  Requires at least:       5.0
+  Tested up to:            7.0
  */
   if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
   

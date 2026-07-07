@@ -42,6 +42,7 @@
         "tickera-event-ticketing-system": "tickera-event-ticketing-system\/tickera.php",
         "ymm-search": "ymm-search\/ymm-search.php",
         "themehunk-customizer": "themehunk-customizer\/themehunk-customizer.php",
-        "hunk-companion": "hunk-companion\/hunk-companion.php"
+        "hunk-companion": "hunk-companion\/hunk-companion.php",
+        "th-wishlist": "th-wishlist\/th-wishlist.php"
     }
 ]

@@ -32,6 +32,8 @@ Just upload the `themehunk-customizer.zip` to the `/wp-content/plugins/` directo
 
 = 2.8.7 =
 Fix: Elanzalite Recent Post Widget function deprecated issue resolved.
+* Big Store: TH STORE ONE added in json.
+* New: Plugin's list updated in themes json.
 
 = 2.8.6 =
 Fix: Mshop Redeclare issue resolved.

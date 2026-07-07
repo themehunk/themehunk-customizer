@@ -1,6 +1,7 @@
 [
     {
         "woocommerce": "woocommerce\/woocommerce.php",
+        "vayu-blocks": "vayu-blocks\/vayu-blocks.php",
         "th-store-one": "th-store-one\/th-store-one.php",
         "unlimited-blocks": "unlimited-blocks\/unlimited-blocks.php",
         "elementor": "elementor\/elementor.php",
